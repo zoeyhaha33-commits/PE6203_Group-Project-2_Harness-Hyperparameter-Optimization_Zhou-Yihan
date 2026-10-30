@@ -1,0 +1,142 @@
+{
+  "task_name": "threejs-structure-parser",
+  "rollout_name": "threejs-structure-parser__522b30c2",
+  "rewards": {
+    "reward": 0.0
+  },
+  "agent": "pi-acp",
+  "agent_name": "pi-acp",
+  "model": "litellm/qwen/qwen3-coder",
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "n_tool_calls": 29,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 29,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 0,
+    "n_output_tokens": 0,
+    "n_cache_read_tokens": 0,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": null,
+    "usage_source": "unavailable",
+    "price_source": null
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 0,
+    "total_completion_tokens": 0,
+    "total_cached_tokens": 0,
+    "total_cost_usd": null
+  },
+  "trajectory_summary": {
+    "steps": 59,
+    "tool_call_steps": 29,
+    "user_message_steps": 1,
+    "agent_message_steps": 29,
+    "agent_thought_steps": 0,
+    "other_steps": 0,
+    "event_type_counts": {
+      "agent_message": 29,
+      "user_message": 1,
+      "tool_call": 29
+    },
+    "tool_call_status_counts": {
+      "completed": 23,
+      "failed": 6
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "unavailable",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "unavailable"
+  },
+  "error": null,
+  "error_category": null,
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": null,
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-10-30 11:19:35.924380",
+  "finished_at": "2026-10-30 11:24:06.645618",
+  "timing": {
+    "environment_setup": 2.2,
+    "agent_setup": 10.2,
+    "agent_execution": 92.5,
+    "verifier": 90.4,
+    "total": 270.7
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "litellm/qwen/qwen3-coder",
+          "reasoning_effort": null,
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "source": {
+    "type": "github",
+    "repo": "benchflow-ai/skillsbench",
+    "requested_ref": "HEAD",
+    "resolved_sha": "b63b7b2850226b6aa4fb5929a8c1ac7bc4d9a6af",
+    "path": "tasks/threejs-structure-parser",
+    "dirty": false,
+    "file_hashes": {
+      "environment/Dockerfile": "sha256:2fcde1fd669428319ad6d0117367ad81d2fb5ce25f9ad503ade9ab24bd01409f",
+      "environment/data/object.js": "sha256:2de9dacd93a02e43c0699a03a1ee2b75ce0366d418c095e9be49b964ead7c3f4",
+      "environment/skills/obj-exporter/SKILL.md": "sha256:92f851fcd69db38dc72e85f789f06557fc3e82c59d33d580fb977a72f8e587aa",
+      "environment/skills/threejs/SKILL.md": "sha256:ea480298751ea55effee4535b16b67ec79fd9540b971a89712e6f5b9ce8cd663",
+      "environment/skills/threejs/references/joint-type-heuristics.md": "sha256:459af44b906bb2bf61a940e88b83b1cf7afe3ddb17c17d355577f987c6a6214b",
+      "environment/skills/threejs/references/link-export-rules.md": "sha256:7c664561c879a7be8d799665f781ba8497abcdbf34ec6c369121fd57d699b835",
+      "environment/skills/threejs/references/urdf-minimal.md": "sha256:204b4ae283774fe2a8181a605aa9f0d79355f6c8bf4b060c53891a2136750aee",
+      "environment/skills/threejs/scripts/build_urdf_from_scene.mjs": "sha256:db916f0930dd39a8e4a17ee2ddb4b166bdc41df57baacc46123fa65a052fe284",
+      "environment/skills/threejs/scripts/export_instanced_obj.mjs": "sha256:b2d33217a6d67ecfc877bfe2d696d681409723f6ed5b5be1e12b75922a90de82",
+      "environment/skills/threejs/scripts/export_link_objs.mjs": "sha256:95772be1810e9bea114197265a0f3094bc98607b9b871e80a34d5d7131d33494",
+      "oracle/solve.sh": "sha256:3dc9174cf12d53afb726c8fff3f488ddde9378b64ee0200779ccfbae45aba665",
+      "task.md": "sha256:94cf9d94d2e1ef6f2ae7ded259be3d78736e9c5f02ae18ffb8b74a58e7699c7e",
+      "verifier/gen_ground_truth.mjs": "sha256:d467bee99a9ce693665c8490df78753e7b05840c0437402769943b4c7e16307c",
+      "verifier/test.sh": "sha256:e265fcab20f8bcce62ce9c227f8ec570225dc24226d09bb863f9036cda92595f",
+      "verifier/test_outputs.py": "sha256:9fcbb9bd95cb3e9d65569874f795270bdd243421e333507c6a2be8e0f776d194"
+    }
+  },
+  "task_digest": "sha256:adb134c373db87374ed4231a4c7bb0efe4bd012737e6ef2989e7a71fed677aad",
+  "sandbox_id": null
+}

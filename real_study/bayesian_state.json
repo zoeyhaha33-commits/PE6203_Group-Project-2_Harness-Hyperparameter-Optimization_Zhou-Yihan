@@ -1,0 +1,494 @@
+{
+  "method": "bayesian",
+  "protocol_sha256": "b46cdfa88f909202b68e80f43e28b28bfd82e44569d67cc33d5f9b54ac309050",
+  "configs": [
+    {
+      "contextWindow": 128000,
+      "maxTokens": 4096
+    },
+    {
+      "contextWindow": 128000,
+      "maxTokens": 4096
+    },
+    {
+      "contextWindow": 128000,
+      "maxTokens": 4096
+    }
+  ],
+  "records": [
+    {
+      "candidate": 0,
+      "task_index": 0,
+      "task": "financial-modeling-qa",
+      "status": "complete",
+      "key_usage_before_usd": 0.44078244,
+      "jobs_dir": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-bayesian-20261028T175905425215Z",
+      "command": [
+        "/home/zoeyhaha33/.local/bin/bench",
+        "eval",
+        "run",
+        "--tasks-dir",
+        "tasks/financial-modeling-qa",
+        "--agent",
+        "pi",
+        "--model",
+        "litellm/qwen/qwen3-coder",
+        "--sandbox",
+        "docker",
+        "--skill-mode",
+        "no-skill",
+        "--loop-strategy",
+        "single-shot",
+        "--concurrency",
+        "1",
+        "--jobs-dir",
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-bayesian-20261028T175905425215Z",
+        "--agent-env",
+        "BENCHFLOW_PROVIDER_MODELS=[{\"id\":\"qwen/qwen3-coder\",\"reasoning\":false,\"input\":[\"text\"],\"contextWindow\":128000,\"maxTokens\":4096}]"
+      ],
+      "returncode": 0,
+      "result_paths": [
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-bayesian-20261028T175905425215Z/2026-10-29__01-59-06/financial-modeling-qa__a91b3113/result.json"
+      ],
+      "error": null,
+      "error_category": null,
+      "verifier_error": null,
+      "reward": 0.0,
+      "strict_pass": false,
+      "billing_reconciliation_attempts": [
+        {
+          "checked_at_utc": "2026-10-29T04:28:59.010743+00:00",
+          "assumption": "User asserts exclusive key use and no unrelated delayed charges.",
+          "usage_snapshots_usd": [
+            0.44755069,
+            0.44755069,
+            0.44755069
+          ]
+        }
+      ],
+      "cost_usd": 0.006768249999999976
+    },
+    {
+      "candidate": 0,
+      "task_index": 1,
+      "task": "jax-computing-basics",
+      "status": "complete",
+      "key_usage_before_usd": 0.44755069,
+      "jobs_dir": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-bayesian-20261029T043018378241Z",
+      "command": [
+        "/home/zoeyhaha33/.local/bin/bench",
+        "eval",
+        "run",
+        "--tasks-dir",
+        "tasks/jax-computing-basics",
+        "--agent",
+        "pi",
+        "--model",
+        "litellm/qwen/qwen3-coder",
+        "--sandbox",
+        "docker",
+        "--skill-mode",
+        "no-skill",
+        "--loop-strategy",
+        "single-shot",
+        "--concurrency",
+        "1",
+        "--jobs-dir",
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-bayesian-20261029T043018378241Z",
+        "--agent-env",
+        "BENCHFLOW_PROVIDER_MODELS=[{\"id\":\"qwen/qwen3-coder\",\"reasoning\":false,\"input\":[\"text\"],\"contextWindow\":128000,\"maxTokens\":4096}]"
+      ],
+      "returncode": 0,
+      "result_paths": [
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-bayesian-20261029T043018378241Z/2026-10-29__12-30-21/jax-computing-basics__d9512ad8/result.json"
+      ],
+      "error": null,
+      "error_category": null,
+      "verifier_error": null,
+      "reward": 0.0,
+      "strict_pass": false,
+      "usage_snapshots_usd": [
+        0.45040889,
+        0.45870569,
+        0.45870569,
+        0.45870569
+      ],
+      "cost_usd": 0.011155000000000026
+    },
+    {
+      "candidate": 0,
+      "task_index": 2,
+      "task": "travel-planning",
+      "status": "complete",
+      "key_usage_before_usd": 0.45870569,
+      "jobs_dir": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-bayesian-20261029T043702670822Z",
+      "command": [
+        "/home/zoeyhaha33/.local/bin/bench",
+        "eval",
+        "run",
+        "--tasks-dir",
+        "tasks/travel-planning",
+        "--agent",
+        "pi",
+        "--model",
+        "litellm/qwen/qwen3-coder",
+        "--sandbox",
+        "docker",
+        "--skill-mode",
+        "no-skill",
+        "--loop-strategy",
+        "single-shot",
+        "--concurrency",
+        "1",
+        "--jobs-dir",
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-bayesian-20261029T043702670822Z",
+        "--agent-env",
+        "BENCHFLOW_PROVIDER_MODELS=[{\"id\":\"qwen/qwen3-coder\",\"reasoning\":false,\"input\":[\"text\"],\"contextWindow\":128000,\"maxTokens\":4096}]"
+      ],
+      "returncode": 0,
+      "result_paths": [
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-bayesian-20261029T043702670822Z/2026-10-29__12-37-04/travel-planning__794e588f/result.json"
+      ],
+      "error": null,
+      "error_category": null,
+      "verifier_error": null,
+      "reward": 0.0,
+      "strict_pass": false,
+      "usage_snapshots_usd": [
+        0.46513479,
+        0.46513479,
+        0.46513479,
+        0.46513479
+      ],
+      "cost_usd": 0.006429100000000021
+    },
+    {
+      "candidate": 1,
+      "task_index": 0,
+      "task": "financial-modeling-qa",
+      "status": "complete",
+      "key_usage_before_usd": 0.46513479,
+      "jobs_dir": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-bayesian-20261029T044204292483Z",
+      "command": [
+        "/home/zoeyhaha33/.local/bin/bench",
+        "eval",
+        "run",
+        "--tasks-dir",
+        "tasks/financial-modeling-qa",
+        "--agent",
+        "pi",
+        "--model",
+        "litellm/qwen/qwen3-coder",
+        "--sandbox",
+        "docker",
+        "--skill-mode",
+        "no-skill",
+        "--loop-strategy",
+        "single-shot",
+        "--concurrency",
+        "1",
+        "--jobs-dir",
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-bayesian-20261029T044204292483Z",
+        "--agent-env",
+        "BENCHFLOW_PROVIDER_MODELS=[{\"id\":\"qwen/qwen3-coder\",\"reasoning\":false,\"input\":[\"text\"],\"contextWindow\":128000,\"maxTokens\":4096}]"
+      ],
+      "returncode": 0,
+      "result_paths": [
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-bayesian-20261029T044204292483Z/2026-10-29__12-42-07/financial-modeling-qa__b0d14816/result.json"
+      ],
+      "error": null,
+      "error_category": null,
+      "verifier_error": null,
+      "reward": 0.0,
+      "strict_pass": false,
+      "usage_snapshots_usd": [
+        0.47510909,
+        0.49177789,
+        0.49177789,
+        0.49177789
+      ],
+      "cost_usd": 0.026643099999999975
+    },
+    {
+      "candidate": 1,
+      "task_index": 1,
+      "task": "jax-computing-basics",
+      "status": "complete",
+      "key_usage_before_usd": 0.49177789,
+      "jobs_dir": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-bayesian-20261029T045331460681Z",
+      "command": [
+        "/home/zoeyhaha33/.local/bin/bench",
+        "eval",
+        "run",
+        "--tasks-dir",
+        "tasks/jax-computing-basics",
+        "--agent",
+        "pi",
+        "--model",
+        "litellm/qwen/qwen3-coder",
+        "--sandbox",
+        "docker",
+        "--skill-mode",
+        "no-skill",
+        "--loop-strategy",
+        "single-shot",
+        "--concurrency",
+        "1",
+        "--jobs-dir",
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-bayesian-20261029T045331460681Z",
+        "--agent-env",
+        "BENCHFLOW_PROVIDER_MODELS=[{\"id\":\"qwen/qwen3-coder\",\"reasoning\":false,\"input\":[\"text\"],\"contextWindow\":128000,\"maxTokens\":4096}]"
+      ],
+      "returncode": 0,
+      "result_paths": [
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-bayesian-20261029T045331460681Z/2026-10-29__12-53-34/jax-computing-basics__47bc2625/result.json"
+      ],
+      "error": null,
+      "error_category": null,
+      "verifier_error": null,
+      "reward": 1.0,
+      "strict_pass": true,
+      "usage_snapshots_usd": [
+        0.49699489,
+        0.49699489,
+        0.49699489,
+        0.49699489
+      ],
+      "cost_usd": 0.005217000000000027
+    },
+    {
+      "candidate": 1,
+      "task_index": 2,
+      "task": "travel-planning",
+      "status": "complete",
+      "key_usage_before_usd": 0.49699489,
+      "jobs_dir": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-bayesian-20261029T045748426887Z",
+      "command": [
+        "/home/zoeyhaha33/.local/bin/bench",
+        "eval",
+        "run",
+        "--tasks-dir",
+        "tasks/travel-planning",
+        "--agent",
+        "pi",
+        "--model",
+        "litellm/qwen/qwen3-coder",
+        "--sandbox",
+        "docker",
+        "--skill-mode",
+        "no-skill",
+        "--loop-strategy",
+        "single-shot",
+        "--concurrency",
+        "1",
+        "--jobs-dir",
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-bayesian-20261029T045748426887Z",
+        "--agent-env",
+        "BENCHFLOW_PROVIDER_MODELS=[{\"id\":\"qwen/qwen3-coder\",\"reasoning\":false,\"input\":[\"text\"],\"contextWindow\":128000,\"maxTokens\":4096}]"
+      ],
+      "returncode": 0,
+      "result_paths": [
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-bayesian-20261029T045748426887Z/2026-10-29__12-57-50/travel-planning__c3df43eb/result.json"
+      ],
+      "error": null,
+      "error_category": null,
+      "verifier_error": null,
+      "reward": 0.0,
+      "strict_pass": false,
+      "usage_snapshots_usd": [
+        0.52822559,
+        0.53768149,
+        0.54551209,
+        0.54551209
+      ],
+      "billing_reconciliation_attempts": [
+        {
+          "checked_at_utc": "2026-10-29T05:02:00.244858+00:00",
+          "assumption": "User asserts exclusive key use and no unrelated delayed charges.",
+          "usage_snapshots_usd": [
+            0.54551209,
+            0.54551209,
+            0.54551209
+          ]
+        }
+      ],
+      "cost_usd": 0.04851719999999998
+    },
+    {
+      "candidate": 2,
+      "task_index": 0,
+      "task": "financial-modeling-qa",
+      "status": "complete",
+      "key_usage_before_usd": 0.54551209,
+      "jobs_dir": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-bayesian-20261029T050253298346Z",
+      "command": [
+        "/home/zoeyhaha33/.local/bin/bench",
+        "eval",
+        "run",
+        "--tasks-dir",
+        "tasks/financial-modeling-qa",
+        "--agent",
+        "pi",
+        "--model",
+        "litellm/qwen/qwen3-coder",
+        "--sandbox",
+        "docker",
+        "--skill-mode",
+        "no-skill",
+        "--loop-strategy",
+        "single-shot",
+        "--concurrency",
+        "1",
+        "--jobs-dir",
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-bayesian-20261029T050253298346Z",
+        "--agent-env",
+        "BENCHFLOW_PROVIDER_MODELS=[{\"id\":\"qwen/qwen3-coder\",\"reasoning\":false,\"input\":[\"text\"],\"contextWindow\":128000,\"maxTokens\":4096}]"
+      ],
+      "returncode": 0,
+      "result_paths": [
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-bayesian-20261029T050253298346Z/2026-10-29__13-02-56/financial-modeling-qa__ce847697/result.json"
+      ],
+      "error": null,
+      "error_category": null,
+      "verifier_error": null,
+      "reward": 0.0,
+      "strict_pass": false,
+      "usage_snapshots_usd": [
+        0.54551209,
+        0.56662389,
+        0.56662389,
+        0.56662389
+      ],
+      "cost_usd": 0.021111800000000014
+    },
+    {
+      "candidate": 2,
+      "task_index": 1,
+      "task": "jax-computing-basics",
+      "status": "complete",
+      "key_usage_before_usd": 0.56662389,
+      "jobs_dir": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-bayesian-20261029T050735499187Z",
+      "command": [
+        "/home/zoeyhaha33/.local/bin/bench",
+        "eval",
+        "run",
+        "--tasks-dir",
+        "tasks/jax-computing-basics",
+        "--agent",
+        "pi",
+        "--model",
+        "litellm/qwen/qwen3-coder",
+        "--sandbox",
+        "docker",
+        "--skill-mode",
+        "no-skill",
+        "--loop-strategy",
+        "single-shot",
+        "--concurrency",
+        "1",
+        "--jobs-dir",
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-bayesian-20261029T050735499187Z",
+        "--agent-env",
+        "BENCHFLOW_PROVIDER_MODELS=[{\"id\":\"qwen/qwen3-coder\",\"reasoning\":false,\"input\":[\"text\"],\"contextWindow\":128000,\"maxTokens\":4096}]"
+      ],
+      "returncode": 0,
+      "result_paths": [
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-bayesian-20261029T050735499187Z/2026-10-29__13-07-36/jax-computing-basics__0fddffe1/result.json"
+      ],
+      "error": null,
+      "error_category": null,
+      "verifier_error": null,
+      "reward": 0.0,
+      "strict_pass": false,
+      "usage_snapshots_usd": [
+        0.56904629,
+        0.57052049,
+        0.57052049,
+        0.57610279
+      ],
+      "billing_reconciliation_attempts": [
+        {
+          "checked_at_utc": "2026-10-29T05:12:06.471966+00:00",
+          "assumption": "User asserts exclusive key use and no unrelated delayed charges.",
+          "usage_snapshots_usd": [
+            0.57610279,
+            0.57610279,
+            0.57610279
+          ]
+        }
+      ],
+      "cost_usd": 0.009478899999999957
+    },
+    {
+      "candidate": 2,
+      "task_index": 2,
+      "task": "travel-planning",
+      "status": "complete",
+      "key_usage_before_usd": 0.57610279,
+      "jobs_dir": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-bayesian-20261029T051306378140Z",
+      "command": [
+        "/home/zoeyhaha33/.local/bin/bench",
+        "eval",
+        "run",
+        "--tasks-dir",
+        "tasks/travel-planning",
+        "--agent",
+        "pi",
+        "--model",
+        "litellm/qwen/qwen3-coder",
+        "--sandbox",
+        "docker",
+        "--skill-mode",
+        "no-skill",
+        "--loop-strategy",
+        "single-shot",
+        "--concurrency",
+        "1",
+        "--jobs-dir",
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-bayesian-20261029T051306378140Z",
+        "--agent-env",
+        "BENCHFLOW_PROVIDER_MODELS=[{\"id\":\"qwen/qwen3-coder\",\"reasoning\":false,\"input\":[\"text\"],\"contextWindow\":128000,\"maxTokens\":4096}]"
+      ],
+      "returncode": 0,
+      "result_paths": [
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-bayesian-20261029T051306378140Z/2026-10-29__13-13-07/travel-planning__eaffceb7/result.json"
+      ],
+      "error": null,
+      "error_category": null,
+      "verifier_error": null,
+      "reward": 0.0,
+      "strict_pass": false,
+      "usage_snapshots_usd": [
+        0.57610279,
+        0.57610279,
+        0.57610279,
+        0.57610279
+      ],
+      "billing_csv_reconciliation": {
+        "audit_path": "billing_audit_20261029_overlap/audit.json",
+        "previous_status": "billing_pending",
+        "previous_cost_usd": null,
+        "basis": "Exported request costs attributed by isolated run time window; limited CSV precision.",
+        "request_count": 15
+      },
+      "cost_usd": 0.00631
+    }
+  ],
+  "promoted": null,
+  "optuna_version": "4.5.0",
+  "progress": {
+    "valid_evaluations": 9,
+    "missing_evaluations": 0,
+    "task_launches": 9,
+    "budget_accounted_usd": 0.14163035
+  },
+  "selected": {
+    "candidate": 1,
+    "config": {
+      "contextWindow": 128000,
+      "maxTokens": 4096
+    },
+    "validation_pass_rate": 0.3333333333333333
+  },
+  "completion_status": "complete"
+}

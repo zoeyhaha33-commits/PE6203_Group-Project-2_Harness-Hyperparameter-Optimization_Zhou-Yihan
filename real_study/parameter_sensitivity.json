@@ -1,0 +1,282 @@
+{
+  "scope": "existing validation only; exploratory",
+  "cells": [
+    {
+      "task": "financial-modeling-qa",
+      "contextWindow": 64000,
+      "maxTokens": 8192,
+      "n": 1,
+      "passes": 0,
+      "pass_rate": 0,
+      "mean_observed_usd": 0.03958209999999995
+    },
+    {
+      "task": "financial-modeling-qa",
+      "contextWindow": 64000,
+      "maxTokens": 16384,
+      "n": 2,
+      "passes": 0,
+      "pass_rate": 0,
+      "mean_observed_usd": 0.0407847
+    },
+    {
+      "task": "financial-modeling-qa",
+      "contextWindow": 96000,
+      "maxTokens": 4096,
+      "n": 2,
+      "passes": 0,
+      "pass_rate": 0,
+      "mean_observed_usd": 0.013795934999999981
+    },
+    {
+      "task": "financial-modeling-qa",
+      "contextWindow": 128000,
+      "maxTokens": 4096,
+      "n": 5,
+      "passes": 0,
+      "pass_rate": 0,
+      "mean_observed_usd": 0.023734029999999996
+    },
+    {
+      "task": "financial-modeling-qa",
+      "contextWindow": 128000,
+      "maxTokens": 8192,
+      "n": 1,
+      "passes": 0,
+      "pass_rate": 0,
+      "mean_observed_usd": 0.16726370000000002
+    },
+    {
+      "task": "jax-computing-basics",
+      "contextWindow": 64000,
+      "maxTokens": 16384,
+      "n": 2,
+      "passes": 0,
+      "pass_rate": 0,
+      "mean_observed_usd": 0.007204349999999998
+    },
+    {
+      "task": "jax-computing-basics",
+      "contextWindow": 96000,
+      "maxTokens": 4096,
+      "n": 2,
+      "passes": 0,
+      "pass_rate": 0,
+      "mean_observed_usd": 0.007384950000000029
+    },
+    {
+      "task": "jax-computing-basics",
+      "contextWindow": 128000,
+      "maxTokens": 4096,
+      "n": 3,
+      "passes": 1,
+      "pass_rate": 0.3333333333333333,
+      "mean_observed_usd": 0.00861696666666667
+    },
+    {
+      "task": "travel-planning",
+      "contextWindow": 64000,
+      "maxTokens": 16384,
+      "n": 2,
+      "passes": 0,
+      "pass_rate": 0,
+      "mean_observed_usd": 0.00722101
+    },
+    {
+      "task": "travel-planning",
+      "contextWindow": 96000,
+      "maxTokens": 4096,
+      "n": 1,
+      "passes": 0,
+      "pass_rate": 0,
+      "mean_observed_usd": 0.07000074
+    },
+    {
+      "task": "travel-planning",
+      "contextWindow": 128000,
+      "maxTokens": 4096,
+      "n": 4,
+      "passes": 1,
+      "pass_rate": 0.25,
+      "mean_observed_usd": 0.019361599999999996
+    }
+  ],
+  "pairs": [
+    {
+      "task": "financial-modeling-qa",
+      "parameter": "maxTokens",
+      "fixed_parameter": "contextWindow",
+      "fixed_value": 64000,
+      "lower": {
+        "task": "financial-modeling-qa",
+        "contextWindow": 64000,
+        "maxTokens": 8192,
+        "n": 1,
+        "passes": 0,
+        "pass_rate": 0,
+        "mean_observed_usd": 0.03958209999999995
+      },
+      "upper": {
+        "task": "financial-modeling-qa",
+        "contextWindow": 64000,
+        "maxTokens": 16384,
+        "n": 2,
+        "passes": 0,
+        "pass_rate": 0,
+        "mean_observed_usd": 0.0407847
+      },
+      "pass_rate_delta": 0,
+      "mean_usd_delta": 0.0012026000000000467
+    },
+    {
+      "task": "financial-modeling-qa",
+      "parameter": "contextWindow",
+      "fixed_parameter": "maxTokens",
+      "fixed_value": 8192,
+      "lower": {
+        "task": "financial-modeling-qa",
+        "contextWindow": 64000,
+        "maxTokens": 8192,
+        "n": 1,
+        "passes": 0,
+        "pass_rate": 0,
+        "mean_observed_usd": 0.03958209999999995
+      },
+      "upper": {
+        "task": "financial-modeling-qa",
+        "contextWindow": 128000,
+        "maxTokens": 8192,
+        "n": 1,
+        "passes": 0,
+        "pass_rate": 0,
+        "mean_observed_usd": 0.16726370000000002
+      },
+      "pass_rate_delta": 0,
+      "mean_usd_delta": 0.12768160000000006
+    },
+    {
+      "task": "financial-modeling-qa",
+      "parameter": "contextWindow",
+      "fixed_parameter": "maxTokens",
+      "fixed_value": 4096,
+      "lower": {
+        "task": "financial-modeling-qa",
+        "contextWindow": 96000,
+        "maxTokens": 4096,
+        "n": 2,
+        "passes": 0,
+        "pass_rate": 0,
+        "mean_observed_usd": 0.013795934999999981
+      },
+      "upper": {
+        "task": "financial-modeling-qa",
+        "contextWindow": 128000,
+        "maxTokens": 4096,
+        "n": 5,
+        "passes": 0,
+        "pass_rate": 0,
+        "mean_observed_usd": 0.023734029999999996
+      },
+      "pass_rate_delta": 0,
+      "mean_usd_delta": 0.009938095000000015
+    },
+    {
+      "task": "financial-modeling-qa",
+      "parameter": "maxTokens",
+      "fixed_parameter": "contextWindow",
+      "fixed_value": 128000,
+      "lower": {
+        "task": "financial-modeling-qa",
+        "contextWindow": 128000,
+        "maxTokens": 4096,
+        "n": 5,
+        "passes": 0,
+        "pass_rate": 0,
+        "mean_observed_usd": 0.023734029999999996
+      },
+      "upper": {
+        "task": "financial-modeling-qa",
+        "contextWindow": 128000,
+        "maxTokens": 8192,
+        "n": 1,
+        "passes": 0,
+        "pass_rate": 0,
+        "mean_observed_usd": 0.16726370000000002
+      },
+      "pass_rate_delta": 0,
+      "mean_usd_delta": 0.14352967000000003
+    },
+    {
+      "task": "jax-computing-basics",
+      "parameter": "contextWindow",
+      "fixed_parameter": "maxTokens",
+      "fixed_value": 4096,
+      "lower": {
+        "task": "jax-computing-basics",
+        "contextWindow": 96000,
+        "maxTokens": 4096,
+        "n": 2,
+        "passes": 0,
+        "pass_rate": 0,
+        "mean_observed_usd": 0.007384950000000029
+      },
+      "upper": {
+        "task": "jax-computing-basics",
+        "contextWindow": 128000,
+        "maxTokens": 4096,
+        "n": 3,
+        "passes": 1,
+        "pass_rate": 0.3333333333333333,
+        "mean_observed_usd": 0.00861696666666667
+      },
+      "pass_rate_delta": 0.3333333333333333,
+      "mean_usd_delta": 0.001232016666666641
+    },
+    {
+      "task": "travel-planning",
+      "parameter": "contextWindow",
+      "fixed_parameter": "maxTokens",
+      "fixed_value": 4096,
+      "lower": {
+        "task": "travel-planning",
+        "contextWindow": 96000,
+        "maxTokens": 4096,
+        "n": 1,
+        "passes": 0,
+        "pass_rate": 0,
+        "mean_observed_usd": 0.07000074
+      },
+      "upper": {
+        "task": "travel-planning",
+        "contextWindow": 128000,
+        "maxTokens": 4096,
+        "n": 4,
+        "passes": 1,
+        "pass_rate": 0.25,
+        "mean_observed_usd": 0.019361599999999996
+      },
+      "pass_rate_delta": 0.25,
+      "mean_usd_delta": -0.05063914000000001
+    }
+  ],
+  "missing": [
+    {
+      "method": "random",
+      "task": "jax-computing-basics",
+      "config": {
+        "contextWindow": 128000,
+        "maxTokens": 4096
+      },
+      "status": "skipped_api_failure"
+    },
+    {
+      "method": "multifidelity",
+      "task": "travel-planning",
+      "config": {
+        "contextWindow": 96000,
+        "maxTokens": 4096
+      },
+      "status": "skipped_docker_failure"
+    }
+  ]
+}

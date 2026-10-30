@@ -1,0 +1,126 @@
+[
+  {
+    "method": "default",
+    "task": "python-scala-translation",
+    "archive_member": "search-test_default-20261029T174427843328Z/2026-10-30__01-44-29/python-scala-translation__38675ba8/result.json",
+    "result_sha256": "1b185023ba76c3ea6f4ed0d5c514a886a0ebdb667071aa351652ab923a75fb48",
+    "verifier_files": []
+  },
+  {
+    "method": "default",
+    "task": "reserves-at-risk-calc",
+    "archive_member": "search-test_default-20261029T204806190351Z/2026-10-30__04-48-07/reserves-at-risk-calc__2c5b1fa7/result.json",
+    "result_sha256": "06cee31bb16f246f8f919558a2fb1375035f43b19618b48cfb98fe7eb8202bb6",
+    "verifier_files": [
+      "test-stdout.txt",
+      "ctrf.json",
+      "reward.txt"
+    ]
+  },
+  {
+    "method": "default",
+    "task": "threejs-structure-parser",
+    "archive_member": "search-test_default-20261029T205829519651Z/2026-10-30__04-58-30/threejs-structure-parser__108d8138/result.json",
+    "result_sha256": "6c087a9d6f140652166c5e4db386df6aa077152d2aa97f7b822e0b732977790a",
+    "verifier_files": [
+      "test-stdout.txt",
+      "ctrf.json",
+      "reward.txt"
+    ]
+  },
+  {
+    "method": "random",
+    "task": "python-scala-translation",
+    "archive_member": "search-test_random-20261029T211124428749Z/2026-10-30__05-11-25/python-scala-translation__7d02e7b8/result.json",
+    "result_sha256": "4760c9c0e45419ae430a944170c7306c2ff5a7f985b0580e5728b3f989051ec3",
+    "verifier_files": [
+      "test-stdout.txt",
+      "output.log",
+      "reward.txt"
+    ]
+  },
+  {
+    "method": "random",
+    "task": "reserves-at-risk-calc",
+    "archive_member": "search-test_random-20261029T214447920029Z/2026-10-30__05-44-48/reserves-at-risk-calc__116f8f55/result.json",
+    "result_sha256": "5855ef2746d329a9f58860c798379ef0fde3c246d983aa51d68315bc8d1890fe",
+    "verifier_files": [
+      "test-stdout.txt",
+      "ctrf.json",
+      "reward.txt"
+    ]
+  },
+  {
+    "method": "random",
+    "task": "threejs-structure-parser",
+    "archive_member": "search-test_random-20261029T215424784272Z/2026-10-30__05-54-25/threejs-structure-parser__ffbdb15f/result.json",
+    "result_sha256": "b34e9e8b72f1518dfd8f6c67f121f3e56890f8a41618419eba1569241fbf6cc1",
+    "verifier_files": [
+      "test-stdout.txt",
+      "ctrf.json",
+      "reward.txt"
+    ]
+  },
+  {
+    "method": "bayesian",
+    "task": "python-scala-translation",
+    "archive_member": "search-test_bayesian-20261030T013402247502Z/2026-10-30__09-34-03/python-scala-translation__6af72dd6/result.json",
+    "result_sha256": "dbd6cc8e428653871710328da8746450d52614de4cba62aec458022cc528d5d7",
+    "verifier_files": []
+  },
+  {
+    "method": "bayesian",
+    "task": "reserves-at-risk-calc",
+    "archive_member": "search-test_bayesian-20261030T031401568957Z/2026-10-30__11-14-02/reserves-at-risk-calc__b4599ca9/result.json",
+    "result_sha256": "8cf350ca15feb8dc0ddcfa58b86f16b0c8012c9f625de5bd824b8107881175d9",
+    "verifier_files": [
+      "test-stdout.txt",
+      "ctrf.json",
+      "reward.txt"
+    ]
+  },
+  {
+    "method": "bayesian",
+    "task": "threejs-structure-parser",
+    "archive_member": "search-test_bayesian-20261030T031935199877Z/2026-10-30__11-19-35/threejs-structure-parser__522b30c2/result.json",
+    "result_sha256": "7128089ec4aee6bc3d27f58daebf9e41d600aa8709e64172d34ca863e323a889",
+    "verifier_files": [
+      "test-stdout.txt",
+      "ctrf.json",
+      "reward.txt"
+    ]
+  },
+  {
+    "method": "multifidelity",
+    "task": "python-scala-translation",
+    "archive_member": "search-test_multifidelity-20261030T032543225728Z/2026-10-30__11-25-43/python-scala-translation__38354467/result.json",
+    "result_sha256": "2ac6b675685bd96a497eb502a1cd471087a55995ee40aee8a94a1bb1883ce7e1",
+    "verifier_files": [
+      "test-stdout.txt",
+      "output.log",
+      "reward.txt"
+    ]
+  },
+  {
+    "method": "multifidelity",
+    "task": "reserves-at-risk-calc",
+    "archive_member": "search-test_multifidelity-20261030T033410134043Z/2026-10-30__11-34-10/reserves-at-risk-calc__7dd1a5c9/result.json",
+    "result_sha256": "7ab00efff4bda4a950dd4e245ebdc44e49e50b275e747329bf203d8c257d289a",
+    "verifier_files": [
+      "test-stdout.txt",
+      "ctrf.json",
+      "reward.txt"
+    ]
+  },
+  {
+    "method": "multifidelity",
+    "task": "threejs-structure-parser",
+    "archive_member": "search-test_multifidelity-20261030T034139766151Z/2026-10-30__11-41-40/threejs-structure-parser__04f0e312/result.json",
+    "result_sha256": "ffc37ccde10c68a5f0316d6226a237453976b1b0794ce3a5fd0f68d52a66c9f9",
+    "verifier_files": [
+      "test-stdout.txt",
+      "ctrf.json",
+      "reward.txt"
+    ]
+  }
+]

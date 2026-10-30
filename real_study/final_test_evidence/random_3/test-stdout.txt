@@ -1,0 +1,126 @@
+Get:1 https://deb.nodesource.com/node_20.x nodistro InRelease [12.1 kB]
+Get:2 https://deb.nodesource.com/node_20.x nodistro/main amd64 Packages [14.7 kB]
+Get:3 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB]
+Get:4 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+Get:5 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Get:6 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+Get:7 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [2122 kB]
+Get:8 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB]
+Get:9 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1412 kB]
+Get:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB]
+Get:11 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1550 kB]
+Get:12 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [55.6 kB]
+Get:13 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB]
+Get:14 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB]
+Get:15 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1740 kB]
+Get:16 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [2235 kB]
+Get:17 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [61.7 kB]
+Get:18 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2172 kB]
+Get:19 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [49.0 kB]
+Get:20 http://archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Packages [669 B]
+Get:21 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [36.0 kB]
+Fetched 33.7 MB in 53s (640 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+curl is already the newest version (8.5.0-2ubuntu10.16).
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+downloading uv 0.9.7 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Ground truth meshes saved.
+(node:795) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///root/data/object.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /root/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Downloading pygments (1.2MiB)
+Downloading numpy (16.0MiB)
+ Downloading pygments
+ Downloading numpy
+Installed 7 packages in 22ms
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.7.0
+rootdir: /root
+configfile: ../dev/null
+plugins: json-ctrf-0.3.5
+collected 3 items
+
+. .FF                                                                    [100%]
+
+=================================== FAILURES ===================================
+______________ TestMeshExport.test_part_meshes_match_ground_truth ______________
+
+self = <test_outputs.TestMeshExport object at 0x7012e74b0b60>
+
+    def test_part_meshes_match_ground_truth(self):
+        gt_root = Path(GT_DIR) / "part_meshes"
+        out_root = Path(OUTPUT_DIR) / "part_meshes"
+    
+        assert gt_root.exists(), f"Missing ground truth part_meshes: {gt_root}"
+        assert out_root.exists(), f"Missing output part_meshes: {out_root}"
+    
+        gt_links = [p for p in gt_root.iterdir() if p.is_dir()]
+        out_links = [p for p in out_root.iterdir() if p.is_dir()]
+    
+>       assert {p.name for p in out_links} == {p.name for p in gt_links}, (
+            "Link directories mismatch in part_meshes"
+        )
+E       AssertionError: Link directories mismatch in part_meshes
+E       assert {'cabin', 'su...el_structure'} == {'cabin_0', '...abin_13', ...}
+E         
+E         Extra items in the left set:
+E         'cabin'
+E         Extra items in the right set:
+E         'cabin_13'
+E         'cabin_6'
+E         'cabin_15'...
+E         
+E         ...Full output truncated (14 lines hidden), use '-vv' to show
+
+/verifier/test_outputs.py:67: AssertionError
+______________ TestMeshExport.test_link_meshes_match_ground_truth ______________
+
+self = <test_outputs.TestMeshExport object at 0x7012e764a300>
+
+    def test_link_meshes_match_ground_truth(self):
+        gt_root = Path(GT_DIR) / "links"
+        out_root = Path(OUTPUT_DIR) / "links"
+    
+        assert gt_root.exists(), f"Missing ground truth links: {gt_root}"
+        assert out_root.exists(), f"Missing output links: {out_root}"
+    
+        gt_links = list(gt_root.glob("*.obj"))
+        out_links = list(out_root.glob("*.obj"))
+    
+        assert gt_links, "No ground truth link meshes found"
+>       assert {p.name for p in out_links} == {p.name for p in gt_links}, (
+            "Link OBJ list mismatch"
+        )
+E       AssertionError: Link OBJ list mismatch
+E       assert {'support_str...tructure.obj'} == {'cabin_0.obj..._13.obj', ...}
+E         
+E         Extra items in the right set:
+E         'cabin_9.obj'
+E         'cabin_12.obj'
+E         'cabin_14.obj'
+E         'cabin_10.obj'
+E         'cabin_11.obj'...
+E         
+E         ...Full output truncated (12 lines hidden), use '-vv' to show
+
+/verifier/test_outputs.py:108: AssertionError
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED ::TestMeshExport::test_output_directories_exist
+FAILED ::TestMeshExport::test_part_meshes_match_ground_truth - AssertionError...
+FAILED ::TestMeshExport::test_link_meshes_match_ground_truth - AssertionError...
+========================= 2 failed, 1 passed in 0.31s ==========================

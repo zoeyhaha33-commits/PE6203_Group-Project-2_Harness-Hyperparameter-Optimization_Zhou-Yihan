@@ -1,0 +1,53 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 3,
+            "passed": 1,
+            "failed": 2,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1793308164.224862,
+            "stop": 1793308164.4917834
+        },
+        "tests": [
+            {
+                "name": "::TestMeshExport::test_output_directories_exist",
+                "status": "passed",
+                "duration": 0.0020790400012629107,
+                "start": 1793308164.477768,
+                "stop": 1793308164.479998,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestMeshExport::test_part_meshes_match_ground_truth",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0008585999967181124,
+                "start": 1793308164.4801176,
+                "stop": 1793308164.489121,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "self = <test_outputs.TestMeshExport object at 0x7a461f713800>\n\n    def test_part_meshes_match_ground_truth(self):\n        gt_root = Path(GT_DIR) / \"part_meshes\"\n        out_root = Path(OUTPUT_DIR) / \"part_meshes\"\n    \n        assert gt_root.exists(), f\"Missing ground truth part_meshes: {gt_root}\"\n        assert out_root.exists(), f\"Missing output part_meshes: {out_root}\"\n    \n        gt_links = [p for p in gt_root.iterdir() if p.is_dir()]\n        out_links = [p for p in out_root.iterdir() if p.is_dir()]\n    \n>       assert {p.name for p in out_links} == {p.name for p in gt_links}, (\n            \"Link directories mismatch in part_meshes\"\n        )\nE       AssertionError: Link directories mismatch in part_meshes\nE       assert {'support_str...el_structure'} == {'cabin_0', '...abin_13', ...}\nE         \nE         Extra items in the right set:\nE         'cabin_4'\nE         'cabin_6'\nE         'cabin_11'\nE         'cabin_1'\nE         'cabin_14'...\nE         \nE         ...Full output truncated (12 lines hidden), use '-vv' to show\n\n/verifier/test_outputs.py:67: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "::TestMeshExport::test_link_meshes_match_ground_truth",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.000755353998101782,
+                "start": 1793308164.4892366,
+                "stop": 1793308164.4916887,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "self = <test_outputs.TestMeshExport object at 0x7a461f733f80>\n\n    def test_link_meshes_match_ground_truth(self):\n        gt_root = Path(GT_DIR) / \"links\"\n        out_root = Path(OUTPUT_DIR) / \"links\"\n    \n        assert gt_root.exists(), f\"Missing ground truth links: {gt_root}\"\n        assert out_root.exists(), f\"Missing output links: {out_root}\"\n    \n        gt_links = list(gt_root.glob(\"*.obj\"))\n        out_links = list(out_root.glob(\"*.obj\"))\n    \n        assert gt_links, \"No ground truth link meshes found\"\n>       assert {p.name for p in out_links} == {p.name for p in gt_links}, (\n            \"Link OBJ list mismatch\"\n        )\nE       AssertionError: Link OBJ list mismatch\nE       assert {'support_str...tructure.obj'} == {'cabin_0.obj..._13.obj', ...}\nE         \nE         Extra items in the right set:\nE         'cabin_13.obj'\nE         'cabin_1.obj'\nE         'cabin_3.obj'\nE         'cabin_10.obj'\nE         'cabin_14.obj'...\nE         \nE         ...Full output truncated (12 lines hidden), use '-vv' to show\n\n/verifier/test_outputs.py:108: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

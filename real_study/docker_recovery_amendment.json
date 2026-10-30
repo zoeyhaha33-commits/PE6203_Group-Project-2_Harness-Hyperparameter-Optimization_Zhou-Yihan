@@ -1,0 +1,10 @@
+{
+  "declared_after": "Multi-fidelity third launch failed during Ubuntu metadata authorization, before any scored result.",
+  "applies_to": [
+    "random",
+    "bayesian",
+    "multifidelity"
+  ],
+  "eligibility": "Verified Ubuntu metadata authorization timeout; no sandbox, trajectory steps, tokens, tools, or reward.",
+  "limits": "Uses the existing single extra attempt per method and ten-launch cap. Same task/config; archive raw result and account observed costs."
+}

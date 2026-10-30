@@ -1,0 +1,12 @@
+[
+  {
+    "method": "default",
+    "archive_member": "supplement-default-20261030T041621835776Z/2026-10-30__12-16-22/python-scala-translation__3295bf76/result.json",
+    "result_sha256": "1c325a006610fd3bc5312cab79f6566217e00e80b396716d787d919167a79430"
+  },
+  {
+    "method": "bayesian",
+    "archive_member": "supplement-bayesian-20261030T043012617256Z/2026-10-30__12-30-13/python-scala-translation__270628f6/result.json",
+    "result_sha256": "31daf9cbcd119b95048c86285a1c8fd98a8421205300556fe56f07f1c86e2852"
+  }
+]

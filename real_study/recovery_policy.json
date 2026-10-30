@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "declared_after": "First suspected API error, Random candidate 1 task 2; after five scored Random evaluations.",
+  "applies_to": [
+    "random",
+    "bayesian",
+    "multifidelity"
+  ],
+  "max_extra_attempts_per_method": 1,
+  "eligibility": "Nonzero process exit; suspected_api_error; no reward; zero recorded tool calls. Explicit retry only.",
+  "budget": "Keep nine scored evaluations and USD 1.50 admission limit; allow at most ten task launches per method. Include failed-attempt observed costs.",
+  "accounting": "Stable zero delta on failed attempt means no observed charge, not confirmed free usage. Preserve raw failure and snapshots."
+}

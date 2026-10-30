@@ -1,0 +1,452 @@
+{
+  "status": "partition_only_not_a_run_schedule",
+  "benchmark_commit": "b63b7b2850226b6aa4fb5929a8c1ac7bc4d9a6af",
+  "seed": "PE6203-P3-20261028-v1",
+  "method": "SHA256(seed:task_name) ascending; alternating validation/test",
+  "development_excluded": [
+    "dialogue-parser"
+  ],
+  "validation": [
+    {
+      "name": "fix-erlang-ssh-cve",
+      "definition_sha256": "e7597368688558e1693be1badbb7e17aad751eeb3a04bda8a3c5c87df1e59e81",
+      "development_only": false
+    },
+    {
+      "name": "financial-modeling-qa",
+      "definition_sha256": "83c9740297d9c67576707d933ba1e9b8660f8cbfd941e1082d170105432b4d13",
+      "development_only": false
+    },
+    {
+      "name": "jpg-ocr-stat",
+      "definition_sha256": "909d9ec531112404b5be041b24ba30b2b05df17ec5c0bd39a771c4b8da6fce47",
+      "development_only": false
+    },
+    {
+      "name": "flood-risk-analysis",
+      "definition_sha256": "a07a16c0e10251e5354dab1a06f3aca6ea47db862a032b730877c892049c37bd",
+      "development_only": false
+    },
+    {
+      "name": "court-form-filling",
+      "definition_sha256": "02be976a28afff3365cdfe20506ede1b23e9904a706a5fbfccb9dfb316ac1b75",
+      "development_only": false
+    },
+    {
+      "name": "shock-analysis-supply",
+      "definition_sha256": "02b50a632f58ab47b6ddd03d5b3f62d53da5e16c6bc7c169b8892ccb01e2f714",
+      "development_only": false
+    },
+    {
+      "name": "fix-visual-stability",
+      "definition_sha256": "bd1de535915abeb4fc4889c2adb00a29c9a0a9af6644e73a4fc6bf3b20e9ff95",
+      "development_only": false
+    },
+    {
+      "name": "civ6-adjacency-optimizer",
+      "definition_sha256": "b82fe53b7432d5b95e535e682e7c84dabcce206975ae2ccf83be3bb425b30c74",
+      "development_only": false
+    },
+    {
+      "name": "setup-fuzzing-py",
+      "definition_sha256": "472891369b64fd18d2f435193e7f47c671043dbd92c07af5b6eb567905dd9b4a",
+      "development_only": false
+    },
+    {
+      "name": "energy-market-pricing",
+      "definition_sha256": "4eb2f6693b3c4c02a418567ea9bf8ca864082f82f7d9c91c56cde9c948c875a3",
+      "development_only": false
+    },
+    {
+      "name": "jax-computing-basics",
+      "definition_sha256": "4f96adb7b56b6d0703d88158d8c9ddbeeb4306df9e20e62fbfa20b81eee6bb3b",
+      "development_only": false
+    },
+    {
+      "name": "organize-messy-files",
+      "definition_sha256": "32cf550ba5e0812c94130fed7aaf2126d29a2ac0b02aae6721203e525c3a92fc",
+      "development_only": false
+    },
+    {
+      "name": "spring-boot-jakarta-migration",
+      "definition_sha256": "655b4553e0c7addfb3ae3dad09a364eb2f17f10aa14f4f29959df3244b57e719",
+      "development_only": false
+    },
+    {
+      "name": "travel-planning",
+      "definition_sha256": "1c4e69fbd9f491f795ab15b50e6c5f4c165180e5f3e51d13f22ba0c235828b88",
+      "development_only": false
+    },
+    {
+      "name": "3d-scan-calc",
+      "definition_sha256": "119cbbd1797f621920bc2adab7797d67bbc6abe15dd72c052ab7973a6eae3a40",
+      "development_only": false
+    },
+    {
+      "name": "econ-detrending-correlation",
+      "definition_sha256": "4127ba9bd34463e848fa5d001c75dd7bd5d0f0e3559f6b918174c55badc3d16f",
+      "development_only": false
+    },
+    {
+      "name": "shock-analysis-demand",
+      "definition_sha256": "fe1242635e696e49e8155c12d903feb9ad4d7304ccdaad483201291e89f70de0",
+      "development_only": false
+    },
+    {
+      "name": "seismic-phase-picking",
+      "definition_sha256": "720d3b8533a73cb0636f26b1ba86e35e9a4bec5039cca72a426b0f489c2fab5a",
+      "development_only": false
+    },
+    {
+      "name": "pdf-excel-diff",
+      "definition_sha256": "9fba1dcd8b6bcd0ba29725c94ffeeb1091ff0ca4c274d5000b568f689138fff9",
+      "development_only": false
+    },
+    {
+      "name": "sales-pivot-analysis",
+      "definition_sha256": "9a282d573878d4bffb154f30b648841708e4e6e7c1ebaac9e90fc39af9397382",
+      "development_only": false
+    },
+    {
+      "name": "quantum-numerical-simulation",
+      "definition_sha256": "358aa76c666bbe716b19ed6ca715e1b8fa0148b4f2f8802ea966d76be880eabc",
+      "development_only": false
+    },
+    {
+      "name": "citation-check",
+      "definition_sha256": "ce8b9dfaf2eede46bd2c597e3ccfa0f96fc9818ad0503aae625c7c162fe51553",
+      "development_only": false
+    },
+    {
+      "name": "manufacturing-codebook-normalization",
+      "definition_sha256": "e3cdb4e6c27cf1d96ef51332feb98699f52ce6146b80680234b98116d36e330a",
+      "development_only": false
+    },
+    {
+      "name": "pddl-airport-planning",
+      "definition_sha256": "24908bed217b7e9869573a70e20d16421103ce2f8802af41163fb798e4b704c9",
+      "development_only": false
+    },
+    {
+      "name": "threejs-to-obj",
+      "definition_sha256": "628c7a43bf54268a998f8ca5007039df5241f303ee124b7ed479cd19eab3e2af",
+      "development_only": false
+    },
+    {
+      "name": "dynamic-object-aware-egomotion",
+      "definition_sha256": "f55109f346d154653ea4cda9305c1ee3400324076770f7453baf571f01f0a4ac",
+      "development_only": false
+    },
+    {
+      "name": "energy-unit-commitment",
+      "definition_sha256": "7cfc132244fdc80472809aaae1cf5d463e451be24402217739099239374ec3b4",
+      "development_only": false
+    },
+    {
+      "name": "fix-druid-loophole-cve",
+      "definition_sha256": "d913dd12d58ba21eea96a9a6aebaaaafb0f65a7bc5247dd6d4278ddb10b34770",
+      "development_only": false
+    },
+    {
+      "name": "simpo-code-reproduction",
+      "definition_sha256": "3c49b96d8e42a5b254f96e82c1748aa45f5fd682bb52b8c3060e866069555157",
+      "development_only": false
+    },
+    {
+      "name": "debug-trl-grpo",
+      "definition_sha256": "7c925e4e84380dcdd4cd8237822b530debd546090fdd0a42099662c71d52d8ca",
+      "development_only": false
+    },
+    {
+      "name": "mars-clouds-clustering",
+      "definition_sha256": "d49a7d1fdde955157c0258ecef374ff259fc8c6174ed937da135007259394596",
+      "development_only": false
+    },
+    {
+      "name": "grid-dispatch-operator",
+      "definition_sha256": "a68bc9f9cc91f03b4b654534e18f07ce49ce723bc829351f7e89a94bcc4378d7",
+      "development_only": false
+    },
+    {
+      "name": "manufacturing-fjsp-optimization",
+      "definition_sha256": "635b1fb019d00f2c4b087c17ad89b37dc460b67155b71649470deeaedc9e4df7",
+      "development_only": false
+    },
+    {
+      "name": "exam-block-sequencing",
+      "definition_sha256": "cdf778749f1a1a96c12d890a10d8d1239d37fc46e7cd934759fb161a2934f1cc",
+      "development_only": false
+    },
+    {
+      "name": "latex-formula-extraction",
+      "definition_sha256": "6d6d2aa4aa00eb5dfce839c57a36ca4a3bfe340ac4ff4f42a4930942f62d28c7",
+      "development_only": false
+    },
+    {
+      "name": "video-silence-remover",
+      "definition_sha256": "6c7ec76aa90bba0aabf36df672d57a4c743c4826fdd62120d7544c05c7f7838a",
+      "development_only": false
+    },
+    {
+      "name": "suricata-custom-exfil",
+      "definition_sha256": "fd765710468c8f9e27b49406387ffaad7edc5014361fa73631c598b26024c498",
+      "development_only": false
+    },
+    {
+      "name": "adaptive-cruise-control",
+      "definition_sha256": "e9701217c73b3e17101a39c087e66e9ad8bbe9cc0456f9e619e59f99b628324f",
+      "development_only": false
+    },
+    {
+      "name": "bike-rebalance",
+      "definition_sha256": "99d346115445ea809271b730d7738baf65688678dec3dd0d317a309af290360f",
+      "development_only": false
+    },
+    {
+      "name": "gravitational-wave-detection",
+      "definition_sha256": "f4f3383775566a08a54a0e76dc5803c80c696486f26cb4757b518055ac9ff855",
+      "development_only": false
+    },
+    {
+      "name": "fix-build-google-auto",
+      "definition_sha256": "e07ea710307ed1c33728652086ac2eceb98abc99c1c946543c0b3f7972aae946",
+      "development_only": false
+    },
+    {
+      "name": "pddl-tpp-planning",
+      "definition_sha256": "e33e86f56075cb293ac4548e038bbcc1b8c8aa340f3d11732281e04b95e4131d",
+      "development_only": false
+    },
+    {
+      "name": "xlsx-recover-data",
+      "definition_sha256": "930dfbb058de41e07b0ae99058a5cbd259eb359be113fac6f10168d25370b87d",
+      "development_only": false
+    }
+  ],
+  "test": [
+    {
+      "name": "ada-bathroom-plan-repair",
+      "definition_sha256": "1566dfdba26922b9908d25ab81f8abd74e1c9bef13415927e18c0c19dfe7059e",
+      "development_only": false
+    },
+    {
+      "name": "tictoc-unnecessary-abort-detection",
+      "definition_sha256": "f40b56ddcfa474cc396fd1f9d21289f2a2384dcc6b144f15774602cf5f628c23",
+      "development_only": false
+    },
+    {
+      "name": "radar-vital-signs",
+      "definition_sha256": "aedc3db7be389d0f21b55285d1c40ee61033489801a6326e9d77663ff2742181",
+      "development_only": false
+    },
+    {
+      "name": "exoplanet-detection-period",
+      "definition_sha256": "b848955d6b9652be291a347850a5a78f1d39e8afc2e3492ff79ffcb8a5efc08b",
+      "development_only": false
+    },
+    {
+      "name": "data-to-d3",
+      "definition_sha256": "a891f4de8592a7d6e068dd83e74337049287f5345505d43d539f4b1a7b3478f0",
+      "development_only": false
+    },
+    {
+      "name": "paper-anonymizer",
+      "definition_sha256": "0815f1e33cc3392622dc387ae1efa3f687e7f8d8c30d85d44df2acd4288db6b0",
+      "development_only": false
+    },
+    {
+      "name": "pptx-reference-formatting",
+      "definition_sha256": "2b1014aeedb565a2c78f0926b61b4c1a98e790996543286588b5d3c0aacb475b",
+      "development_only": false
+    },
+    {
+      "name": "multilingual-video-dubbing",
+      "definition_sha256": "0bbb7e12979b6e33d1b7a195f6bad0293e0c1986b1d4245b87d69c2c5bf9781b",
+      "development_only": false
+    },
+    {
+      "name": "syzkaller-ppdev-syzlang",
+      "definition_sha256": "1c57ffb14b87a21126b1b94458dc3cb1b5d569568f199a72fb876c2872c98bee",
+      "development_only": false
+    },
+    {
+      "name": "software-dependency-audit",
+      "definition_sha256": "0787a9af2bacd2b66d371591dcbb27863ea96a449456bf6cf5b603c2792d0faf",
+      "development_only": false
+    },
+    {
+      "name": "mario-coin-counting",
+      "definition_sha256": "c1f321d209b0812857c0002371d0d2607b40cd3524297a6e59614bbc5eafcdd3",
+      "development_only": false
+    },
+    {
+      "name": "python-scala-translation",
+      "definition_sha256": "df4efec83eeb79098331597b460f88b1d5087f3d856a00759336ab6977a70cf7",
+      "development_only": false
+    },
+    {
+      "name": "reserves-at-risk-calc",
+      "definition_sha256": "6c7023a07f2f5dc3ad98cb2885ae05ccba11ed9b5f9cf5ece13b4a33114ce8cf",
+      "development_only": false
+    },
+    {
+      "name": "sec-financial-report",
+      "definition_sha256": "c0ac7dbb523ea251384f5b1a77d70ef19535d95e14529730fcb15f68984e30d6",
+      "development_only": false
+    },
+    {
+      "name": "azure-bgp-oscillation-route-leak",
+      "definition_sha256": "22793032bd68e31ff5eff1bd745e33550cc9e225ca2afe4f71482295ef022def",
+      "development_only": false
+    },
+    {
+      "name": "manufacturing-equipment-maintenance",
+      "definition_sha256": "1157703cc76a720b24577cbb63ca2552d4b3fb297c796690c6df4119dffcc52f",
+      "development_only": false
+    },
+    {
+      "name": "hvac-control",
+      "definition_sha256": "ec6529ccd24674151adc92eebd214776fd838b38fcbf07fa3c6b0a3a26c0e553",
+      "development_only": false
+    },
+    {
+      "name": "drone-planning-control",
+      "definition_sha256": "5e1f0e99f61f6fb77c9a0cadb828bf444c6f78eb88b1336793cfaa7df606ece0",
+      "development_only": false
+    },
+    {
+      "name": "threejs-structure-parser",
+      "definition_sha256": "94cf9d94d2e1ef6f2ae7ded259be3d78736e9c5f02ae18ffb8b74a58e7699c7e",
+      "development_only": false
+    },
+    {
+      "name": "exceltable-in-ppt",
+      "definition_sha256": "6cd09bc7b8f9503e31ea0f72ac6c10480fd3f8e0f53798e4a4eb8ee688ab33af",
+      "development_only": false
+    },
+    {
+      "name": "powerlifting-coef-calc",
+      "definition_sha256": "8a050b39ea4eac4fe748f0a8dd6d9b36b0646e9c71d44191f8c3138f4fc8f758",
+      "development_only": false
+    },
+    {
+      "name": "earthquake-phase-association",
+      "definition_sha256": "ca1ca19ae8e478d74a0a662ee2eb8fdb3f14298d4d135219f5e5b1bb6814def0",
+      "development_only": false
+    },
+    {
+      "name": "llm-prefix-cache-replay",
+      "definition_sha256": "76bc3280055cd05df0c9855391d795595acc454cfd7da43a448fbbdba6026c72",
+      "development_only": false
+    },
+    {
+      "name": "lean4-proof",
+      "definition_sha256": "e743ef5e8fc39bae84b518a50624f8e090520c9b19e2e531e1d288f6e12ade08",
+      "development_only": false
+    },
+    {
+      "name": "flink-query",
+      "definition_sha256": "ee161cef106f80b69daf8830153ec4becf6086aabcf568fd25dc712fdbde1fc0",
+      "development_only": false
+    },
+    {
+      "name": "weighted-gdp-calc",
+      "definition_sha256": "c7b8cfc5324cebe9b0611175df0b368f2d97247a40bb6ac21378af8b017567c5",
+      "development_only": false
+    },
+    {
+      "name": "dapt-intrusion-detection",
+      "definition_sha256": "7acf9ad888fe75cc6262bca3a3625c7978b7e9a5c14526cb0e23c76beca71bc1",
+      "development_only": false
+    },
+    {
+      "name": "crystallographic-wyckoff-position-analysis",
+      "definition_sha256": "e982f8c8faba37232a518cde7dc4bcc84e8299e984fb0a0a950f5b5e7f38bf12",
+      "development_only": false
+    },
+    {
+      "name": "edit-pdf",
+      "definition_sha256": "69c5bbaa5f2fc9d6091da6f1342c05702c9b8c054af49f2214e85e2dd4631d02",
+      "development_only": false
+    },
+    {
+      "name": "glm-lake-mendota",
+      "definition_sha256": "b80cb40ff0a51f6e87d37942808001a89ef50125fc0f06c415c5a67a650e1e7b",
+      "development_only": false
+    },
+    {
+      "name": "lake-warming-attribution",
+      "definition_sha256": "0aebba229ae62ca2d78365d3b800e1744a6f40164692e76cb54a3fdf1a102c52",
+      "development_only": false
+    },
+    {
+      "name": "r2r-mpc-control",
+      "definition_sha256": "6db824aae121974dd06f7269f4690e4c133d9537421f7dc0336771a55e12418d",
+      "development_only": false
+    },
+    {
+      "name": "protein-expression-analysis",
+      "definition_sha256": "ba701c5a41404fff719fd54f80e541b586c1f04c56c3b13b5e5cc40d8be752de",
+      "development_only": false
+    },
+    {
+      "name": "paratransit-routing",
+      "definition_sha256": "394b7b354f6f63eb331df5923ef7bcc239fb237323dfdcc48f1656d20d0d31b5",
+      "development_only": false
+    },
+    {
+      "name": "lab-unit-harmonization",
+      "definition_sha256": "349b3c7fe92fcb412b23b52d9f12de1c7a4531fdb4f0a181d19f5c0a91dd1d80",
+      "development_only": false
+    },
+    {
+      "name": "parallel-tfidf-search",
+      "definition_sha256": "c33735a9d96076ee425fbf9d6dd83e4b66d343513695b2efcac11c29295ac163",
+      "development_only": false
+    },
+    {
+      "name": "enterprise-information-search",
+      "definition_sha256": "1f78cc626d30f4d58fe2968f5606a796f6c7ac8b8536e6474193c9ff5d65bcaf",
+      "development_only": false
+    },
+    {
+      "name": "earthquake-plate-calculation",
+      "definition_sha256": "3edefc3c1f82c83737c445b8b77cc91606471e3dffb22088aa5c13613d2804b0",
+      "development_only": false
+    },
+    {
+      "name": "react-performance-debugging",
+      "definition_sha256": "32d9d988111a2dd0f4bd8abcf0cdf1290f570f5e74c35b10c4137dc09eb915ab",
+      "development_only": false
+    },
+    {
+      "name": "fix-build-agentops",
+      "definition_sha256": "e6918196f0ad79e98bd24f639fdbbd7a467252a73292bf7a99ed1057f2ae5149",
+      "development_only": false
+    },
+    {
+      "name": "energy-ac-optimal-power-flow",
+      "definition_sha256": "8405c3fec1f4e1bd3ded1cfd435eb0280793cf3bb70847cf7d09bc32e9343e41",
+      "development_only": false
+    },
+    {
+      "name": "invoice-fraud-detection",
+      "definition_sha256": "862be570b25fa0e4fe28b24b7c9120e2f14cc5633c8269156ec10b22ef71ff81",
+      "development_only": false
+    },
+    {
+      "name": "offer-letter-generator",
+      "definition_sha256": "ae84a359ca7f7159814eca43624772b758c98f086bf4785bac38ae924f4592e2",
+      "development_only": false
+    }
+  ],
+  "rules": [
+    "Do not use held-out test results to choose parameters, tasks, prompts or stopping rules.",
+    "Partitioning does not authorize running all tasks; declare an affordable subset before runs.",
+    "Audit runtime requirements and parameter effects before selecting the pilot subset.",
+    "Preserve benchmark rewards; report task pass@1 separately from partial rewards.",
+    "Missing token or cost telemetry is unknown, never zero.",
+    "Reconcile prior provider spending before allocating the remaining total USD 10 budget."
+  ],
+  "paid_calls": 0
+}

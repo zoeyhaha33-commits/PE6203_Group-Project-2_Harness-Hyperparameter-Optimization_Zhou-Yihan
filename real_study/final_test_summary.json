@@ -1,0 +1,668 @@
+{
+  "scope": "Validation search and held-out test accounting; excludes earlier baseline, probes, and environment preparation.",
+  "protocol_sha256": "edf0b4dbd5a403202077da6db21a2b908f6726d087a1e8799e22f3f52a83c128",
+  "source_sha256": {
+    "test_default_state.json": "284356f2110628d325efde51d891f57ec6571c0f5989f6d6dcbf5ad200119d86",
+    "test_random_state.json": "a78f7ad98983eb3b2114f7e8e27a1e587e4f3e3835f6f3080323630871b88f21",
+    "test_bayesian_state.json": "4cf2a022dad153169d6ecd502411b4db93d1f5fd80ff1ab00878f6600db1d784",
+    "test_multifidelity_state.json": "cf58ea017d4faef4c0d271c9e68cca8a628e10bee1db6d26971350eafe106361"
+  },
+  "methods": {
+    "default": {
+      "config": null,
+      "slots": 3,
+      "scored": 2,
+      "missing": 1,
+      "passes": 0,
+      "pass_rate_scored_only": 0.0,
+      "scored_observed_usd": 0.06800399999999995,
+      "unattributed_failure_interval_usd": 0.0,
+      "budget_accounted_usd": 0.06800399999999995,
+      "tasks": [
+        {
+          "task": "python-scala-translation",
+          "status": "skipped_docker_failure",
+          "reward": null,
+          "strict_pass": null,
+          "cost_usd": null,
+          "unattributed_interval_usd": 0.0,
+          "error": "Docker compose command failed for environment python-scala-translation. Command: docker compose --project-name python-scala-translation__38675ba8 --project-directory /tmp/benchflow-task-yc_y6xfj/python-scala-translation/environment -f /home/zoeyhaha33/.local/share/uv/tools/benchflow/lib/python3.12/site-packages/benchflow/sandbox/_compose_files/docker-compose-base.yaml -f /home/zoeyhaha33/.local/share/uv/tools/benchflow/lib/python3.12/site-packages/benchflow/sandbox/_compose_files/docker-compose-build.yaml build. Return code: 1. Stdout:  Image python-scala-translation__38675ba8-main Building \n#1 [internal] load local bake definitions\n#1 reading from stdin 628B done\n#1 DONE 0.0s\n\n#2 [internal] load build definition from Dockerfile\n#2 transferring dockerfile: 929B done\n#2 DONE 0.0s\n\n#3 [internal] load metadata for docker.io/library/ubuntu:24.04\n#3 DONE 0.1s\n\n#4 [internal] load .dockerignore\n#4 transferring context: 2B done\n#4 DONE 0.0s\n\n#5 [internal] load build context\n#5 transferring context: 69.61kB 0.0s done\n#5 DONE 0.0s\n\n#6 [ 1/10] FROM docker.io/library/ubuntu:24.04@sha256:fe81560990fae86dc4743202b2cb4d3df98d0bcf949173cecef15ce1127ef852\n#6 resolve docker.io/library/ubuntu:24.04@sha256:fe81560990fae86dc4743202b2cb4d3df98d0bcf949173cecef15ce1127ef852 0.0s done\n#6 CACHED\n\n#7 [ 2/10] RUN apt-get update && apt-get install -y     python3     python3-pip     && rm -rf /var/lib/apt/lists/*\n#7 1.941 Get:1 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]\n#7 2.091 Get:2 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB]\n#7 3.660 Get:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]\n#7 4.998 Get:4 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1550 kB]\n#7 5.351 Get:5 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]\n#7 9.283 Get:6 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1412 kB]\n#7 9.428 Get:7 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB]\n#7 10.96 Get:8 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB]\n#7 13.08 Get:9 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [2122 kB]\n#7 15.64 Get:10 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [55.6 kB]\n#7 25.68 Get:11 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB]\n#7 30.78 Get:12 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB]\n#7 34.80 Get:13 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [2235 kB]\n#7 38.15 Get:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2172 kB]\n#7 41.20 Get:15 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [61.7 kB]\n#7 45.36 Get:16 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1740 kB]\n#7 46.67 Get:17 http://archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Packages [669 B]\n#7 47.95 Get:18 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [49.0 kB]\n#7 49.12 Get:19 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [36.0 kB]\n#7 49.18 Fetched 33.6 MB in 48s (695 kB/s)\n#7 49.18 Reading package lists...\n#7 50.96 Reading package lists...\n#7 52.58 Building dependency tree...\n#7 52.92 Reading state information...\n#7 53.12 The following additional packages will be installed:\n#7 53.12   adduser binutils binutils-common binutils-x86-64-linux-gnu build-essential\n#7 53.12   bzip2 ca-certificates cpp cpp-13 cpp-13-x86-64-linux-gnu\n#7 53.12   cpp-x86-64-linux-gnu dirmngr dpkg-dev fakeroot fontconfig-config\n#7 53.12   fonts-dejavu-core fonts-dejavu-mono g++ g++-13 g++-13-x86-64-linux-gnu\n#7 53.12   g++-x86-64-linux-gnu gcc gcc-13 gcc-13-base gcc-13-x86-64-linux-gnu\n#7 53.12   gcc-x86-64-linux-gnu gnupg gnupg-l10n gnupg-utils gpg gpg-agent\n#7 53.12   gpg-wks-client gpgconf gpgsm javascript-common keyboxd\n#7 53.12   libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl\n#7 53.12   libaom3 libasan8 libatomic1 libbinutils libbrotli1 libbsd0 libc-dev-bin\n#7 53.12   libc-devtools libc6-dev libcc1-0 libcrypt-dev libctf-nobfd0 libctf0\n#7 53.12   libdeflate0 libdpkg-perl libexpat1 libexpat1-dev libfakeroot\n#7 53.12   libfile-fcntllock-perl libfontconfig1 libfreetype6 libgcc-13-dev libgd3\n#7 53.12   libgdbm-compat4t64 libgdbm6t64 libgomp1 libgprofng0 libheif-plugin-aomdec\n#7 53.12   libheif-plugin-aomenc libheif1 libhwasan0 libisl23 libitm1 libjansson4\n#7 53.12   libjbig0 libjpeg-turbo8 libjpeg8 libjs-jquery libjs-sphinxdoc\n#7 53.12   libjs-underscore libksba8 libldap-common libldap2 liblerc4\n#7 53.12   liblocale-gettext-perl liblsan0 libmpc3 libmpfr6 libperl5.38t64\n#7 53.12   libpng16-16t64 libpython3-dev libpython3-stdlib libpython3.12-dev\n#7 53.12   libpython3.12-minimal libpython3.12-stdlib libpython3.12t64 libquadmath0\n#7 53.12   libreadline8t64 libsasl2-2 libsasl2-modules libsasl2-modules-db libsframe1\n#7 53.12   libsharpyuv0 libsqlite3-0 libstdc++-13-dev libtiff6 libtsan2 libubsan1\n#7 53.12   libwebp7 libx11-6 libx11-data libxau6 libxcb1 libxdmcp6 libxpm4\n#7 53.12   linux-libc-dev lto-disabled-list make manpages manpages-dev media-types\n#7 53.12   netbase openssl patch perl perl-modules-5.38 pinentry-curses python3-dev\n#7 53.12   python3-minimal python3-pkg-resources python3-setuptools python3-wheel\n#7 53.12   python3.12 python3.12-dev python3.12-minimal readline-common rpcsvc-proto\n#7 53.12   tzdata xz-utils zlib1g-dev\n#7 53.13 Suggested packages:\n#7 53.13   cron quota ecryptfs-utils binutils-doc gprofng-gui bzip2-doc cpp-doc\n#7 53.13   gcc-13-locales cpp-13-doc dbus-user-session libpam-systemd pinentry-gnome3\n#7 53.13   tor debian-keyring g++-multilib g++-13-multilib gcc-13-doc gcc-multilib\n#7 53.13   autoconf automake libtool flex bison gdb gcc-doc gcc-13-multilib\n#7 53.13   gdb-x86-64-linux-gnu parcimonie xloadimage gpg-wks-server scdaemon apache2\n#7 53.13   | lighttpd | httpd glibc-doc git bzr libgd-tools gdbm-l10n\n#7 53.13   libheif-plugin-libde265 libheif-plugin-x265 libheif-plugin-ffmpegdec\n#7 53.13   libheif-plugin-jpegdec libheif-plugin-jpegenc libheif-plugin-j2kdec\n#7 53.13   libheif-plugin-j2kenc libheif-plugin-rav1e libheif-plugin-svtenc\n#7 53.13   libsasl2-modules-gssapi-mit | libsasl2-modules-gssapi-heimdal\n#7 53.13   libsasl2-modules-ldap libsasl2-modules-otp libsasl2-modules-sql\n#7 53.13   libstdc++-13-doc make-doc man-browser ed diffutils-doc perl-doc\n#7 53.13   libterm-readline-gnu-perl | libterm-readline-perl-perl\n#7 53.13   libtap-harness-archive-perl pinentry-doc python3-doc python3-tk python3-venv\n#7 53.13   python-setuptools-doc python3.12-venv python3.12-doc binfmt-support\n#7 53.13   readline-doc\n#7 53.32 The following NEW packages will be installed:\n#7 53.32   adduser binutils binutils-common binutils-x86-64-linux-gnu build-essential\n#7 53.32   bzip2 ca-certificates cpp cpp-13 cpp-13-x86-64-linux-gnu\n#7 53.32   cpp-x86-64-linux-gnu dirmngr dpkg-dev fakeroot fontconfig-config\n#7 53.32   fonts-dejavu-core fonts-dejavu-mono g++ g++-13 g++-13-x86-64-linux-gnu\n#7 53.32   g++-x86-64-linux-gnu gcc gcc-13 gcc-13-base gcc-13-x86-64-linux-gnu\n#7 53.32   gcc-x86-64-linux-gnu gnupg gnupg-l10n gnupg-utils gpg gpg-agent\n#7 53.32   gpg-wks-client gpgconf gpgsm javascript-common keyboxd\n#7 53.32   libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl\n#7 53.32   libaom3 libasan8 libatomic1 libbinutils libbrotli1 libbsd0 libc-dev-bin\n#7 53.32   libc-devtools libc6-dev libcc1-0 libcrypt-dev libctf-nobfd0 libctf0\n#7 53.32   libdeflate0 libdpkg-perl libexpat1 libexpat1-dev libfakeroot\n#7 53.32   libfile-fcntllock-perl libfontconfig1 libfreetype6 libgcc-13-dev libgd3\n#7 53.32   libgdbm-compat4t64 libgdbm6t64 libgomp1 libgprofng0 libheif-plugin-aomdec\n#7 53.32   libheif-plugin-aomenc libheif1 libhwasan0 libisl23 libitm1 libjansson4\n#7 53.32   libjbig0 libjpeg-turbo8 libjpeg8 libjs-jquery libjs-sphinxdoc\n#7 53.32   libjs-underscore libksba8 libldap-common libldap2 liblerc4\n#7 53.32   liblocale-gettext-perl liblsan0 libmpc3 libmpfr6 libperl5.38t64\n#7 53.32   libpng16-16t64 libpython3-dev libpython3-stdlib libpython3.12-dev\n#7 53.32   libpython3.12-minimal libpython3.12-stdlib libpython3.12t64 libquadmath0\n#7 53.32   libreadline8t64 libsasl2-2 libsasl2-modules libsasl2-modules-db libsframe1\n#7 53.32   libsharpyuv0 libsqlite3-0 libstdc++-13-dev libtiff6 libtsan2 libubsan1\n#7 53.32   libwebp7 libx11-6 libx11-data libxau6 libxcb1 libxdmcp6 libxpm4\n#7 53.32   linux-libc-dev lto-disabled-list make manpages manpages-dev media-types\n#7 53.32   netbase openssl patch perl perl-modules-5.38 pinentry-curses python3\n#7 53.32   python3-dev python3-minimal python3-pip python3-pkg-resources\n#7 53.32   python3-setuptools python3-wheel python3.12 python3.12-dev\n#7 53.32   python3.12-minimal readline-common rpcsvc-proto tzdata xz-utils zlib1g-dev\n#7 54.36 0 upgraded, 141 newly installed, 0 to remove and 0 not upgraded.\n#7 54.36 Need to get 113 MB of archives.\n#7 54.36 After this operation, 419 MB of additional disk space will be used.\n#7 54.36 Get:1 http://archive.ubuntu.com/ubuntu noble/main amd64 liblocale-gettext-perl amd64 1.07-6ubuntu5 [15.8 kB]\n#7 56.51 Get:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpython3.12-minimal amd64 3.12.3-1ubuntu0.17 [839 kB]\n#7 58.02 Get:3 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libexpat1 amd64 2.6.1-2ubuntu0.6 [98.9 kB]\n#7 62.15 Get:4 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3.12-minimal amd64 3.12.3-1ubuntu0.17 [2335 kB]\n#7 63.38 Get:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3-minimal amd64 3.12.3-0ubuntu2.1 [27.4 kB]\n#7 64.64 Get:6 http://archive.ubuntu.com/ubuntu noble/main amd64 media-types all 10.1.0 [27.5 kB]\n#7 65.52 Get:7 http://archive.ubuntu.com/ubuntu noble/main amd64 netbase all 6.4 [13.1 kB]\n#7 67.29 Get:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 tzdata all 2026e-0ubuntu0.24.04.1 [282 kB]\n#7 69.05 Get:9 http://archive.ubuntu.com/ubuntu noble/main amd64 readline-common all 8.2-4build1 [56.5 kB]\n#7 70.51 Get:10 http://archive.ubuntu.com/ubuntu noble/main amd64 libreadline8t64 amd64 8.2-4build1 [153 kB]\n#7 73.40 Get:11 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsqlite3-0 amd64 3.45.1-1ubuntu2.8 [702 kB]\n#7 76.74 Get:12 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpython3.12-stdlib amd64 3.12.3-1ubuntu0.17 [2071 kB]\n#7 79.35 Get:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3.12 amd64 3.12.3-1ubuntu0.17 [651 kB]\n#7 80.31 Get:14 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpython3-stdlib amd64 3.12.3-0ubuntu2.1 [10.1 kB]\n#7 81.45 Get:15 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3 amd64 3.12.3-0ubuntu2.1 [23.0 kB]\n#7 85.68 Get:16 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 perl-modules-5.38 all 5.38.2-3.2ubuntu0.6 [3110 kB]\n#7 87.28 Get:17 http://archive.ubuntu.com/ubuntu noble/main amd64 libgdbm6t64 amd64 1.23-5.1build1 [34.4 kB]\n#7 88.21 Get:18 http://archive.ubuntu.com/ubuntu noble/main amd64 libgdbm-compat4t64 amd64 1.23-5.1build1 [6710 B]\n#7 93.43 Get:19 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libperl5.38t64 amd64 5.38.2-3.2ubuntu0.6 [4864 kB]\n#7 95.64 Get:20 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 perl amd64 5.38.2-3.2ubuntu0.6 [231 kB]\n#7 97.34 Get:21 http://archive.ubuntu.com/ubuntu noble/main amd64 adduser all 3.137ubuntu1 [101 kB]\n#7 100.8 Get:22 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openssl amd64 3.0.13-0ubuntu3.16 [1004 kB]\n#7 102.4 Get:23 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 ca-certificates all 20260816ubuntu0.24.04.1 [139 kB]\n#7 104.0 Get:24 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libbsd0 amd64 0.12.1-1build1.1 [41.2 kB]\n#7 105.7 Get:25 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3-pkg-resources all 68.1.2-2ubuntu1.2 [168 kB]\n#7 107.1 Get:26 http://archive.ubuntu.com/ubuntu noble/main amd64 libjansson4 amd64 2.14-2build2 [32.8 kB]\n#7 108.9 Get:27 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpng16-16t64 amd64 1.6.43-5ubuntu0.7 [189 kB]\n#7 109.7 Get:28 http://archive.ubuntu.com/ubuntu noble/main amd64 libxau6 amd64 1:1.0.9-1build6 [7160 B]\n#7 110.7 Get:29 http://archive.ubuntu.com/ubuntu noble/main amd64 libxdmcp6 amd64 1:1.1.3-0ubuntu6 [10.3 kB]\n#7 112.0 Get:30 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb1 amd64 1.15-1ubuntu2 [47.7 kB]\n#7 113.7 Get:31 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libx11-data all 2:1.8.7-1ubuntu0.1 [116 kB]\n#7 116.0 Get:32 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libx11-6 amd64 2:1.8.7-1ubuntu0.1 [653 kB]\n#7 119.1 Get:33 http://archive.ubuntu.com/ubuntu noble/main amd64 manpages all 6.7-2 [1384 kB]\n#7 121.0 Get:34 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 xz-utils amd64 5.6.1+really5.4.5-1ubuntu0.4 [267 kB]\n#7 122.7 Get:35 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 binutils-common amd64 2.42-4ubuntu2.10 [240 kB]\n#7 123.7 Get:36 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsframe1 amd64 2.42-4ubuntu2.10 [15.7 kB]\n#7 125.6 Get:37 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libbinutils amd64 2.42-4ubuntu2.10 [577 kB]\n#7 127.0 Get:38 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libctf-nobfd0 amd64 2.42-4ubuntu2.10 [98.0 kB]\n#7 128.3 Get:39 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libctf0 amd64 2.42-4ubuntu2.10 [94.5 kB]\n#7 131.3 Get:40 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgprofng0 amd64 2.42-4ubuntu2.10 [849 kB]\n#7 134.8 Get:41 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 binutils-x86-64-linux-gnu amd64 2.42-4ubuntu2.10 [2463 kB]\n#7 136.2 Get:42 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 binutils amd64 2.42-4ubuntu2.10 [18.2 kB]\n#7 137.1 Get:43 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libc-dev-bin amd64 2.39-0ubuntu8.9 [20.4 kB]\n#7 140.2 Get:44 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 linux-libc-dev amd64 6.8.0-147.147 [1595 kB]\n#7 142.3 Get:45 http://archive.ubuntu.com/ubuntu noble/main amd64 libcrypt-dev amd64 1:4.4.36-4build1 [112 kB]\n#7 143.7 Get:46 http://archive.ubuntu.com/ubuntu noble/main amd64 rpcsvc-proto amd64 1.4.2-0ubuntu7 [67.4 kB]\n#7 147.0 Get:47 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libc6-dev amd64 2.39-0ubuntu8.9 [2126 kB]\n#7 148.5 Get:48 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gcc-13-base amd64 13.3.0-6ubuntu2~24.04.1 [51.6 kB]\n#7 150.8 Get:49 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libisl23 amd64 0.26-3build1.1 [680 kB]\n#7 152.9 Get:50 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libmpfr6 amd64 4.2.1-1build1.1 [353 kB]\n#7 155.1 Get:51 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libmpc3 amd64 1.3.1-1build1.1 [54.6 kB]\n#7 163.9 Get:52 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 cpp-13-x86-64-linux-gnu amd64 13.3.0-6ubuntu2~24.04.1 [10.7 MB]\n#7 165.3 Get:53 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 cpp-13 amd64 13.3.0-6ubuntu2~24.04.1 [1042 B]\n#7 166.3 Get:54 http://archive.ubuntu.com/ubuntu noble/main amd64 cpp-x86-64-linux-gnu amd64 4:13.2.0-7ubuntu1 [5326 B]\n#7 167.5 Get:55 http://archive.ubuntu.com/ubuntu noble/main amd64 cpp amd64 4:13.2.0-7ubuntu1 [22.4 kB]\n#7 168.7 Get:56 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcc1-0 amd64 14.2.0-4ubuntu2~24.04.1 [48.0 kB]\n#7 170.3 Get:57 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgomp1 amd64 14.2.0-4ubuntu2~24.04.1 [148 kB]\n#7 171.5 Get:58 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libitm1 amd64 14.2.0-4ubuntu2~24.04.1 [29.7 kB]\n#7 172.5 Get:59 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libatomic1 amd64 14.2.0-4ubuntu2~24.04.1 [10.5 kB]\n#7 176.4 Get:60 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libasan8 amd64 14.2.0-4ubuntu2~24.04.1 [3027 kB]\n#7 179.7 Get:61 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 liblsan0 amd64 14.2.0-4ubuntu2~24.04.1 [1322 kB]\n#7 184.3 Get:62 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libtsan2 amd64 14.2.0-4ubuntu2~24.04.1 [2772 kB]\n#7 187.1 Get:63 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libubsan1 amd64 14.2.0-4ubuntu2~24.04.1 [1184 kB]\n#7 190.9 Get:64 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libhwasan0 amd64 14.2.0-4ubuntu2~24.04.1 [1641 kB]\n#7 192.7 Get:65 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libquadmath0 amd64 14.2.0-4ubuntu2~24.04.1 [153 kB]\n#7 196.1 Get:66 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgcc-13-dev amd64 13.3.0-6ubuntu2~24.04.1 [2681 kB]\n#7 211.4 Get:67 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gcc-13-x86-64-linux-gnu amd64 13.3.0-6ubuntu2~24.04.1 [21.1 MB]\n#7 214.8 Get:68 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gcc-13 amd64 13.3.0-6ubuntu2~24.04.1 [494 kB]\n#7 215.7 Get:69 http://archive.ubuntu.com/ubuntu noble/main amd64 gcc-x86-64-linux-gnu amd64 4:13.2.0-7ubuntu1 [1212 B]\n#7 216.5 Get:70 http://archive.ubuntu.com/ubuntu noble/main amd64 gcc amd64 4:13.2.0-7ubuntu1 [5018 B]\n#7 220.1 Get:71 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libstdc++-13-dev amd64 13.3.0-6ubuntu2~24.04.1 [2420 kB]\n#7 231.3 Get:72 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 g++-13-x86-64-linux-gnu amd64 13.3.0-6ubuntu2~24.04.1 [12.2 MB]\n#7 232.9 Get:73 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 g++-13 amd64 13.3.0-6ubuntu2~24.04.1 [16.0 kB]\n#7 234.0 Get:74 http://archive.ubuntu.com/ubuntu noble/main amd64 g++-x86-64-linux-gnu amd64 4:13.2.0-7ubuntu1 [964 B]\n#7 235.4 Get:75 http://archive.ubuntu.com/ubuntu noble/main amd64 g++ amd64 4:13.2.0-7ubuntu1 [1100 B]\n#7 237.5 Get:76 http://archive.ubuntu.com/ubuntu noble/main amd64 make amd64 4.3-4.1build2 [180 kB]\n#7 239.4 Get:77 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libdpkg-perl all 1.22.6ubuntu6.6 [268 kB]\n#7 240.6 Get:78 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 bzip2 amd64 1.0.8-5.1ubuntu0.1 [34.6 kB]\n#7 242.1 Get:79 http://archive.ubuntu.com/ubuntu noble/main amd64 patch amd64 2.7.6-7build3 [104 kB]\n#7 243.3 Get:80 http://archive.ubuntu.com/ubuntu noble/main amd64 lto-disabled-list all 47 [12.4 kB]\n#7 246.2 Get:81 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dpkg-dev all 1.22.6ubuntu6.6 [1074 kB]\n#7 247.3 Get:82 http://archive.ubuntu.com/ubuntu noble/main amd64 build-essential amd64 12.10ubuntu1 [4928 B]\n#7 249.0 Get:83 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gpgconf amd64 2.4.4-2ubuntu17.6 [104 kB]\n#7 250.5 Get:84 http://archive.ubuntu.com/ubuntu noble/main amd64 libksba8 amd64 1.6.6-1build1 [122 kB]\n#7 251.6 Get:85 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsasl2-modules-db amd64 2.1.28+dfsg1-5ubuntu3.1 [20.4 kB]\n#7 252.8 Get:86 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsasl2-2 amd64 2.1.28+dfsg1-5ubuntu3.1 [53.2 kB]\n#7 254.3 Get:87 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libldap2 amd64 2.6.10+dfsg-0ubuntu0.24.04.1 [198 kB]\n#7 256.3 Get:88 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dirmngr amd64 2.4.4-2ubuntu17.6 [323 kB]\n#7 257.5 Get:89 http://archive.ubuntu.com/ubuntu noble/main amd64 libfakeroot amd64 1.33-1 [32.4 kB]\n#7 259.1 Get:90 http://archive.ubuntu.com/ubuntu noble/main amd64 fakeroot amd64 1.33-1 [67.2 kB]\n#7 261.5 Get:91 http://archive.ubuntu.com/ubuntu noble/main amd64 fonts-dejavu-mono all 2.37-8 [502 kB]\n#7 263.6 Get:92 http://archive.ubuntu.com/ubuntu noble/main amd64 fonts-dejavu-core all 2.37-8 [835 kB]\n#7 264.9 Get:93 http://archive.ubuntu.com/ubuntu noble/main amd64 fontconfig-config amd64 2.15.0-1.1ubuntu2 [37.3 kB]\n#7 266.3 Get:94 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gnupg-utils amd64 2.4.4-2ubuntu17.6 [109 kB]\n#7 268.9 Get:95 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gpg amd64 2.4.4-2ubuntu17.6 [565 kB]\n#7 270.0 Get:96 http://archive.ubuntu.com/ubuntu noble/main amd64 pinentry-curses amd64 1.2.1-3ubuntu5 [35.2 kB]\n#7 271.7 Get:97 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gpg-agent amd64 2.4.4-2ubuntu17.6 [227 kB]\n#7 273.7 Get:98 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gpgsm amd64 2.4.4-2ubuntu17.6 [232 kB]\n#7 275.1 Get:99 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 keyboxd amd64 2.4.4-2ubuntu17.6 [78.3 kB]\n#7 277.0 Get:100 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gnupg all 2.4.4-2ubuntu17.6 [359 kB]\n#7 278.3 Get:101 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gnupg-l10n all 2.4.4-2ubuntu17.6 [66.5 kB]\n#7 280.1 Get:102 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gpg-wks-client amd64 2.4.4-2ubuntu17.6 [70.9 kB]\n#7 281.1 Get:103 http://archive.ubuntu.com/ubuntu noble/main amd64 javascript-common all 11+nmu1 [5936 B]\n#7 282.4 Get:104 http://archive.ubuntu.com/ubuntu noble/main amd64 libalgorithm-diff-perl all 1.201-1 [41.8 kB]\n#7 283.3 Get:105 http://archive.ubuntu.com/ubuntu noble/main amd64 libalgorithm-diff-xs-perl amd64 0.04-8build3 [11.2 kB]\n#7 284.3 Get:106 http://archive.ubuntu.com/ubuntu noble/main amd64 libalgorithm-merge-perl all 0.08-5 [11.4 kB]\n#7 289.0 Get:107 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libaom3 amd64 3.8.2-2ubuntu0.2 [1942 kB]\n#7 291.0 Get:108 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libbrotli1 amd64 1.1.0-2ubuntu0.1 [331 kB]\n#7 293.1 Get:109 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libfreetype6 amd64 2.13.2+dfsg-1ubuntu0.2 [403 kB]\n#7 294.8 Get:110 http://archive.ubuntu.com/ubuntu noble/main amd64 libfontconfig1 amd64 2.15.0-1.1ubuntu2 [139 kB]\n#7 295.9 Get:111 http://archive.ubuntu.com/ubuntu noble/main amd64 libsharpyuv0 amd64 1.3.2-0.4build3 [15.8 kB]\n#7 296.7 Get:112 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libheif-plugin-aomdec amd64 1.17.6-1ubuntu4.9 [11.9 kB]\n#7 298.3 Get:113 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libheif1 amd64 1.17.6-1ubuntu4.9 [277 kB]\n#7 299.9 Get:114 http://archive.ubuntu.com/ubuntu noble/main amd64 libjpeg-turbo8 amd64 2.1.5-2ubuntu2 [150 kB]\n#7 300.8 Get:115 http://archive.ubuntu.com/ubuntu noble/main amd64 libjpeg8 amd64 8c-2ubuntu11 [2148 B]\n#7 302.0 Get:116 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libdeflate0 amd64 1.19-1build1.1 [43.9 kB]\n#7 303.2 Get:117 http://archive.ubuntu.com/ubuntu noble/main amd64 libjbig0 amd64 2.1-6.1ubuntu2 [29.7 kB]\n#7 304.8 Get:118 http://archive.ubuntu.com/ubuntu noble/main amd64 liblerc4 amd64 4.0.0+ds-4ubuntu2 [179 kB]\n#7 306.6 Get:119 http://archive.ubuntu.com/ubuntu noble/main amd64 libwebp7 amd64 1.3.2-0.4build3 [230 kB]\n#7 308.6 Get:120 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libtiff6 amd64 4.5.1+git230720-4ubuntu2.5 [200 kB]\n#7 309.7 Get:121 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libxpm4 amd64 1:3.5.17-1ubuntu0.24.04.2 [36.7 kB]\n#7 311.3 Get:122 http://archive.ubuntu.com/ubuntu noble/main amd64 libgd3 amd64 2.3.3-9ubuntu5 [128 kB]\n#7 312.4 Get:123 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libc-devtools amd64 2.39-0ubuntu8.9 [29.3 kB]\n#7 314.4 Get:124 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libexpat1-dev amd64 2.6.1-2ubuntu0.6 [147 kB]\n#7 315.8 Get:125 http://archive.ubuntu.com/ubuntu noble/main amd64 libfile-fcntllock-perl amd64 0.22-4ubuntu5 [30.7 kB]\n#7 316.6 Get:126 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libheif-plugin-aomenc amd64 1.17.6-1ubuntu4.9 [14.7 kB]\n#7 318.2 Get:127 http://archive.ubuntu.com/ubuntu noble/main amd64 libjs-jquery all 3.6.1+dfsg+~3.5.14-1 [328 kB]\n#7 319.8 Get:128 http://archive.ubuntu.com/ubuntu noble/main amd64 libjs-underscore all 1.13.4~dfsg+~1.11.4-3 [118 kB]\n#7 321.3 Get:129 http://archive.ubuntu.com/ubuntu noble/main amd64 libjs-sphinxdoc all 7.2.6-6 [149 kB]\n#7 322.6 Get:130 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libldap-common all 2.6.10+dfsg-0ubuntu0.24.04.1 [32.9 kB]\n#7 326.3 Get:131 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpython3.12t64 amd64 3.12.3-1ubuntu0.17 [2348 kB]\n#7 329.0 Get:132 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 zlib1g-dev amd64 1:1.3.dfsg-3.1ubuntu2.3 [894 kB]\n#7 335.0 Get:133 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpython3.12-dev amd64 3.12.3-1ubuntu0.17 [5684 kB]\n#7 336.2 Get:134 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpython3-dev amd64 3.12.3-0ubuntu2.1 [10.3 kB]\n#7 337.5 Get:135 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsasl2-modules amd64 2.1.28+dfsg1-5ubuntu3.1 [69.9 kB]\n#7 340.7 Get:136 http://archive.ubuntu.com/ubuntu noble/main amd64 manpages-dev all 6.7-2 [2013 kB]\n#7 343.2 Get:137 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3.12-dev amd64 3.12.3-1ubuntu0.17 [498 kB]\n#7 344.5 Get:138 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3-dev amd64 3.12.3-0ubuntu2.1 [26.7 kB]\n#7 346.9 Get:139 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3-setuptools all 68.1.2-2ubuntu1.2 [397 kB]\n#7 348.4 Get:140 http://archive.ubuntu.com/ubuntu noble/universe amd64 python3-wheel all 0.42.0-2 [53.1 kB]\n#7 351.2 Get:141 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 python3-pip all 24.0+dfsg-1ubuntu1.3 [1320 kB]\n#7 351.9 debconf: delaying package configuration, since apt-utils is not installed\n#7 352.0 Fetched 113 MB in 4min 57s (380 kB/s)\n#7 352.0 Selecting previously unselected package liblocale-gettext-perl.\r\n#7 352.0 (Reading database ... \r(Reading database ... 5%\r(Reading database ... 10%\r(Reading database ... 15%\r(Reading database ... 20%\r(Reading database ... 25%\r(Reading database ... 30%\r(Reading database ... 35%\r(Reading database ... 40%\r(Reading database ... 45%\r(Reading database ... 50%\r(Reading database ... 55%\r(Reading database ... 60%\r(Reading database ... 65%\r(Reading database ... 70%\r(Reading database ... 75%\r(Reading database ... 80%\r(Reading database ... 85%\r(Reading database ... 90%\r(Reading database ... 95%\r(Reading database ... 100%\r(Reading database ... 4381 files and directories currently installed.)\r\n#7 352.1 Preparing to unpack .../liblocale-gettext-perl_1.07-6ubuntu5_amd64.deb ...\r\n#7 352.1 Unpacking liblocale-gettext-perl (1.07-6ubuntu5) ...\r\n#7 352.2 Selecting previously unselected package libpython3.12-minimal:amd64.\r\n#7 352.2 Preparing to unpack .../libpython3.12-minimal_3.12.3-1ubuntu0.17_amd64.deb ...\r\n#7 352.2 Unpacking libpython3.12-minimal:amd64 (3.12.3-1ubuntu0.17) ...\r\n#7 352.4 Selecting previously unselected package libexpat1:amd64.\r\n#7 352.4 Preparing to unpack .../libexpat1_2.6.1-2ubuntu0.6_amd64.deb ...\r\n#7 352.4 Unpacking libexpat1:amd64 (2.6.1-2ubuntu0.6) ...\r\n#7 352.5 Selecting previously unselected package python3.12-minimal.\r\n#7 352.5 Preparing to unpack .../python3.12-minimal_3.12.3-1ubuntu0.17_amd64.deb ...\r\n#7 352.6 Unpacking python3.12-minimal (3.12.3-1ubuntu0.17) ...\r\n#7 352.7 Setting up libpython3.12-minimal:amd64 (3.12.3-1ubuntu0.17) ...\r\n#7 352.8 Setting up libexpat1:amd64 (2.6.1-2ubuntu0.6) ...\r\n#7 352.8 Setting up python3.12-minimal (3.12.3-1ubuntu0.17) ...\r\n#7 354.1 Selecting previously unselected package python3-minimal.\r\n#7 354.1 (Reading database ... \r(Reading database ... 5%\r(Reading database ... 10%\r(Reading database ... 15%\r(Reading database ... 20%\r(Reading database ... 25%\r(Reading database ... 30%\r(Reading database ... 35%\r(Reading database ... 40%\r(Reading database ... 45%\r(Reading database ... 50%\r(Reading database ... 55%\r(Reading database ... 60%\r(Reading database ... 65%\r(Reading database ... 70%\r(Reading database ... 75%\r(Reading database ... 80%\r(Reading database ... 85%\r(Reading database ... 90%\r(Reading database ... 95%\r(Reading database ... 100%\r(Reading database ... 4714 files and directories currently installed.)\r\n#7 354.1 Preparing to unpack .../0-python3-minimal_3.12.3-0ubuntu2.1_amd64.deb ...\r\n#7 354.1 Unpacking python3-minimal (3.12.3-0ubuntu2.1) ...\r\n#7 354.2 Selecting previously unselected package media-types.\r\n#7 354.2 Preparing to unpack .../1-media-types_10.1.0_all.deb ...\r\n#7 354.2 Unpacking media-types (10.1.0) ...\r\n#7 354.3 Selecting previously unselected package netbase.\r\n#7 354.3 Preparing to unpack .../2-netbase_6.4_all.deb ...\r\n#7 354.3 Unpacking netbase (6.4) ...\r\n#7 354.4 Selecting previously unselected package tzdata.\r\n#7 354.4 Preparing to unpack .../3-tzdata_2026e-0ubuntu0.24.04.1_all.deb ...\r\n#7 354.4 Unpacking tzdata (2026e-0ubuntu0.24.04.1) ...\r\n#7 354.6 Selecting previously unselected package readline-common.\r\n#7 354.6 Preparing to unpack .../4-readline-common_8.2-4build1_all.deb ...\r\n#7 354.6 Unpacking readline-common (8.2-4build1) ...\r\n#7 354.7 Selecting previously unselected package libreadline8t64:amd64.\r\n#7 354.7 Preparing to unpack .../5-libreadline8t64_8.2-4build1_amd64.deb ...\r\n#7 354.7 Adding 'diversion of /lib/x86_64-linux-gnu/libhistory.so.8 to /lib/x86_64-linux-gnu/libhistory.so.8.usr-is-merged by libreadline8t64'\r\n#7 354.7 Adding 'diversion of /lib/x86_64-linux-gnu/libhistory.so.8.2 to /lib/x86_64-linux-gnu/libhistory.so.8.2.usr-is-merged by libreadline8t64'\r\n#7 354.7 Adding 'diversion of /lib/x86_64-linux-gnu/libreadline.so.8 to /lib/x86_64-linux-gnu/libreadline.so.8.usr-is-merged by libreadline8t64'\r\n#7 354.7 Adding 'diversion of /lib/x86_64-linux-gnu/libreadline.so.8.2 to /lib/x86_64-linux-gnu/libreadline.so.8.2.usr-is-merged by libreadline8t64'\r\n#7 354.7 Unpacking libreadline8t64:amd64 (8.2-4build1) ...\r\n#7 354.8 Selecting previously unselected package libsqlite3-0:amd64.\r\n#7 354.8 Preparing to unpack .../6-libsqlite3-0_3.45.1-1ubuntu2.8_amd64.deb ...\r\n#7 354.8 Unpacking libsqlite3-0:amd64 (3.45.1-1ubuntu2.8) ...\r\n#7 354.9 Selecting previously unselected package libpython3.12-stdlib:amd64.\r\n#7 354.9 Preparing to unpack .../7-libpython3.12-stdlib_3.12.3-1ubuntu0.17_amd64.deb ...\r\n#7 354.9 Unpacking libpython3.12-stdlib:amd64 (3.12.3-1ubuntu0.17) ...\r\n#7 355.2 Selecting previously unselected package python3.12.\r\n#7 355.2 Preparing to unpack .../8-python3.12_3.12.3-1ubuntu0.17_amd64.deb ...\r\n#7 355.2 Unpacking python3.12 (3.12.3-1ubuntu0.17) ...\r\n#7 355.3 Selecting previously unselected package libpython3-stdlib:amd64.\r\n#7 355.3 Preparing to unpack .../9-libpython3-stdlib_3.12.3-0ubuntu2.1_amd64.deb ...\r\n#7 355.3 Unpacking libpython3-stdlib:amd64 (3.12.3-0ubuntu2.1) ...\r\n#7 355.4 Setting up python3-minimal (3.12.3-0ubuntu2.1) ...\r\n#7 355.8 Selecting previously unselected package python3.\r\n#7 355.8 (Reading database ... \r(Reading database ... 5%\r(Reading database ... 10%\r(Reading database ... 15%\r(Reading database ... 20%\r(Reading database ... 25%\r(Reading database ... 30%\r(Reading database ... 35%\r(Reading database ... 40%\r(Reading database ... 45%\r(Reading database ... 50%\r(Reading database ... 55%\r(Reading database ... 60%\r(Reading database ... 65%\r(Reading database ... 70%\r(Reading database ... 75%\r(Reading database ... 80%\r(Reading database ... 85%\r(Reading database ... 90%\r(Reading database ... 95%\r(Reading database ... 100%\r(Reading database ... 5720 files and directories currently installed.)\r\n#7 355.8 Preparing to unpack .../0-python3_3.12.3-0ubuntu2.1_amd64.deb ...\r\n#7 355.8 Unpacking python3 (3.12.3-0ubuntu2.1) ...\r\n#7 355.9 Selecting previously unselected package perl-modules-5.38.\r\n#7 355.9 Preparing to unpack .../1-perl-modules-5.38_5.38.2-3.2ubuntu0.6_all.deb ...\r\n#7 355.9 Unpacking perl-modules-5.38 (5.38.2-3.2ubuntu0.6) ...\r\n#7 356.4 Selecting previously unselected package libgdbm6t64:amd64.\r\n#7 356.4 Preparing to unpack .../2-libgdbm6t64_1.23-5.1build1_amd64.deb ...\r\n#7 356.4 Unpacking libgdbm6t64:amd64 (1.23-5.1build1) ...\r\n#7 356.5 Selecting previously unselected package libgdbm-compat4t64:amd64.\r\n#7 356.5 Preparing to unpack .../3-libgdbm-compat4t64_1.23-5.1build1_amd64.deb ...\r\n#7 356.5 Unpacking libgdbm-compat4t64:amd64 (1.23-5.1build1) ...\r\n#7 356.6 Selecting previously unselected package libperl5.38t64:amd64.\r\n#7 356.6 Preparing to unpack .../4-libperl5.38t64_5.38.2-3.2ubuntu0.6_amd64.deb ...\r\n#7 356.6 Unpacking libperl5.38t64:amd64 (5.38.2-3.2ubuntu0.6) ...\r\n#7 357.1 Selecting previously unselected package perl.\r\n#7 357.1 Preparing to unpack .../5-perl_5.38.2-3.2ubuntu0.6_amd64.deb ...\r\n#7 357.1 Unpacking perl (5.38.2-3.2ubuntu0.6) ...\r\n#7 357.2 Selecting previously unselected package adduser.\r\n#7 357.2 Preparing to unpack .../6-adduser_3.137ubuntu1_all.deb ...\r\n#7 357.2 Unpacking adduser (3.137ubuntu1) ...\r\n#7 357.3 Setting up adduser (3.137ubuntu1) ...\r\n#7 357.5 Selecting previously unselected package openssl.\r\n#7 357.5 (Reading database ... \r(Reading database ... 5%\r(Reading database ... 10%\r(Reading database ... 15%\r(Reading database ... 20%\r(Reading database ... 25%\r(Reading database ... 30%\r(Reading database ... 35%\r(Reading database ... 40%\r(Reading database ... 45%\r(Reading database ... 50%\r(Reading database ... 55%\r(Reading database ... 60%\r(Reading database ... 65%\r(Reading database ... 70%\r(Reading database ... 75%\r(Reading database ... 80%\r(Reading database ... 85%\r(Reading database ... 90%\r(Reading database ... 95%\r(Reading database ... 100%\r(Reading database ... 7801 files and directories currently installed.)\r\n#7 357.5 Preparing to unpack .../000-openssl_3.0.13-0ubuntu3.16_amd64.deb ...\r\n#7 357.5 Unpacking openssl (3.0.13-0ubuntu3.16) ...\r\n#7 357.7 Selecting previously unselected package ca-certificates.\r\n#7 357.7 Preparing to unpack .../001-ca-certificates_20260816ubuntu0.24.04.1_all.deb ...\r\n#7 357.7 Unpacking ca-certificates (20260816ubuntu0.24.04.1) ...\r\n#7 357.8 Selecting previously unselected package libbsd0:amd64.\r\n#7 357.8 Preparing to unpack .../002-libbsd0_0.12.1-1build1.1_amd64.deb ...\r\n#7 357.8 Unpacking libbsd0:amd64 (0.12.1-1build1.1) ...\r\n#7 357.9 Selecting previously unselected package python3-pkg-resources.\r\n#7 357.9 Preparing to unpack .../003-python3-pkg-resources_68.1.2-2ubuntu1.2_all.deb ...\r\n#7 357.9 Unpacking python3-pkg-resources (68.1.2-2ubuntu1.2) ...\r\n#7 358.0 Selecting previously unselected package libjansson4:amd64.\r\n#7 358.0 Preparing to unpack .../004-libjansson4_2.14-2build2_amd64.deb ...\r\n#7 358.1 Unpacking libjansson4:amd64 (2.14-2build2) ...\r\n#7 358.1 Selecting previously unselected package libpng16-16t64:amd64.\r\n#7 358.1 Preparing to unpack .../005-libpng16-16t64_1.6.43-5ubuntu0.7_amd64.deb ...\r\n#7 358.2 Unpacking libpng16-16t64:amd64 (1.6.43-5ubuntu0.7) ...\r\n#7 358.3 Selecting previously unselected package libxau6:amd64.\r\n#7 358.3 Preparing to unpack .../006-libxau6_1%3a1.0.9-1build6_amd64.deb ...\r\n#7 358.3 Unpacking libxau6:amd64 (1:1.0.9-1build6) ...\r\n#7 358.4 Selecting previously unselected package libxdmcp6:amd64.\r\n#7 358.4 Preparing to unpack .../007-libxdmcp6_1%3a1.1.3-0ubuntu6_amd64.deb ...\r\n#7 358.4 Unpacking libxdmcp6:amd64 (1:1.1.3-0ubuntu6) ...\r\n#7 358.5 Selecting previously unselected package libxcb1:amd64.\r\n#7 358.5 Preparing to unpack .../008-libxcb1_1.15-1ubuntu2_amd64.deb ...\r\n#7 358.5 Unpacking libxcb1:amd64 (1.15-1ubuntu2) ...\r\n#7 358.5 Selecting previously unselected package libx11-data.\r\n#7 358.5 Preparing to unpack .../009-libx11-data_2%3a1.8.7-1ubuntu0.1_all.deb ...\r\n#7 358.6 Unpacking libx11-data (2:1.8.7-1ubuntu0.1) ...\r\n#7 358.7 Selecting previously unselected package libx11-6:amd64.\r\n#7 358.7 Preparing to unpack .../010-libx11-6_2%3a1.8.7-1ubuntu0.1_amd64.deb ...\r\n#7 358.7 Unpacking libx11-6:amd64 (2:1.8.7-1ubuntu0.1) ...\r\n#7 358.8 Selecting previously unselected package manpages.\r\n#7 358.8 Preparing to unpack .../011-manpages_6.7-2_all.deb ...\r\n#7 358.9 Unpacking manpages (6.7-2) ...\r\n#7 359.0 Selecting previously unselected package xz-utils.\r\n#7 359.0 Preparing to unpack .../012-xz-utils_5.6.1+really5.4.5-1ubuntu0.4_amd64.deb ...\r\n#7 359.0 Unpacking xz-utils (5.6.1+really5.4.5-1ubuntu0.4) ...\r\n#7 359.1 Selecting previously unselected package binutils-common:amd64.\r\n#7 359.1 Preparing to unpack .../013-binutils-common_2.42-4ubuntu2.10_amd64.deb ...\r\n#7 359.1 Unpacking binutils-common:amd64 (2.42-4ubuntu2.10) ...\r\n#7 359.2 Selecting previously unselected package libsframe1:amd64.\r\n#7 359.2 Preparing to unpack .../014-libsframe1_2.42-4ubuntu2.10_amd64.deb ...\r\n#7 359.2 Unpacking libsframe1:amd64 (2.42-4ubuntu2.10) ...\r\n#7 359.3 Selecting previously unselected package libbinutils:amd64.\r\n#7 359.3 Preparing to unpack .../015-libbinutils_2.42-4ubuntu2.10_amd64.deb ...\r\n#7 359.3 Unpacking libbinutils:amd64 (2.42-4ubuntu2.10) ...\r\n#7 359.4 Selecting previously unselected package libctf-nobfd0:amd64.\r\n#7 359.4 Preparing to unpack .../016-libctf-nobfd0_2.42-4ubuntu2.10_amd64.deb ...\r\n#7 359.4 Unpacking libctf-nobfd0:amd64 (2.42-4ubuntu2.10) ...\r\n#7 359.5 Selecting previously unselected package libctf0:amd64.\r\n#7 359.5 Preparing to unpack .../017-libctf0_2.42-4ubuntu2.10_amd64.deb ...\r\n#7 359.5 Unpacking libctf0:amd64 (2.42-4ubuntu2.10) ...\r\n#7 359.6 Selecting previously unselected package libgprofng0:amd64.\r\n#7 359.6 Preparing to unpack .../018-libgprofng0_2.42-4ubuntu2.10_amd64.deb ...\r\n#7 359.6 Unpacking libgprofng0:amd64 (2.42-4ubuntu2.10) ...\r\n#7 359.7 Selecting previously unselected package binutils-x86-64-linux-gnu.\r\n#7 359.7 Preparing to unpack .../019-binutils-x86-64-linux-gnu_2.42-4ubuntu2.10_amd64.deb ...\r\n#7 359.7 Unpacking binutils-x86-64-linux-gnu (2.42-4ubuntu2.10) ...\r\n#7 359.9 Selecting previously unselected package binutils.\r\n#7 359.9 Preparing to unpack .../020-binutils_2.42-4ubuntu2.10_amd64.deb ...\r\n#7 359.9 Unpacking binutils (2.42-4ubuntu2.10) ...\r\n#7 360.0 Selecting previously unselected package libc-dev-bin.\r\n#7 360.0 Preparing to unpack .../021-libc-dev-bin_2.39-0ubuntu8.9_amd64.deb ...\r\n#7 360.0 Unpacking libc-dev-bin (2.39-0ubuntu8.9) ...\r\n#7 360.1 Selecting previously unselected package linux-libc-dev:amd64.\r\n#7 360.1 Preparing to unpack .../022-linux-libc-dev_6.8.0-147.147_amd64.deb ...\r\n#7 360.1 Unpacking linux-libc-dev:amd64 (6.8.0-147.147) ...\r\n#7 360.4 Selecting previously unselected package libcrypt-dev:amd64.\r\n#7 360.4 Preparing to unpack .../023-libcrypt-dev_1%3a4.4.36-4build1_amd64.deb ...\r\n#7 360.4 Unpacking libcrypt-dev:amd64 (1:4.4.36-4build1) ...\r\n#7 360.5 Selecting previously unselected package rpcsvc-proto.\r\n#7 360.5 Preparing to unpack .../024-rpcsvc-proto_1.4.2-0ubuntu7_amd64.deb ...\r\n#7 360.5 Unpacking rpcsvc-proto (1.4.2-0ubuntu7) ...\r\n#7 360.6 Selecting previously unselected package libc6-dev:amd64.\r\n#7 360.6 Preparing to unpack .../025-libc6-dev_2.39-0ubuntu8.9_amd64.deb ...\r\n#7 360.6 Unpacking libc6-dev:amd64 (2.39-0ubuntu8.9) ...\r\n#7 360.9 Selecting previously unselected package gcc-13-base:amd64.\r\n#7 360.9 Preparing to unpack .../026-gcc-13-base_13.3.0-6ubuntu2~24.04.1_amd64.deb ...\r\n#7 360.9 Unpacking gcc-13-base:amd64 (13.3.0-6ubuntu2~24.04.1) ...\r\n#7 361.0 Selecting previously unselected package libisl23:amd64.\r\n#7 361.0 Preparing to unpack .../027-libisl23_0.26-3build1.1_amd64.deb ...\r\n#7 361.0 Unpacking libisl23:amd64 (0.26-3build1.1) ...\r\n#7 361.1 Selecting previously unselected package libmpfr6:amd64.\r\n#7 361.1 Preparing to unpack .../028-libmpfr6_4.2.1-1build1.1_amd64.deb ...\r\n#7 361.1 Unpacking libmpfr6:amd64 (4.2.1-1build1.1) ...\r\n#7 361.3 Selecting previously unselected package libmpc3:amd64.\r\n#7 361.3 Preparing to unpack .../029-libmpc3_1.3.1-1build1.1_amd64.deb ...\r\n#7 361.3 Unpacking libmpc3:amd64 (1.3.1-1build1.1) ...\r\n#7 361.3 Selecting previously unselected package cpp-13-x86-64-linux-gnu.\r\n#7 361.3 Preparing to unpack .../030-cpp-13-x86-64-linux-gnu_13.3.0-6ubuntu2~24.04.1_amd64.deb ...\r\n#7 361.4 Unpacking cpp-13-x86-64-linux-gnu (13.3.0-6ubuntu2~24.04.1) ...\r\n#7 361.8 Selecting previously unselected package cpp-13.\r\n#7 361.8 Preparing to unpack .../031-cpp-13_13.3.0-6ubuntu2~24.04.1_amd64.deb ...\r\n#7 361.8 Unpacking cpp-13 (13.3.0-6ubuntu2~24.04.1) ...\r\n#7 361.9 Selecting previously unselected package cpp-x86-64-linux-gnu.\r\n#7 361.9 Preparing to unpack .../032-cpp-x86-64-linux-gnu_4%3a13.2.0-7ubuntu1_amd64.deb ...\r\n#7 361.9 Unpacking cpp-x86-64-linux-gnu (4:13.2.0-7ubuntu1) ...\r\n#7 362.0 Selecting previously unselected package cpp.\r\n#7 362.0 Preparing to unpack .../033-cpp_4%3a13.2.0-7ubuntu1_amd64.deb ...\r\n#7 362.0 Unpacking cpp (4:13.2.0-7ubuntu1) ...\r\n#7 362.2 Selecting previously unselected package libcc1-0:amd64.\r\n#7 362.2 Preparing to unpack .../034-libcc1-0_14.2.0-4ubuntu2~24.04.1_amd64.deb ...\r\n#7 362.2 Unpacking libcc1-0:amd64 (14.2.0-4ubuntu2~24.04.1) ...\r\n#7 362.3 Selecting previously unselected package libgomp1:amd64.\r\n#7 362.3 Preparing to unpack .../035-libgomp1_14.2.0-4ubuntu2~24.04.1_amd64.deb ...\r\n#7 362.3 Unpacking libgomp1:amd64 (14.2.0-4ubuntu2~24.04.1) ...\r\n#7 362.4 Selecting previously unselected package libitm1:amd64.\r\n#7 362.4 Preparing to unpack .../036-libitm1_14.2.0-4ubuntu2~24.04.1_amd64.deb ...\r\n#7 362.4 Unpacking libitm1:amd64 (14.2.0-4ubuntu2~24.04.1) ...\r\n#7 362.5 Selecting previously unselected package libatomic1:amd64.\r\n#7 362.5 Preparing to unpack .../037-libatomic1_14.2.0-4ubuntu2~24.04.1_amd64.deb ...\r\n#7 362.5 Unpacking libatomic1:amd64 (14.2.0-4ubuntu2~24.04.1) ...\r\n#7 362.6 Selecting previously unselected package libasan8:amd64.\r\n#7 362.6 Preparing to unpack .../038-libasan8_14.2.0-4ubuntu2~24.04.1_amd64.deb ...\r\n#7 362.6 Unpacking libasan8:amd64 (14.2.0-4ubuntu2~24.04.1) ...\r\n#7 363.0 Selecting previously unselected package liblsan0:amd64.\r\n#7 363.0 Preparing to unpack .../039-liblsan0_14.2.0-4ubuntu2~24.04.1_amd64.deb ...\r\n#7 363.0 Unpacking liblsan0:amd64 (14.2.0-4ubuntu2~24.04.1) ...\r\n#7 363.1 Selecting previously unselected package libtsan2:amd64.\r\n#7 363.1 Preparing to unpack .../040-libtsan2_14.2.0-4ubuntu2~24.04.1_amd64.deb ...\r\n#7 363.2 Unpacking libtsan2:amd64 (14.2.0-4ubuntu2~24.04.1) ...\r\n#7 363.3 Selecting previously unselected package libubsan1:amd64.\r\n#7 363.3 Preparing to unpack .../041-libubsan1_14.2.0-4ubuntu2~24.04.1_amd64.deb ...\r\n#7 363.4 Unpacking libubsan1:amd64 (14.2.0-4ubuntu2~24.04.1) ...\r\n#7 363.5 Selecting previously unselected package libhwasan0:amd64.\r\n#7 363.5 Preparing to unpack .../042-libhwasan0_14.2.0-4ubuntu2~24.04.1_amd64.deb ...\r\n#7 363.5 Unpacking libhwasan0:amd64 (14.2.0-4ubuntu2~24.04.1) ...\r\n#7 363.6 Selecting previously unselected package libquadmath0:amd64.\r\n#7 363.6 Preparing to unpack .../043-libquadmath0_14.2.0-4ubuntu2~24.04.1_amd64.deb ...\r\n#7 363.7 Unpacking libquadmath0:amd64 (14.2.0-4ubuntu2~24.04.1) ...\r\n#7 363.7 Selecting previously unselected package libgcc-13-dev:amd64.\r\n#7 363.7 Preparing to unpack .../044-libgcc-13-dev_13.3.0-6ubuntu2~24.04.1_amd64.deb ...\r\n#7 363.7 Unpacking libgcc-13-dev:amd64 (13.3.0-6ubuntu2~24.04.1) ...\r\n#7 364.0 Selecting previously unselected package gcc-13-x86-64-linux-gnu.\r\n#7 364.0 Preparing to unpack .../045-gcc-13-x86-64-linux-gnu_13.3.0-6ubuntu2~24.04.1_amd64.deb ...\r\n#7 364.0 Unpacking gcc-13-x86-64-linux-gnu (13.3.0-6ubuntu2~24.04.1) ...\r\n#7 364.7 Selecting previously unselected package gcc-13.\r\n#7 364.7 Preparing to unpack .../046-gcc-13_13.3.0-6ubuntu2~24.04.1_amd64.deb ...\r\n#7 364.7 Unpacking gcc-13 (13.3.0-6ubuntu2~24.04.1) ...\r\n#7 364.8 Selecting previously unselected package gcc-x86-64-linux-gnu.\r\n#7 364.8 Preparing to unpack .../047-gcc-x86-64-linux-gnu_4%3a13.2.0-7ubuntu1_amd64.deb ...\r\n#7 364.8 Unpacking gcc-x86-64-linux-gnu (4:13.2.0-7ubuntu1) ...\r\n#7 364.9 Selecting previously unselected package gcc.\r\n#7 364.9 Preparing to unpack .../048-gcc_4%3a13.2.0-7ubuntu1_amd64.deb ...\r\n#7 364.9 Unpacking gcc (4:13.2.0-7ubuntu1) ...\r\n#7 365.0 Selecting previously unselected package libstdc++-13-dev:amd64.\r\n#7 365.0 Preparing to unpack .../049-libstdc++-13-dev_13.3.0-6ubuntu2~24.04.1_amd64.deb ...\r\n#7 365.0 Unpacking libstdc++-13-dev:amd64 (13.3.0-6ubuntu2~24.04.1) ...\r\n#7 365.4 Selecting previously unselected package g++-13-x86-64-linux-gnu.\r\n#7 365.4 Preparing to unpack .../050-g++-13-x86-64-linux-gnu_13.3.0-6ubuntu2~24.04.1_amd64.deb ...\r\n#7 365.4 Unpacking g++-13-x86-64-linux-gnu (13.3.0-6ubuntu2~24.04.1) ...\r\n#7 365.8 Selecting previously unselected package g++-13.\r\n#7 365.8 Preparing to unpack .../051-g++-13_13.3.0-6ubuntu2~24.04.1_amd64.deb ...\r\n#7 365.8 Unpacking g++-13 (13.3.0-6ubuntu2~24.04.1) ...\r\n#7 365.9 Selecting previously unselected package g++-x86-64-linux-gnu.\r\n#7 365.9 Preparing to unpack .../052-g++-x86-64-linux-gnu_4%3a13.2.0-7ubuntu1_amd64.deb ...\r\n#7 365.9 Unpacking g++-x86-64-linux-gnu (4:13.2.0-7ubuntu1) ...\r\n#7 366.0 Selecting previously unselected package g++.\r\n#7 366.0 Preparing to unpack .../053-g++_4%3a13.2.0-7ubuntu1_amd64.deb ...\r\n#7 366.0 Unpacking g++ (4:13.2.0-7ubuntu1) ...\r\n#7 366.1 Selecting previously unselected package make.\r\n#7 366.1 Preparing to unpack .../054-make_4.3-4.1build2_amd64.deb ...\r\n#7 366.1 Unpacking make (4.3-4.1build2) ...\r\n#7 366.1 Selecting previously unselected package libdpkg-perl.\r\n#7 366.1 Preparing to unpack .../055-libdpkg-perl_1.22.6ubuntu6.6_all.deb ...\r\n#7 366.1 Unpacking libdpkg-perl (1.22.6ubuntu6.6) ...\r\n#7 366.2 Selecting previously unselected package bzip2.\r\n#7 366.2 Preparing to unpack .../056-bzip2_1.0.8-5.1ubuntu0.1_amd64.deb ...\r\n#7 366.2 Unpacking bzip2 (1.0.8-5.1ubuntu0.1) ...\r\n#7 366.3 Selecting previously unselected package patch.\r\n#7 366.3 Preparing to unpack .../057-patch_2.7.6-7build3_amd64.deb ...\r\n#7 366.3 Unpacking patch (2.7.6-7build3) ...\r\n#7 366.4 Selecting previously unselected package lto-disabled-list.\r\n#7 366.4 Preparing to unpack .../058-lto-disabled-list_47_all.deb ...\r\n#7 366.4 Unpacking lto-disabled-list (47) ...\r\n#7 366.5 Selecting previously unselected package dpkg-dev.\r\n#7 366.5 Preparing to unpack .../059-dpkg-dev_1.22.6ubuntu6.6_all.deb ...\r\n#7 366.5 Unpacking dpkg-dev (1.22.6ubuntu6.6) ...\r\n#7 366.6 Selecting previously unselected package build-essential.\r\n#7 366.6 Preparing to unpack .../060-build-essential_12.10ubuntu1_amd64.deb ...\r\n#7 366.7 Unpacking build-essential (12.10ubuntu1) ...\r\n#7 366.7 Selecting previously unselected package gpgconf.\r\n#7 366.7 Preparing to unpack .../061-gpgconf_2.4.4-2ubuntu17.6_amd64.deb ...\r\n#7 366.8 Unpacking gpgconf (2.4.4-2ubuntu17.6) ...\r\n#7 366.9 Selecting previously unselected package libksba8:amd64.\r\n#7 366.9 Preparing to unpack .../062-libksba8_1.6.6-1build1_amd64.deb ...\r\n#7 366.9 Unpacking libksba8:amd64 (1.6.6-1build1) ...\r\n#7 367.0 Selecting previously unselected package libsasl2-modules-db:amd64.\r\n#7 367.0 Preparing to unpack .../063-libsasl2-modules-db_2.1.28+dfsg1-5ubuntu3.1_amd64.deb ...\r\n#7 367.0 Unpacking libsasl2-modules-db:amd64 (2.1.28+dfsg1-5ubuntu3.1) ...\r\n#7 367.1 Selecting previously unselected package libsasl2-2:amd64.\r\n#7 367.1 Preparing to unpack .../064-libsasl2-2_2.1.28+dfsg1-5ubuntu3.1_amd64.deb ...\r\n#7 367.1 Unpacking libsasl2-2:amd64 (2.1.28+dfsg1-5ubuntu3.1) ...\r\n#7 367.2 Selecting previously unselected package libldap2:amd64.\r\n#7 367.2 Preparing to unpack .../065-libldap2_2.6.10+dfsg-0ubuntu0.24.04.1_amd64.deb ...\r\n#7 367.2 Unpacking libldap2:amd64 (2.6.10+dfsg-0ubuntu0.24.04.1) ...\r\n#7 367.3 Selecting previously unselected package dirmngr.\r\n#7 367.3 Preparing to unpack .../066-dirmngr_2.4.4-2ubuntu17.6_amd64.deb ...\r\n#7 367.3 Unpacking dirmngr (2.4.4-2ubuntu17.6) ...\r\n#7 367.4 Selecting previously unselected package libfakeroot:amd64.\r\n#7 367.4 Preparing to unpack .../067-libfakeroot_1.33-1_amd64.deb ...\r\n#7 367.5 Unpacking libfakeroot:amd64 (1.33-1) ...\r\n#7 367.5 Selecting previously unselected package fakeroot.\r\n#7 367.5 Preparing to unpack .../068-fakeroot_1.33-1_amd64.deb ...\r\n#7 367.6 Unpacking fakeroot (1.33-1) ...\r\n#7 367.6 Selecting previously unselected package fonts-dejavu-mono.\r\n#7 367.6 Preparing to unpack .../069-fonts-dejavu-mono_2.37-8_all.deb ...\r\n#7 367.7 Unpacking fonts-dejavu-mono (2.37-8) ...\r\n#7 367.8 Selecting previously unselected package fonts-dejavu-core.\r\n#7 367.8 Preparing to unpack .../070-fonts-dejavu-core_2.37-8_all.deb ...\r\n#7 367.8 Unpacking fonts-dejavu-core (2.37-8) ...\r\n#7 368.0 Selecting previously unselected package fontconfig-config.\r\n#7 368.0 Preparing to unpack .../071-fontconfig-config_2.15.0-1.1ubuntu2_amd64.deb ...\r\n#7 368.2 Unpacking fontconfig-config (2.15.0-1.1ubuntu2) ...\r\n#7 368.4 Selecting previously unselected package gnupg-utils.\r\n#7 368.4 Preparing to unpack .../072-gnupg-utils_2.4.4-2ubuntu17.6_amd64.deb ...\r\n#7 368.4 Unpacking gnupg-utils (2.4.4-2ubuntu17.6) ...\r\n#7 368.5 Selecting previously unselected package gpg.\r\n#7 368.5 Preparing to unpack .../073-gpg_2.4.4-2ubuntu17.6_amd64.deb ...\r\n#7 368.5 Unpacking gpg (2.4.4-2ubuntu17.6) ...\r\n#7 368.6 Selecting previously unselected package pinentry-curses.\r\n#7 368.6 Preparing to unpack .../074-pinentry-curses_1.2.1-3ubuntu5_amd64.deb ...\r\n#7 368.6 Unpacking pinentry-curses (1.2.1-3ubuntu5) ...\r\n#7 368.7 Selecting previously unselected package gpg-agent.\r\n#7 368.7 Preparing to unpack .../075-gpg-agent_2.4.4-2ubuntu17.6_amd64.deb ...\r\n#7 368.7 Unpacking gpg-agent (2.4.4-2ubuntu17.6) ...\r\n#7 368.8 Selecting previously unselected package gpgsm.\r\n#7 368.8 Preparing to unpack .../076-gpgsm_2.4.4-2ubuntu17.6_amd64.deb ...\r\n#7 368.8 Unpacking gpgsm (2.4.4-2ubuntu17.6) ...\r\n#7 368.9 Selecting previously unselected package keyboxd.\r\n#7 368.9 Preparing to unpack .../077-keyboxd_2.4.4-2ubuntu17.6_amd64.deb ...\r\n#7 368.9 Unpacking keyboxd (2.4.4-2ubuntu17.6) ...\r\n#7 369.0 Selecting previously unselected package gnupg.\r\n#7 369.0 Preparing to unpack .../078-gnupg_2.4.4-2ubuntu17.6_all.deb ...\r\n#7 369.0 Unpacking gnupg (2.4.4-2ubuntu17.6) ...\r\n#7 369.1 Selecting previously unselected package gnupg-l10n.\r\n#7 369.1 Preparing to unpack .../079-gnupg-l10n_2.4.4-2ubuntu17.6_all.deb ...\r\n#7 369.1 Unpacking gnupg-l10n (2.4.4-2ubuntu17.6) ...\r\n#7 369.2 Selecting previously unselected package gpg-wks-client.\r\n#7 369.2 Preparing to unpack .../080-gpg-wks-client_2.4.4-2ubuntu17.6_amd64.deb ...\r\n#7 369.2 Unpacking gpg-wks-client (2.4.4-2ubuntu17.6) ...\r\n#7 369.3 Selecting previously unselected package javascript-common.\r\n#7 369.3 Preparing to unpack .../081-javascript-common_11+nmu1_all.deb ...\r\n#7 369.3 Unpacking javascript-common (11+nmu1) ...\r\n#7 369.4 Selecting previously unselected package libalgorithm-diff-perl.\r\n#7 369.4 Preparing to unpack .../082-libalgorithm-diff-perl_1.201-1_all.deb ...\r\n#7 369.4 Unpacking libalgorithm-diff-perl (1.201-1) ...\r\n#7 369.5 Selecting previously unselected package libalgorithm-diff-xs-perl:amd64.\r\n#7 369.5 Preparing to unpack .../083-libalgorithm-diff-xs-perl_0.04-8build3_amd64.deb ...\r\n#7 369.5 Unpacking libalgorithm-diff-xs-perl:amd64 (0.04-8build3) ...\r\n#7 369.6 Selecting previously unselected package libalgorithm-merge-perl.\r\n#7 369.6 Preparing to unpack .../084-libalgorithm-merge-perl_0.08-5_all.deb ...\r\n#7 369.6 Unpacking libalgorithm-merge-perl (0.08-5) ...\r\n#7 369.7 Selecting previously unselected package libaom3:amd64.\r\n#7 369.7 Preparing to unpack .../085-libaom3_3.8.2-2ubuntu0.2_amd64.deb ...\r\n#7 369.7 Unpacking libaom3:amd64 (3.8.2-2ubuntu0.2) ...\r\n#7 369.8 Selecting previously unselected package libbrotli1:amd64.\r\n#7 369.8 Preparing to unpack .../086-libbrotli1_1.1.0-2ubuntu0.1_amd64.deb ...\r\n#7 369.9 Unpacking libbrotli1:amd64 (1.1.0-2ubuntu0.1) ...\r\n#7 370.0 Selecting previously unselected package libfreetype6:amd64.\r\n#7 370.0 Preparing to unpack .../087-libfreetype6_2.13.2+dfsg-1ubuntu0.2_amd64.deb ...\r\n#7 370.0 Unpacking libfreetype6:amd64 (2.13.2+dfsg-1ubuntu0.2) ...\r\n#7 370.1 Selecting previously unselected package libfontconfig1:amd64.\r\n#7 370.1 Preparing to unpack .../088-libfontconfig1_2.15.0-1.1ubuntu2_amd64.deb ...\r\n#7 370.1 Unpacking libfontconfig1:amd64 (2.15.0-1.1ubuntu2) ...\r\n#7 370.2 Selecting previously unselected package libsharpyuv0:amd64.\r\n#7 370.2 Preparing to unpack .../089-libsharpyuv0_1.3.2-0.4build3_amd64.deb ...\r\n#7 370.2 Unpacking libsharpyuv0:amd64 (1.3.2-0.4build3) ...\r\n#7 370.3 Selecting previously unselected package libheif-plugin-aomdec:amd64.\r\n#7 370.3 Preparing to unpack .../090-libheif-plugin-aomdec_1.17.6-1ubuntu4.9_amd64.deb ...\r\n#7 370.3 Unpacking libheif-plugin-aomdec:amd64 (1.17.6-1ubuntu4.9) ...\r\n#7 370.4 Selecting previously unselected package libheif1:amd64.\r\n#7 370.4 Preparing to unpack .../091-libheif1_1.17.6-1ubuntu4.9_amd64.deb ...\r\n#7 370.4 Unpacking libheif1:amd64 (1.17.6-1ubuntu4.9) ...\r\n#7 370.5 Selecting previously unselected package libjpeg-turbo8:amd64.\r\n#7 370.5 Preparing to unpack .../092-libjpeg-turbo8_2.1.5-2ubuntu2_amd64.deb ...\r\n#7 370.5 Unpacking libjpeg-turbo8:amd64 (2.1.5-2ubuntu2) ...\r\n#7 370.6 Selecting previously unselected package libjpeg8:amd64.\r\n#7 370.6 Preparing to unpack .../093-libjpeg8_8c-2ubuntu11_amd64.deb ...\r\n#7 370.6 Unpacking libjpeg8:amd64 (8c-2ubuntu11) ...\r\n#7 370.7 Selecting previously unselected package libdeflate0:amd64.\r\n#7 370.7 Preparing to unpack .../094-libdeflate0_1.19-1build1.1_amd64.deb ...\r\n#7 370.7 Unpacking libdeflate0:amd64 (1.19-1build1.1) ...\r\n#7 370.8 Selecting previously unselected package libjbig0:amd64.\r\n#7 370.8 Preparing to unpack .../095-libjbig0_2.1-6.1ubuntu2_amd64.deb ...\r\n#7 370.8 Unpacking libjbig0:amd64 (2.1-6.1ubuntu2) ...\r\n#7 370.9 Selecting previously unselected package liblerc4:amd64.\r\n#7 370.9 Preparing to unpack .../096-liblerc4_4.0.0+ds-4ubuntu2_amd64.deb ...\r\n#7 370.9 Unpacking liblerc4:amd64 (4.0.0+ds-4ubuntu2) ...\r\n#7 371.0 Selecting previously unselected package libwebp7:amd64.\r\n#7 371.0 Preparing to unpack .../097-libwebp7_1.3.2-0.4build3_amd64.deb ...\r\n#7 371.0 Unpacking libwebp7:amd64 (1.3.2-0.4build3) ...\r\n#7 371.2 Selecting previously unselected package libtiff6:amd64.\r\n#7 371.2 Preparing to unpack .../098-libtiff6_4.5.1+git230720-4ubuntu2.5_amd64.deb ...\r\n#7 371.2 Unpacking libtiff6:amd64 (4.5.1+git230720-4ubuntu2.5) ...\r\n#7 371.3 Selecting previously unselected package libxpm4:amd64.\r\n#7 371.3 Preparing to unpack .../099-libxpm4_1%3a3.5.17-1ubuntu0.24.04.2_amd64.deb ...\r\n#7 371.3 Unpacking libxpm4:amd64 (1:3.5.17-1ubuntu0.24.04.2) ...\r\n#7 371.4 Selecting previously unselected package libgd3:amd64.\r\n#7 371.4 Preparing to unpack .../100-libgd3_2.3.3-9ubuntu5_amd64.deb ...\r\n#7 371.4 Unpacking libgd3:amd64 (2.3.3-9ubuntu5) ...\r\n#7 371.5 Selecting previously unselected package libc-devtools.\r\n#7 371.5 Preparing to unpack .../101-libc-devtools_2.39-0ubuntu8.9_amd64.deb ...\r\n#7 371.5 Unpacking libc-devtools (2.39-0ubuntu8.9) ...\r\n#7 371.5 Selecting previously unselected package libexpat1-dev:amd64.\r\n#7 371.5 Preparing to unpack .../102-libexpat1-dev_2.6.1-2ubuntu0.6_amd64.deb ...\r\n#7 371.6 Unpacking libexpat1-dev:amd64 (2.6.1-2ubuntu0.6) ...\r\n#7 371.6 Selecting previously unselected package libfile-fcntllock-perl.\r\n#7 371.6 Preparing to unpack .../103-libfile-fcntllock-perl_0.22-4ubuntu5_amd64.deb ...\r\n#7 371.7 Unpacking libfile-fcntllock-perl (0.22-4ubuntu5) ...\r\n#7 371.8 Selecting previously unselected package libheif-plugin-aomenc:amd64.\r\n#7 371.8 Preparing to unpack .../104-libheif-plugin-aomenc_1.17.6-1ubuntu4.9_amd64.deb ...\r\n#7 371.8 Unpacking libheif-plugin-aomenc:amd64 (1.17.6-1ubuntu4.9) ...\r\n#7 371.9 Selecting previously unselected package libjs-jquery.\r\n#7 371.9 Preparing to unpack .../105-libjs-jquery_3.6.1+dfsg+~3.5.14-1_all.deb ...\r\n#7 371.9 Unpacking libjs-jquery (3.6.1+dfsg+~3.5.14-1) ...\r\n#7 372.0 Selecting previously unselected package libjs-underscore.\r\n#7 372.0 Preparing to unpack .../106-libjs-underscore_1.13.4~dfsg+~1.11.4-3_all.deb ...\r\n#7 372.0 Unpacking libjs-underscore (1.13.4~dfsg+~1.11.4-3) ...\r\n#7 372.0 Selecting previously unselected package libjs-sphinxdoc.\r\n#7 372.0 Preparing to unpack .../107-libjs-sphinxdoc_7.2.6-6_all.deb ...\r\n#7 372.0 Unpacking libjs-sphinxdoc (7.2.6-6) ...\r\n#7 372.1 Selecting previously unselected package libldap-common.\r\n#7 372.1 Preparing to unpack .../108-libldap-common_2.6.10+dfsg-0ubuntu0.24.04.1_all.deb ...\r\n#7 372.1 Unpacking libldap-common (2.6.10+dfsg-0ubuntu0.24.04.1) ...\r\n#7 372.2 Selecting previously unselected package libpython3.12t64:amd64.\r\n#7 372.2 Preparing to unpack .../109-libpython3.12t64_3.12.3-1ubuntu0.17_amd64.deb ...\r\n#7 372.3 Unpacking libpython3.12t64:amd64 (3.12.3-1ubuntu0.17) ...\r\n#7 372.4 Selecting previously unselected package zlib1g-dev:amd64.\r\n#7 372.4 Preparing to unpack .../110-zlib1g-dev_1%3a1.3.dfsg-3.1ubuntu2.3_amd64.deb ...\r\n#7 372.4 Unpacking zlib1g-dev:amd64 (1:1.3.dfsg-3.1ubuntu2.3) ...\r\n#7 372.5 Selecting previously unselected package libpython3.12-dev:amd64.\r\n#7 372.5 Preparing to unpack .../111-libpython3.12-dev_3.12.3-1ubuntu0.17_amd64.deb ...\r\n#7 372.5 Unpacking libpython3.12-dev:amd64 (3.12.3-1ubuntu0.17) ...\r\n#7 372.9 Selecting previously unselected package libpython3-dev:amd64.\r\n#7 372.9 Preparing to unpack .../112-libpython3-dev_3.12.3-0ubuntu2.1_amd64.deb ...\r\n#7 372.9 Unpacking libpython3-dev:amd64 (3.12.3-0ubuntu2.1) ...\r\n#7 373.0 Selecting previously unselected package libsasl2-modules:amd64.\r\n#7 373.0 Preparing to unpack .../113-libsasl2-modules_2.1.28+dfsg1-5ubuntu3.1_amd64.deb ...\r\n#7 373.0 Unpacking libsasl2-modules:amd64 (2.1.28+dfsg1-5ubuntu3.1) ...\r\n#7 373.1 Selecting previously unselected package manpages-dev.\r\n#7 373.1 Preparing to unpack .../114-manpages-dev_6.7-2_all.deb ...\r\n#7 373.1 Unpacking manpages-dev (6.7-2) ...\r\n#7 373.2 Selecting previously unselected package python3.12-dev.\r\n#7 373.2 Preparing to unpack .../115-python3.12-dev_3.12.3-1ubuntu0.17_amd64.deb ...\r\n#7 373.3 Unpacking python3.12-dev (3.12.3-1ubuntu0.17) ...\r\n#7 373.3 Selecting previously unselected package python3-dev.\r\n#7 373.3 Preparing to unpack .../116-python3-dev_3.12.3-0ubuntu2.1_amd64.deb ...\r\n#7 373.4 Unpacking python3-dev (3.12.3-0ubuntu2.1) ...\r\n#7 373.5 Selecting previously unselected package python3-setuptools.\r\n#7 373.5 Preparing to unpack .../117-python3-setuptools_68.1.2-2ubuntu1.2_all.deb ...\r\n#7 373.5 Unpacking python3-setuptools (68.1.2-2ubuntu1.2) ...\r\n#7 373.6 Selecting previously unselected package python3-wheel.\r\n#7 373.6 Preparing to unpack .../118-python3-wheel_0.42.0-2_all.deb ...\r\n#7 373.6 Unpacking python3-wheel (0.42.0-2) ...\r\n#7 373.7 Selecting previously unselected package python3-pip.\r\n#7 373.7 Preparing to unpack .../119-python3-pip_24.0+dfsg-1ubuntu1.3_all.deb ...\r\n#7 373.7 Unpacking python3-pip (24.0+dfsg-1ubuntu1.3) ...\r\n#7 374.0 Setting up libksba8:amd64 (1.6.6-1build1) ...\r\n#7 374.1 Setting up pinentry-curses (1.2.1-3ubuntu5) ...\r\n#7 374.1 Setting up media-types (10.1.0) ...\r\n#7 374.2 Setting up javascript-common (11+nmu1) ...\r\n#7 374.3 Setting up libsharpyuv0:amd64 (1.3.2-0.4build3) ...\r\n#7 374.3 Setting up libaom3:amd64 (3.8.2-2ubuntu0.2) ...\r\n#7 374.3 Setting up libxau6:amd64 (1:1.0.9-1build6) ...\r\n#7 374.4 Setting up lto-disabled-list (47) ...\r\n#7 374.4 Setting up liblerc4:amd64 (4.0.0+ds-4ubuntu2) ...\r\n#7 374.5 Setting up libgdbm6t64:amd64 (1.23-5.1build1) ...\r\n#7 374.5 Setting up libgdbm-compat4t64:amd64 (1.23-5.1build1) ...\r\n#7 374.5 Setting up manpages (6.7-2) ...\r\n#7 374.6 Setting up libbrotli1:amd64 (1.1.0-2ubuntu0.1) ...\r\n#7 374.6 Setting up libsqlite3-0:amd64 (3.45.1-1ubuntu2.8) ...\r\n#7 374.6 Setting up libsasl2-modules:amd64 (2.1.28+dfsg1-5ubuntu3.1) ...\r\n#7 374.7 Setting up binutils-common:amd64 (2.42-4ubuntu2.10) ...\r\n#7 374.7 Setting up libdeflate0:amd64 (1.19-1build1.1) ...\r\n#7 374.8 Setting up linux-libc-dev:amd64 (6.8.0-147.147) ...\r\n#7 374.8 Setting up libctf-nobfd0:amd64 (2.42-4ubuntu2.10) ...\r\n#7 374.9 Setting up libgomp1:amd64 (14.2.0-4ubuntu2~24.04.1) ...\r\n#7 374.9 Setting up bzip2 (1.0.8-5.1ubuntu0.1) ...\r\n#7 374.9 Setting up libldap-common (2.6.10+dfsg-0ubuntu0.24.04.1) ...\r\n#7 375.0 Setting up libjbig0:amd64 (2.1-6.1ubuntu2) ...\r\n#7 375.1 Setting up libsframe1:amd64 (2.42-4ubuntu2.10) ...\r\n#7 375.1 Setting up libfakeroot:amd64 (1.33-1) ...\r\n#7 375.1 Setting up libjansson4:amd64 (2.14-2build2) ...\r\n#7 375.2 Setting up libsasl2-modules-db:amd64 (2.1.28+dfsg1-5ubuntu3.1) ...\r\n#7 375.2 Setting up tzdata (2026e-0ubuntu0.24.04.1) ...\r\n#7 375.4 \r\n#7 375.4 Current default time zone: 'Etc/UTC'\r\n#7 375.4 Local time is now:      Thu Oct 29 17:50:45 UTC 2026.\r\n#7 375.4 Universal Time is now:  Thu Oct 29 17:50:45 UTC 2026.\r\n#7 375.4 Run 'dpkg-reconfigure tzdata' if you wish to change it.\r\n#7 375.4 \r\n#7 375.4 Setting up fakeroot (1.33-1) ...\r\n#7 375.4 update-alternatives: using /usr/bin/fakeroot-sysv to provide /usr/bin/fakeroot (fakeroot) in auto mode\r\n#7 375.4 update-alternatives: warning: skip creation of /usr/share/man/man1/fakeroot.1.gz because associated file /usr/share/man/man1/fakeroot-sysv.1.gz (of link group fakeroot) doesn't exist\r\n#7 375.4 update-alternatives: warning: skip creation of /usr/share/man/man1/faked.1.gz because associated file /usr/share/man/man1/faked-sysv.1.gz (of link group fakeroot) doesn't exist\r\n#7 375.4 update-alternatives: warning: skip creation of /usr/share/man/es/man1/fakeroot.1.gz because associated file /usr/share/man/es/man1/fakeroot-sysv.1.gz (of link group fakeroot) doesn't exist\r\n#7 375.4 update-alternatives: warning: skip creation of /usr/share/man/es/man1/faked.1.gz because associated file /usr/share/man/es/man1/faked-sysv.1.gz (of link group fakeroot) doesn't exist\r\n#7 375.4 update-alternatives: warning: skip creation of /usr/share/man/fr/man1/fakeroot.1.gz because associated file /usr/share/man/fr/man1/fakeroot-sysv.1.gz (of link group fakeroot) doesn't exist\r\n#7 375.4 update-alternatives: warning: skip creation of /usr/share/man/fr/man1/faked.1.gz because associated file /usr/share/man/fr/man1/faked-sysv.1.gz (of link group fakeroot) doesn't exist\r\n#7 375.4 update-alternatives: warning: skip creation of /usr/share/man/sv/man1/fakeroot.1.gz because associated file /usr/share/man/sv/man1/fakeroot-sysv.1.gz (of link group fakeroot) doesn't exist\r\n#7 375.4 update-alternatives: warning: skip creation of /usr/share/man/sv/man1/faked.1.gz because associated file /usr/share/man/sv/man1/faked-sysv.1.gz (of link group fakeroot) doesn't exist\r\n#7 375.4 Setting up rpcsvc-proto (1.4.2-0ubuntu7) ...\r\n#7 375.5 Setting up gcc-13-base:amd64 (13.3.0-6ubuntu2~24.04.1) ...\r\n#7 375.5 Setting up libx11-data (2:1.8.7-1ubuntu0.1) ...\r\n#7 375.5 Setting up make (4.3-4.1build2) ...\r\n#7 375.6 Setting up libmpfr6:amd64 (4.2.1-1build1.1) ...\r\n#7 375.6 Setting up gnupg-l10n (2.4.4-2ubuntu17.6) ...\r\n#7 375.6 Setting up xz-utils (5.6.1+really5.4.5-1ubuntu0.4) ...\r\n#7 375.7 update-alternatives: using /usr/bin/xz to provide /usr/bin/lzma (lzma) in auto mode\r\n#7 375.7 update-alternatives: warning: skip creation of /usr/share/man/man1/lzma.1.gz because associated file /usr/share/man/man1/xz.1.gz (of link group lzma) doesn't exist\r\n#7 375.7 update-alternatives: warning: skip creation of /usr/share/man/man1/unlzma.1.gz because associated file /usr/share/man/man1/unxz.1.gz (of link group lzma) doesn't exist\r\n#7 375.7 update-alternatives: warning: skip creation of /usr/share/man/man1/lzcat.1.gz because associated file /usr/share/man/man1/xzcat.1.gz (of link group lzma) doesn't exist\r\n#7 375.7 update-alternatives: warning: skip creation of /usr/share/man/man1/lzmore.1.gz because associated file /usr/share/man/man1/xzmore.1.gz (of link group lzma) doesn't exist\r\n#7 375.7 update-alternatives: warning: skip creation of /usr/share/man/man1/lzless.1.gz because associated file /usr/share/man/man1/xzless.1.gz (of link group lzma) doesn't exist\r\n#7 375.7 update-alternatives: warning: skip creation of /usr/share/man/man1/lzdiff.1.gz because associated file /usr/share/man/man1/xzdiff.1.gz (of link group lzma) doesn't exist\r\n#7 375.7 update-alternatives: warning: skip creation of /usr/share/man/man1/lzcmp.1.gz because associated file /usr/share/man/man1/xzcmp.1.gz (of link group lzma) doesn't exist\r\n#7 375.7 update-alternatives: warning: skip creation of /usr/share/man/man1/lzgrep.1.gz because associated file /usr/share/man/man1/xzgrep.1.gz (of link group lzma) doesn't exist\r\n#7 375.7 update-alternatives: warning: skip creation of /usr/share/man/man1/lzegrep.1.gz because associated file /usr/share/man/man1/xzegrep.1.gz (of link group lzma) doesn't exist\r\n#7 375.7 update-alternatives: warning: skip creation of /usr/share/man/man1/lzfgrep.1.gz because associated file /usr/share/man/man1/xzfgrep.1.gz (of link group lzma) doesn't exist\r\n#7 375.7 Setting up perl-modules-5.38 (5.38.2-3.2ubuntu0.6) ...\r\n#7 375.7 Setting up libquadmath0:amd64 (14.2.0-4ubuntu2~24.04.1) ...\r\n#7 375.7 Setting up fonts-dejavu-mono (2.37-8) ...\r\n#7 375.8 Setting up libpng16-16t64:amd64 (1.6.43-5ubuntu0.7) ...\r\n#7 375.8 Setting up libmpc3:amd64 (1.3.1-1build1.1) ...\r\n#7 375.9 Setting up libatomic1:amd64 (14.2.0-4ubuntu2~24.04.1) ...\r\n#7 375.9 Setting up patch (2.7.6-7build3) ...\r\n#7 375.9 Setting up fonts-dejavu-core (2.37-8) ...\r\n#7 376.0 Setting up libjpeg-turbo8:amd64 (2.1.5-2ubuntu2) ...\r\n#7 376.1 Setting up libsasl2-2:amd64 (2.1.28+dfsg1-5ubuntu3.1) ...\r\n#7 376.1 Setting up libwebp7:amd64 (1.3.2-0.4build3) ...\r\n#7 376.1 Setting up libubsan1:amd64 (14.2.0-4ubuntu2~24.04.1) ...\r\n#7 376.2 Setting up libhwasan0:amd64 (14.2.0-4ubuntu2~24.04.1) ...\r\n#7 376.2 Setting up libcrypt-dev:amd64 (1:4.4.36-4build1) ...\r\n#7 376.2 Setting up libasan8:amd64 (14.2.0-4ubuntu2~24.04.1) ...\r\n#7 376.3 Setting up netbase (6.4) ...\r\n#7 376.3 Setting up libperl5.38t64:amd64 (5.38.2-3.2ubuntu0.6) ...\r\n#7 376.4 Setting up libtsan2:amd64 (14.2.0-4ubuntu2~24.04.1) ...\r\n#7 376.4 Setting up libjs-jquery (3.6.1+dfsg+~3.5.14-1) ...\r\n#7 376.4 Setting up libbinutils:amd64 (2.42-4ubuntu2.10) ...\r\n#7 376.5 Setting up libisl23:amd64 (0.26-3build1.1) ...\r\n#7 376.5 Setting up libc-dev-bin (2.39-0ubuntu8.9) ...\r\n#7 376.5 Setting up openssl (3.0.13-0ubuntu3.16) ...\r\n#7 376.5 Setting up libbsd0:amd64 (0.12.1-1build1.1) ...\r\n#7 376.6 Setting up readline-common (8.2-4build1) ...\r\n#7 376.6 Setting up libcc1-0:amd64 (14.2.0-4ubuntu2~24.04.1) ...\r\n#7 376.6 Setting up libldap2:amd64 (2.6.10+dfsg-0ubuntu0.24.04.1) ...\r\n#7 376.7 Setting up liblocale-gettext-perl (1.07-6ubuntu5) ...\r\n#7 376.7 Setting up liblsan0:amd64 (14.2.0-4ubuntu2~24.04.1) ...\r\n#7 376.7 Setting up libitm1:amd64 (14.2.0-4ubuntu2~24.04.1) ...\r\n#7 376.8 Setting up libjs-underscore (1.13.4~dfsg+~1.11.4-3) ...\r\n#7 376.8 Setting up gnupg-utils (2.4.4-2ubuntu17.6) ...\r\n#7 376.8 Setting up libctf0:amd64 (2.42-4ubuntu2.10) ...\r\n#7 376.9 Setting up libjpeg8:amd64 (8c-2ubuntu11) ...\r\n#7 376.9 Setting up manpages-dev (6.7-2) ...\r\n#7 376.9 Setting up libxdmcp6:amd64 (1:1.1.3-0ubuntu6) ...\r\n#7 376.9 Setting up libxcb1:amd64 (1.15-1ubuntu2) ...\r\n#7 377.0 Setting up cpp-13-x86-64-linux-gnu (13.3.0-6ubuntu2~24.04.1) ...\r\n#7 377.0 Setting up fontconfig-config (2.15.0-1.1ubuntu2) ...\r\n#7 377.2 Setting up ca-certificates (20260816ubuntu0.24.04.1) ...\r\n#7 377.9 Updating certificates in /etc/ssl/certs...\r\n#7 378.9 120 added, 0 removed; done.\r\n#7 379.0 Setting up perl (5.38.2-3.2ubuntu0.6) ...\r\n#7 379.0 Setting up libgprofng0:amd64 (2.42-4ubuntu2.10) ...\r\n#7 379.1 Setting up libfreetype6:amd64 (2.13.2+dfsg-1ubuntu0.2) ...\r\n#7 379.1 Setting up libjs-sphinxdoc (7.2.6-6) ...\r\n#7 379.1 Setting up libdpkg-perl (1.22.6ubuntu6.6) ...\r\n#7 379.2 Setting up libreadline8t64:amd64 (8.2-4build1) ...\r\n#7 379.2 Setting up libgcc-13-dev:amd64 (13.3.0-6ubuntu2~24.04.1) ...\r\n#7 379.3 Setting up libtiff6:amd64 (4.5.1+git230720-4ubuntu2.5) ...\r\n#7 379.3 Setting up gpgconf (2.4.4-2ubuntu17.6) ...\r\n#7 379.3 Setting up libc6-dev:amd64 (2.39-0ubuntu8.9) ...\r\n#7 379.4 Setting up libx11-6:amd64 (2:1.8.7-1ubuntu0.1) ...\r\n#7 379.4 Setting up libfontconfig1:amd64 (2.15.0-1.1ubuntu2) ...\r\n#7 379.4 Setting up gpg (2.4.4-2ubuntu17.6) ...\r\n#7 379.5 Setting up libstdc++-13-dev:amd64 (13.3.0-6ubuntu2~24.04.1) ...\r\n#7 379.5 Setting up binutils-x86-64-linux-gnu (2.42-4ubuntu2.10) ...\r\n#7 379.6 Setting up cpp-x86-64-linux-gnu (4:13.2.0-7ubuntu1) ...\r\n#7 379.6 Setting up gpg-agent (2.4.4-2ubuntu17.6) ...\r\n#7 380.5 Setting up libpython3.12-stdlib:amd64 (3.12.3-1ubuntu0.17) ...\r\n#7 380.5 Setting up libxpm4:amd64 (1:3.5.17-1ubuntu0.24.04.2) ...\r\n#7 380.6 Setting up cpp-13 (13.3.0-6ubuntu2~24.04.1) ...\r\n#7 380.6 Setting up libfile-fcntllock-perl (0.22-4ubuntu5) ...\r\n#7 380.7 Setting up libalgorithm-diff-perl (1.201-1) ...\r\n#7 380.7 Setting up gcc-13-x86-64-linux-gnu (13.3.0-6ubuntu2~24.04.1) ...\r\n#7 380.7 Setting up python3.12 (3.12.3-1ubuntu0.17) ...\r\n#7 382.3 Setting up gpgsm (2.4.4-2ubuntu17.6) ...\r\n#7 382.4 Setting up binutils (2.42-4ubuntu2.10) ...\r\n#7 382.4 Setting up dpkg-dev (1.22.6ubuntu6.6) ...\r\n#7 382.5 Setting up libpython3.12t64:amd64 (3.12.3-1ubuntu0.17) ...\r\n#7 382.6 Setting up dirmngr (2.4.4-2ubuntu17.6) ...\r\n#7 382.9 Setting up libexpat1-dev:amd64 (2.6.1-2ubuntu0.6) ...\r\n#7 382.9 Setting up gcc-13 (13.3.0-6ubuntu2~24.04.1) ...\r\n#7 383.0 Setting up keyboxd (2.4.4-2ubuntu17.6) ...\r\n#7 383.2 Setting up zlib1g-dev:amd64 (1:1.3.dfsg-3.1ubuntu2.3) ...\r\n#7 383.3 Setting up cpp (4:13.2.0-7ubuntu1) ...\r\n#7 383.4 Setting up gnupg (2.4.4-2ubuntu17.6) ...\r\n#7 383.4 Setting up libalgorithm-diff-xs-perl:amd64 (0.04-8build3) ...\r\n#7 383.4 Setting up libpython3-stdlib:amd64 (3.12.3-0ubuntu2.1) ...\r\n#7 383.5 Setting up libalgorithm-merge-perl (0.08-5) ...\r\n#7 383.5 Setting up g++-13-x86-64-linux-gnu (13.3.0-6ubuntu2~24.04.1) ...\r\n#7 383.5 Setting up gcc-x86-64-linux-gnu (4:13.2.0-7ubuntu1) ...\r\n#7 383.6 Setting up gpg-wks-client (2.4.4-2ubuntu17.6) ...\r\n#7 383.6 Setting up python3 (3.12.3-0ubuntu2.1) ...\r\n#7 383.8 Setting up libpython3.12-dev:amd64 (3.12.3-1ubuntu0.17) ...\r\n#7 383.9 Setting up python3-wheel (0.42.0-2) ...\r\n#7 384.2 Setting up gcc (4:13.2.0-7ubuntu1) ...\r\n#7 384.3 Setting up python3.12-dev (3.12.3-1ubuntu0.17) ...\r\n#7 384.3 Setting up g++-x86-64-linux-gnu (4:13.2.0-7ubuntu1) ...\r\n#7 384.3 Setting up python3-pkg-resources (68.1.2-2ubuntu1.2) ...\r\n#7 384.7 Setting up g++-13 (13.3.0-6ubuntu2~24.04.1) ...\r\n#7 384.8 Setting up libpython3-dev:amd64 (3.12.3-0ubuntu2.1) ...\r\n#7 384.8 Setting up python3-setuptools (68.1.2-2ubuntu1.2) ...\r\n#7 385.6 Setting up python3-dev (3.12.3-0ubuntu2.1) ...\r\n#7 385.7 Setting up python3-pip (24.0+dfsg-1ubuntu1.3) ...\r\n#7 387.6 Setting up g++ (4:13.2.0-7ubuntu1) ...\r\n#7 387.6 update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ (c++) in auto mode\r\n#7 387.6 update-alternatives: warning: skip creation of /usr/share/man/man1/c++.1.gz because associated file /usr/share/man/man1/g++.1.gz (of link group c++) doesn't exist\r\n#7 387.6 Setting up build-essential (12.10ubuntu1) ...\r\n#7 387.7 Setting up libheif1:amd64 (1.17.6-1ubuntu4.9) ...\r\n#7 387.7 Setting up libgd3:amd64 (2.3.3-9ubuntu5) ...\r\n#7 387.7 Setting up libc-devtools (2.39-0ubuntu8.9) ...\r\n#7 387.8 Setting up libheif-plugin-aomdec:amd64 (1.17.6-1ubuntu4.9) ...\r\n#7 387.8 Setting up libheif-plugin-aomenc:amd64 (1.17.6-1ubuntu4.9) ...\r\n#7 387.8 Processing triggers for libc-bin (2.39-0ubuntu8.9) ...\r\n#7 388.0 Processing triggers for ca-certificates (20260816ubuntu0.24.04.1) ...\r\n#7 388.0 Updating certificates in /etc/ssl/certs...\r\n#7 388.4 0 added, 0 removed; done.\r\n#7 388.4 Running hooks in /etc/ca-certificates/update.d...\r\n#7 388.5 done.\r\n#7 DONE 389.1s\n\n#8 [ 3/10] RUN apt-get update -y &&     apt-get install -y default-jdk &&     apt-get install -y curl &&     apt-get clean\n#8 2.315 Get:1 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]\n#8 2.579 Get:2 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB]\n#8 4.149 Get:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]\n#8 5.456 Get:4 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1550 kB]\n#8 5.892 Get:5 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]\n#8 7.329 Get:6 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB]\n#8 8.181 Get:7 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1412 kB]\n#8 9.890 Get:8 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [55.6 kB]\n#8 10.98 Get:9 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB]\n#8 13.22 Get:10 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [2122 kB]\n#8 31.52 Get:11 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB]\n#8 34.56 Get:12 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB]\n#8 37.55 Get:13 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [2235 kB]\n#8 39.26 Get:14 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [61.7 kB]\n#8 42.56 Get:15 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1740 kB]\n#8 46.62 Get:16 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2172 kB]\n#8 48.02 Get:17 http://archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Packages [669 B]\n#8 49.44 Get:18 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [49.0 kB]\n#8 50.70 Get:19 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [36.0 kB]\n#8 50.74 Fetched 33.6 MB in 50s (672 kB/s)\n#8 50.74 Reading package lists...\n#8 52.39 Reading package lists...\n#8 54.29 Building dependency tree...\n#8 54.67 Reading state information...\n#8 55.10 The following additional packages will be installed:\n#8 55.10   adwaita-icon-theme alsa-topology-conf alsa-ucm-conf at-spi2-common\n#8 55.10   at-spi2-core ca-certificates-java dbus dbus-bin dbus-daemon\n#8 55.10   dbus-session-bus-common dbus-system-bus-common dbus-user-session\n#8 55.10   dconf-gsettings-backend dconf-service default-jdk-headless default-jre\n#8 55.10   default-jre-headless dmsetup fontconfig fonts-dejavu-extra\n#8 55.10   gir1.2-girepository-2.0 gir1.2-glib-2.0 gsettings-desktop-schemas\n#8 55.10   gtk-update-icon-cache hicolor-icon-theme humanity-icon-theme java-common\n#8 55.10   krb5-locales libapparmor1 libargon2-1 libasound2-data libasound2t64\n#8 55.10   libatk-bridge2.0-0t64 libatk-wrapper-java libatk-wrapper-java-jni\n#8 55.10   libatk1.0-0t64 libatspi2.0-0t64 libavahi-client3 libavahi-common-data\n#8 55.10   libavahi-common3 libcairo-gobject2 libcairo2 libcolord2 libcryptsetup12\n#8 55.10   libcups2t64 libdatrie1 libdbus-1-3 libdconf1 libdevmapper1.02.1\n#8 55.10   libdrm-amdgpu1 libdrm-common libdrm-intel1 libdrm2 libedit2 libelf1t64\n#8 55.10   libepoxy0 libfdisk1 libfribidi0 libgbm1 libgdk-pixbuf-2.0-0\n#8 55.10   libgdk-pixbuf2.0-bin libgdk-pixbuf2.0-common libgif7 libgirepository-1.0-1\n#8 55.10   libgl1 libgl1-mesa-dri libglib2.0-0t64 libglib2.0-data libglvnd0\n#8 55.10   libglx-mesa0 libglx0 libgraphite2-3 libgssapi-krb5-2 libgtk-3-0t64\n#8 55.10   libgtk-3-bin libgtk-3-common libharfbuzz0b libice-dev libice6 libicu74\n#8 55.10   libjson-c5 libk5crypto3 libkeyutils1 libkmod2 libkrb5-3 libkrb5support0\n#8 55.10   liblcms2-2 libllvm20 libnspr4 libnss-systemd libnss3 libpam-systemd\n#8 55.10   libpango-1.0-0 libpangocairo-1.0-0 libpangoft2-1.0-0 libpciaccess0\n#8 55.10   libpcsclite1 libpixman-1-0 libpthread-stubs0-dev librsvg2-2 librsvg2-common\n#8 55.10   libsensors-config libsensors5 libsm-dev libsm6 libsystemd-shared\n#8 55.10   libthai-data libthai0 libvulkan1 libwayland-client0 libwayland-cursor0\n#8 55.10   libwayland-egl1 libx11-dev libx11-xcb1 libxau-dev libxaw7 libxcb-dri3-0\n#8 55.10   libxcb-glx0 libxcb-present0 libxcb-randr0 libxcb-render0 libxcb-shape0\n#8 55.10   libxcb-shm0 libxcb-sync1 libxcb-xfixes0 libxcb1-dev libxcomposite1\n#8 55.10   libxcursor1 libxdamage1 libxdmcp-dev libxext6 libxfixes3 libxft2 libxi6\n#8 55.10   libxinerama1 libxkbcommon0 libxkbfile1 libxml2 libxmu6 libxmuu1 libxrandr2\n#8 55.10   libxrender1 libxshmfence1 libxt-dev libxt6t64 libxtst6 libxv1 libxxf86dga1\n#8 55.10   libxxf86vm1 mesa-libgallium mesa-vulkan-drivers networkd-dispatcher\n#8 55.10   openjdk-21-jdk openjdk-21-jdk-headless openjdk-21-jre\n#8 55.10   openjdk-21-jre-headless python3-dbus python3-gi session-migration\n#8 55.10   shared-mime-info systemd systemd-dev systemd-resolved systemd-sysv\n#8 55.10   systemd-timesyncd ubuntu-mono x11-common x11-utils x11proto-dev\n#8 55.10   xdg-user-dirs xkb-data xorg-sgml-doctools xtrans-dev\n#8 55.11 Suggested packages:\n#8 55.11   alsa-utils libasound2-plugins colord cups-common low-memory-monitor krb5-doc\n#8 55.11   krb5-user gvfs libice-doc liblcms2-utils pciutils pcscd librsvg2-bin\n#8 55.11   lm-sensors libsm-doc libx11-doc libxcb-doc libxt-doc iw | wireless-tools\n#8 55.11   openjdk-21-demo openjdk-21-source visualvm libnss-mdns fonts-ipafont-gothic\n#8 55.11   fonts-ipafont-mincho fonts-wqy-microhei | fonts-wqy-zenhei fonts-indic\n#8 55.11   python-dbus-doc systemd-container systemd-homed systemd-userdbd systemd-boot\n#8 55.11   libfido2-1 libip4tc2 libqrencode4 libtss2-esys-3.0.2-0 libtss2-mu-4.0.1-0\n#8 55.11   libtss2-rc0 libtss2-tcti-device0 polkitd mesa-utils\n#8 55.11 Recommended packages:\n#8 55.11   luit\n#8 55.38 The following NEW packages will be installed:\n#8 55.38   adwaita-icon-theme alsa-topology-conf alsa-ucm-conf at-spi2-common\n#8 55.38   at-spi2-core ca-certificates-java dbus dbus-bin dbus-daemon\n#8 55.38   dbus-session-bus-common dbus-system-bus-common dbus-user-session\n#8 55.38   dconf-gsettings-backend dconf-service default-jdk default-jdk-headless\n#8 55.38   default-jre default-jre-headless dmsetup fontconfig fonts-dejavu-extra\n#8 55.38   gir1.2-girepository-2.0 gir1.2-glib-2.0 gsettings-desktop-schemas\n#8 55.38   gtk-update-icon-cache hicolor-icon-theme humanity-icon-theme java-common\n#8 55.38   krb5-locales libapparmor1 libargon2-1 libasound2-data libasound2t64\n#8 55.38   libatk-bridge2.0-0t64 libatk-wrapper-java libatk-wrapper-java-jni\n#8 55.38   libatk1.0-0t64 libatspi2.0-0t64 libavahi-client3 libavahi-common-data\n#8 55.38   libavahi-common3 libcairo-gobject2 libcairo2 libcolord2 libcryptsetup12\n#8 55.38   libcups2t64 libdatrie1 libdbus-1-3 libdconf1 libdevmapper1.02.1\n#8 55.38   libdrm-amdgpu1 libdrm-common libdrm-intel1 libdrm2 libedit2 libelf1t64\n#8 55.38   libepoxy0 libfdisk1 libfribidi0 libgbm1 libgdk-pixbuf-2.0-0\n#8 55.38   libgdk-pixbuf2.0-bin libgdk-pixbuf2.0-common libgif7 libgirepository-1.0-1\n#8 55.38   libgl1 libgl1-mesa-dri libglib2.0-0t64 libglib2.0-data libglvnd0\n#8 55.38   libglx-mesa0 libglx0 libgraphite2-3 libgssapi-krb5-2 libgtk-3-0t64\n#8 55.38   libgtk-3-bin libgtk-3-common libharfbuzz0b libice-dev libice6 libicu74\n#8 55.38   libjson-c5 libk5crypto3 libkeyutils1 libkmod2 libkrb5-3 libkrb5support0\n#8 55.38   liblcms2-2 libllvm20 libnspr4 libnss-systemd libnss3 libpam-systemd\n#8 55.38   libpango-1.0-0 libpangocairo-1.0-0 libpangoft2-1.0-0 libpciaccess0\n#8 55.38   libpcsclite1 libpixman-1-0 libpthread-stubs0-dev librsvg2-2 librsvg2-common\n#8 55.38   libsensors-config libsensors5 libsm-dev libsm6 libsystemd-shared\n#8 55.38   libthai-data libthai0 libvulkan1 libwayland-client0 libwayland-cursor0\n#8 55.38   libwayland-egl1 libx11-dev libx11-xcb1 libxau-dev libxaw7 libxcb-dri3-0\n#8 55.38   libxcb-glx0 libxcb-present0 libxcb-randr0 libxcb-render0 libxcb-shape0\n#8 55.38   libxcb-shm0 libxcb-sync1 libxcb-xfixes0 libxcb1-dev libxcomposite1\n#8 55.38   libxcursor1 libxdamage1 libxdmcp-dev libxext6 libxfixes3 libxft2 libxi6\n#8 55.38   libxinerama1 libxkbcommon0 libxkbfile1 libxml2 libxmu6 libxmuu1 libxrandr2\n#8 55.38   libxrender1 libxshmfence1 libxt-dev libxt6t64 libxtst6 libxv1 libxxf86dga1\n#8 55.38   libxxf86vm1 mesa-libgallium mesa-vulkan-drivers networkd-dispatcher\n#8 55.38   openjdk-21-jdk openjdk-21-jdk-headless openjdk-21-jre\n#8 55.38   openjdk-21-jre-headless python3-dbus python3-gi session-migration\n#8 55.38   shared-mime-info systemd systemd-dev systemd-resolved systemd-sysv\n#8 55.38   systemd-timesyncd ubuntu-mono x11-common x11-utils x11proto-dev\n#8 55.38   xdg-user-dirs xkb-data xorg-sgml-doctools xtrans-dev\n#8 57.46 0 upgraded, 174 newly installed, 0 to remove and 0 not upgraded.\n#8 57.46 Need to get 234 MB of archives.\n#8 57.46 After this operation, 771 MB of additional disk space will be used.\n#8 57.46 Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libapparmor1 amd64 4.0.1really4.0.1-0ubuntu0.24.04.9 [51.5 kB]\n#8 58.68 Get:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libargon2-1 amd64 0~20190702+dfsg-4build1 [20.8 kB]\n#8 61.03 Get:3 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libdevmapper1.02.1 amd64 2:1.02.185-3ubuntu3.2 [139 kB]\n#8 63.21 Get:4 http://archive.ubuntu.com/ubuntu noble/main amd64 libjson-c5 amd64 0.17-1build1 [35.3 kB]\n#8 72.50 Get:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcryptsetup12 amd64 2:2.7.0-1ubuntu4.2 [266 kB]\n#8 74.15 Get:6 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libfdisk1 amd64 2.39.3-9ubuntu6.6 [146 kB]\n#8 75.35 Get:7 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libkmod2 amd64 31+20240202-2ubuntu7.2 [51.8 kB]\n#8 78.54 Get:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsystemd-shared amd64 255.4-1ubuntu8.18 [2077 kB]\n#8 80.26 Get:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 systemd-dev all 255.4-1ubuntu8.18 [107 kB]\n#8 89.18 Get:10 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 systemd amd64 255.4-1ubuntu8.18 [3475 kB]\n#8 90.61 Get:11 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 systemd-sysv amd64 255.4-1ubuntu8.18 [11.9 kB]\n#8 92.50 Get:12 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libdbus-1-3 amd64 1.14.10-4ubuntu4.1 [210 kB]\n#8 93.60 Get:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dbus-bin amd64 1.14.10-4ubuntu4.1 [39.3 kB]\n#8 94.96 Get:14 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dbus-session-bus-common all 1.14.10-4ubuntu4.1 [80.5 kB]\n#8 96.44 Get:15 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dbus-daemon amd64 1.14.10-4ubuntu4.1 [118 kB]\n#8 97.91 Get:16 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dbus-system-bus-common all 1.14.10-4ubuntu4.1 [81.6 kB]\n#8 98.91 Get:17 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dbus amd64 1.14.10-4ubuntu4.1 [24.3 kB]\n#8 100.5 Get:18 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpam-systemd amd64 255.4-1ubuntu8.18 [235 kB]\n#8 101.6 Get:19 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dbus-user-session amd64 1.14.10-4ubuntu4.1 [9968 B]\n#8 102.9 Get:20 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dmsetup amd64 2:1.02.185-3ubuntu3.2 [79.2 kB]\n#8 105.9 Get:21 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libglib2.0-0t64 amd64 2.80.0-6ubuntu3.10 [1548 kB]\n#8 107.7 Get:22 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gir1.2-glib-2.0 amd64 2.80.0-6ubuntu3.10 [183 kB]\n#8 109.1 Get:23 http://archive.ubuntu.com/ubuntu noble/main amd64 libgirepository-1.0-1 amd64 1.80.1-1 [81.9 kB]\n#8 110.2 Get:24 http://archive.ubuntu.com/ubuntu noble/main amd64 gir1.2-girepository-2.0 amd64 1.80.1-1 [24.5 kB]\n#8 111.2 Get:25 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 krb5-locales all 1.20.1-6ubuntu2.10 [15.3 kB]\n#8 112.5 Get:26 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libelf1t64 amd64 0.190-1.1ubuntu0.1 [57.8 kB]\n#8 113.6 Get:27 http://archive.ubuntu.com/ubuntu noble/main amd64 libfribidi0 amd64 1.0.13-3build1 [26.1 kB]\n#8 114.9 Get:28 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libglib2.0-data all 2.80.0-6ubuntu3.10 [50.2 kB]\n#8 115.9 Get:29 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libkrb5support0 amd64 1.20.1-6ubuntu2.10 [34.9 kB]\n#8 117.4 Get:30 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libk5crypto3 amd64 1.20.1-6ubuntu2.10 [81.9 kB]\n#8 118.2 Get:31 http://archive.ubuntu.com/ubuntu noble/main amd64 libkeyutils1 amd64 1.6.3-3build1 [9490 B]\n#8 119.9 Get:32 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libkrb5-3 amd64 1.20.1-6ubuntu2.10 [348 kB]\n#8 121.6 Get:33 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgssapi-krb5-2 amd64 1.20.1-6ubuntu2.10 [143 kB]\n#8 130.8 Get:34 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libicu74 amd64 74.2-1ubuntu3.1 [10.9 MB]\n#8 133.2 Get:35 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libnss-systemd amd64 255.4-1ubuntu8.18 [159 kB]\n#8 135.5 Get:36 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libxml2 amd64 2.9.14+dfsg-1.3ubuntu3.10 [764 kB]\n#8 137.6 Get:37 http://archive.ubuntu.com/ubuntu noble/main amd64 python3-dbus amd64 1.3.2-5build3 [100 kB]\n#8 139.7 Get:38 http://archive.ubuntu.com/ubuntu noble/main amd64 python3-gi amd64 3.48.2-1 [232 kB]\n#8 141.0 Get:39 http://archive.ubuntu.com/ubuntu noble/main amd64 networkd-dispatcher all 2.2.4-1 [15.5 kB]\n#8 144.1 Get:40 http://archive.ubuntu.com/ubuntu noble/main amd64 shared-mime-info amd64 2.4-4 [474 kB]\n#8 148.8 Get:41 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 systemd-resolved amd64 255.4-1ubuntu8.18 [296 kB]\n#8 150.2 Get:42 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 systemd-timesyncd amd64 255.4-1ubuntu8.18 [35.3 kB]\n#8 151.7 Get:43 http://archive.ubuntu.com/ubuntu noble/main amd64 xdg-user-dirs amd64 0.18-1build1 [18.4 kB]\n#8 153.8 Get:44 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 xkb-data all 2.41-2ubuntu1.1 [397 kB]\n#8 154.8 Get:45 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libdrm-common all 2.4.125-1ubuntu0.1~24.04.2 [9250 B]\n#8 156.1 Get:46 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libdrm2 amd64 2.4.125-1ubuntu0.1~24.04.2 [41.4 kB]\n#8 157.7 Get:47 http://archive.ubuntu.com/ubuntu noble/main amd64 libedit2 amd64 3.1-20230828-1build1 [97.6 kB]\n#8 158.9 Get:48 http://archive.ubuntu.com/ubuntu noble/main amd64 libsensors-config all 1:3.6.0-9build1 [5546 B]\n#8 160.0 Get:49 http://archive.ubuntu.com/ubuntu noble/main amd64 libsensors5 amd64 1:3.6.0-9build1 [26.6 kB]\n#8 161.4 Get:50 http://archive.ubuntu.com/ubuntu noble/main amd64 libxext6 amd64 2:1.3.4-1build2 [30.4 kB]\n#8 162.9 Get:51 http://archive.ubuntu.com/ubuntu noble/main amd64 libxkbcommon0 amd64 1.6.0-1build1 [122 kB]\n#8 163.8 Get:52 http://archive.ubuntu.com/ubuntu noble/main amd64 libxmuu1 amd64 2:1.1.3-3build2 [8958 B]\n#8 164.8 Get:53 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgdk-pixbuf2.0-common all 2.42.10+dfsg-3ubuntu3.3 [8302 B]\n#8 166.6 Get:54 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgdk-pixbuf-2.0-0 amd64 2.42.10+dfsg-3ubuntu3.3 [147 kB]\n#8 168.1 Get:55 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gtk-update-icon-cache amd64 3.24.41-4ubuntu1.3 [51.9 kB]\n#8 169.1 Get:56 http://archive.ubuntu.com/ubuntu noble/main amd64 hicolor-icon-theme all 0.17-2 [9976 B]\n#8 172.0 Get:57 http://archive.ubuntu.com/ubuntu noble/main amd64 humanity-icon-theme all 0.6.16 [1282 kB]\n#8 173.7 Get:58 http://archive.ubuntu.com/ubuntu noble/main amd64 ubuntu-mono all 24.04-0ubuntu1 [151 kB]\n#8 175.9 Get:59 http://archive.ubuntu.com/ubuntu noble/main amd64 adwaita-icon-theme all 46.0-1 [723 kB]\n#8 177.1 Get:60 http://archive.ubuntu.com/ubuntu noble/main amd64 alsa-topology-conf all 1.2.5.1-2 [15.5 kB]\n#8 178.3 Get:61 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libasound2-data all 1.2.11-1ubuntu0.3 [21.4 kB]\n#8 180.1 Get:62 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libasound2t64 amd64 1.2.11-1ubuntu0.3 [398 kB]\n#8 181.6 Get:63 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 alsa-ucm-conf all 1.2.10-1ubuntu5.15 [70.5 kB]\n#8 183.0 Get:64 http://archive.ubuntu.com/ubuntu noble/main amd64 at-spi2-common all 2.52.0-1build1 [8674 B]\n#8 184.1 Get:65 http://archive.ubuntu.com/ubuntu noble/main amd64 libxi6 amd64 2:1.8.1-1build1 [32.4 kB]\n#8 185.9 Get:66 http://archive.ubuntu.com/ubuntu noble/main amd64 libatspi2.0-0t64 amd64 2.52.0-1build1 [80.5 kB]\n#8 186.9 Get:67 http://archive.ubuntu.com/ubuntu noble/main amd64 x11-common all 1:7.7+23ubuntu3 [21.7 kB]\n#8 187.9 Get:68 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libxtst6 amd64 2:1.2.3-1.1ubuntu0.1 [12.6 kB]\n#8 189.3 Get:69 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libdconf1 amd64 0.40.0-4ubuntu0.1 [39.6 kB]\n#8 190.5 Get:70 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dconf-service amd64 0.40.0-4ubuntu0.1 [27.6 kB]\n#8 191.7 Get:71 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dconf-gsettings-backend amd64 0.40.0-4ubuntu0.1 [22.1 kB]\n#8 193.1 Get:72 http://archive.ubuntu.com/ubuntu noble/main amd64 session-migration amd64 0.3.9build1 [9034 B]\n#8 194.4 Get:73 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gsettings-desktop-schemas all 46.1-0ubuntu1 [35.6 kB]\n#8 196.0 Get:74 http://archive.ubuntu.com/ubuntu noble/main amd64 at-spi2-core amd64 2.52.0-1build1 [56.6 kB]\n#8 197.2 Get:75 http://archive.ubuntu.com/ubuntu noble/main amd64 ca-certificates-java all 20240118 [11.6 kB]\n#8 198.4 Get:76 http://archive.ubuntu.com/ubuntu noble/main amd64 java-common all 0.75+exp1 [6798 B]\n#8 200.3 Get:77 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 liblcms2-2 amd64 2.14-2ubuntu0.1 [161 kB]\n#8 201.9 Get:78 http://archive.ubuntu.com/ubuntu noble/main amd64 libnspr4 amd64 2:4.35-1.1build1 [117 kB]\n#8 204.7 Get:79 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libnss3 amd64 2:3.98-1ubuntu0.3 [1445 kB]\n#8 205.9 Get:80 http://archive.ubuntu.com/ubuntu noble/main amd64 libpcsclite1 amd64 2.0.3-1build1 [21.4 kB]\n#8 236.1 Ign:81 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openjdk-21-jre-headless amd64 21.0.12.1+1-1~24.04.4\n#8 237.1 Get:82 http://archive.ubuntu.com/ubuntu noble/main amd64 default-jre-headless amd64 2:1.21-75+exp1 [3094 B]\n#8 239.9 Get:83 http://archive.ubuntu.com/ubuntu noble/main amd64 libatk1.0-0t64 amd64 2.52.0-1build1 [55.3 kB]\n#8 241.3 Get:84 http://archive.ubuntu.com/ubuntu noble/main amd64 libatk-bridge2.0-0t64 amd64 2.52.0-1build1 [66.0 kB]\n#8 243.3 Get:85 http://archive.ubuntu.com/ubuntu noble/main amd64 libpixman-1-0 amd64 0.42.2-1build1 [279 kB]\n#8 244.6 Get:86 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-render0 amd64 1.15-1ubuntu2 [16.2 kB]\n#8 245.6 Get:87 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-shm0 amd64 1.15-1ubuntu2 [5756 B]\n#8 246.8 Get:88 http://archive.ubuntu.com/ubuntu noble/main amd64 libxrender1 amd64 1:0.9.10-1.1build1 [19.0 kB]\n#8 249.0 Get:89 http://archive.ubuntu.com/ubuntu noble/main amd64 libcairo2 amd64 1.18.0-3build1 [566 kB]\n#8 250.9 Get:90 http://archive.ubuntu.com/ubuntu noble/main amd64 libcairo-gobject2 amd64 1.18.0-3build1 [127 kB]\n#8 252.6 Get:91 http://archive.ubuntu.com/ubuntu noble/main amd64 libcolord2 amd64 1.4.7-1build2 [149 kB]\n#8 254.3 Get:92 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libavahi-common-data amd64 0.8-13ubuntu6.2 [30.1 kB]\n#8 255.8 Get:93 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libavahi-common3 amd64 0.8-13ubuntu6.2 [23.4 kB]\n#8 256.9 Get:94 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libavahi-client3 amd64 0.8-13ubuntu6.2 [26.8 kB]\n#8 258.6 Get:95 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcups2t64 amd64 2.4.7-1.2ubuntu7.14 [274 kB]\n#8 260.6 Get:96 http://archive.ubuntu.com/ubuntu noble/main amd64 libepoxy0 amd64 1.5.10-1build1 [220 kB]\n#8 261.9 Get:97 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgraphite2-3 amd64 1.3.14-2ubuntu0.24.04.1 [73.4 kB]\n#8 263.9 Get:98 http://archive.ubuntu.com/ubuntu noble/main amd64 libharfbuzz0b amd64 8.3.0-2build2 [469 kB]\n#8 265.8 Get:99 http://archive.ubuntu.com/ubuntu noble/main amd64 fontconfig amd64 2.15.0-1.1ubuntu2 [180 kB]\n#8 267.5 Get:100 http://archive.ubuntu.com/ubuntu noble/main amd64 libthai-data all 0.1.29-2build1 [158 kB]\n#8 268.7 Get:101 http://archive.ubuntu.com/ubuntu noble/main amd64 libdatrie1 amd64 0.2.13-3build1 [19.0 kB]\n#8 270.0 Get:102 http://archive.ubuntu.com/ubuntu noble/main amd64 libthai0 amd64 0.1.29-2build1 [18.9 kB]\n#8 272.0 Get:103 http://archive.ubuntu.com/ubuntu noble/main amd64 libpango-1.0-0 amd64 1.52.1+ds-1build1 [231 kB]\n#8 273.4 Get:104 http://archive.ubuntu.com/ubuntu noble/main amd64 libpangoft2-1.0-0 amd64 1.52.1+ds-1build1 [42.5 kB]\n#8 274.6 Get:105 http://archive.ubuntu.com/ubuntu noble/main amd64 libpangocairo-1.0-0 amd64 1.52.1+ds-1build1 [28.8 kB]\n#8 275.7 Get:106 http://archive.ubuntu.com/ubuntu noble/main amd64 libwayland-client0 amd64 1.22.0-2.1build1 [26.4 kB]\n#8 276.8 Get:107 http://archive.ubuntu.com/ubuntu noble/main amd64 libwayland-cursor0 amd64 1.22.0-2.1build1 [10.4 kB]\n#8 277.9 Get:108 http://archive.ubuntu.com/ubuntu noble/main amd64 libwayland-egl1 amd64 1.22.0-2.1build1 [5628 B]\n#8 279.1 Get:109 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcomposite1 amd64 1:0.4.5-1build3 [6320 B]\n#8 280.1 Get:110 http://archive.ubuntu.com/ubuntu noble/main amd64 libxfixes3 amd64 1:6.0.0-2build1 [10.8 kB]\n#8 281.3 Get:111 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcursor1 amd64 1:1.2.1-1build1 [20.7 kB]\n#8 282.2 Get:112 http://archive.ubuntu.com/ubuntu noble/main amd64 libxdamage1 amd64 1:1.1.6-1build1 [6150 B]\n#8 283.3 Get:113 http://archive.ubuntu.com/ubuntu noble/main amd64 libxinerama1 amd64 2:1.1.4-3build1 [6396 B]\n#8 284.5 Get:114 http://archive.ubuntu.com/ubuntu noble/main amd64 libxrandr2 amd64 2:1.5.2-2build1 [19.7 kB]\n#8 288.0 Get:115 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgtk-3-common all 3.24.41-4ubuntu1.3 [1426 kB]\n#8 292.9 Get:116 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgtk-3-0t64 amd64 3.24.41-4ubuntu1.3 [2913 kB]\n#8 294.5 Get:117 http://archive.ubuntu.com/ubuntu noble/main amd64 libglvnd0 amd64 1.7.0-1build1 [69.6 kB]\n#8 295.4 Get:118 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libx11-xcb1 amd64 2:1.8.7-1ubuntu0.1 [7796 B]\n#8 297.2 Get:119 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-dri3-0 amd64 1.15-1ubuntu2 [7142 B]\n#8 298.7 Get:120 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-glx0 amd64 1.15-1ubuntu2 [24.8 kB]\n#8 299.7 Get:121 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-present0 amd64 1.15-1ubuntu2 [5676 B]\n#8 300.8 Get:122 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-xfixes0 amd64 1.15-1ubuntu2 [10.2 kB]\n#8 301.7 Get:123 http://archive.ubuntu.com/ubuntu noble/main amd64 libxxf86vm1 amd64 1:1.1.4-1build4 [9282 B]\n#8 302.9 Get:124 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libdrm-amdgpu1 amd64 2.4.125-1ubuntu0.1~24.04.2 [21.4 kB]\n#8 304.1 Get:125 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpciaccess0 amd64 0.17-3ubuntu0.24.04.3 [19.2 kB]\n#8 305.9 Get:126 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libdrm-intel1 amd64 2.4.125-1ubuntu0.1~24.04.2 [63.9 kB]\n#8 330.0 Get:127 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libllvm20 amd64 1:20.1.2-0ubuntu1~24.04.3 [30.6 MB]\n#8 333.0 Get:128 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-randr0 amd64 1.15-1ubuntu2 [17.9 kB]\n#8 333.9 Get:129 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-sync1 amd64 1.15-1ubuntu2 [9312 B]\n#8 334.9 Get:130 http://archive.ubuntu.com/ubuntu noble/main amd64 libxshmfence1 amd64 1.3-1build5 [4764 B]\n#8 344.2 Get:131 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 mesa-libgallium amd64 25.2.8-0ubuntu0.24.04.4 [10.8 MB]\n#8 346.5 Get:132 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgbm1 amd64 25.2.8-0ubuntu0.24.04.4 [34.2 kB]\n#8 348.3 Get:133 http://archive.ubuntu.com/ubuntu noble/main amd64 libvulkan1 amd64 1.3.275.0-1build1 [142 kB]\n#8 349.8 Get:134 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgl1-mesa-dri amd64 25.2.8-0ubuntu0.24.04.4 [38.0 kB]\n#8 351.5 Get:135 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libglx-mesa0 amd64 25.2.8-0ubuntu0.24.04.4 [110 kB]\n#8 352.7 Get:136 http://archive.ubuntu.com/ubuntu noble/main amd64 libglx0 amd64 1.7.0-1build1 [38.6 kB]\n#8 354.8 Get:137 http://archive.ubuntu.com/ubuntu noble/main amd64 libgl1 amd64 1.7.0-1build1 [102 kB]\n#8 356.2 Get:138 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgif7 amd64 5.2.2-1ubuntu1.2 [35.6 kB]\n#8 359.1 Get:139 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openjdk-21-jre amd64 21.0.12.1+1-1~24.04.4 [233 kB]\n#8 360.3 Get:140 http://archive.ubuntu.com/ubuntu noble/main amd64 default-jre amd64 2:1.21-75+exp1 [922 B]\n#8 390.4 Ign:141 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openjdk-21-jdk-headless amd64 21.0.12.1+1-1~24.04.4\n#8 391.8 Get:142 http://archive.ubuntu.com/ubuntu noble/main amd64 default-jdk-headless amd64 2:1.21-75+exp1 [960 B]\n#8 400.3 Get:143 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openjdk-21-jdk amd64 21.0.12.1+1-1~24.04.4 [1665 kB]\n#8 402.2 Get:144 http://archive.ubuntu.com/ubuntu noble/main amd64 default-jdk amd64 2:1.21-75+exp1 [926 B]\n#8 411.9 Get:145 http://archive.ubuntu.com/ubuntu noble/main amd64 fonts-dejavu-extra all 2.37-8 [1947 kB]\n#8 414.5 Get:146 http://archive.ubuntu.com/ubuntu noble/main amd64 libice6 amd64 2:1.0.10-1build3 [41.4 kB]\n#8 415.7 Get:147 http://archive.ubuntu.com/ubuntu noble/main amd64 libsm6 amd64 2:1.2.3-1build3 [15.7 kB]\n#8 417.5 Get:148 http://archive.ubuntu.com/ubuntu noble/main amd64 libxt6t64 amd64 1:1.2.1-1.2build1 [171 kB]\n#8 419.5 Get:149 http://archive.ubuntu.com/ubuntu noble/main amd64 libxmu6 amd64 2:1.1.3-3build2 [47.6 kB]\n#8 421.8 Get:150 http://archive.ubuntu.com/ubuntu noble/main amd64 libxaw7 amd64 2:1.0.14-1build2 [187 kB]\n#8 423.0 Get:151 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-shape0 amd64 1.15-1ubuntu2 [6100 B]\n#8 424.8 Get:152 http://archive.ubuntu.com/ubuntu noble/main amd64 libxft2 amd64 2.3.6-1build1 [45.3 kB]\n#8 426.4 Get:153 http://archive.ubuntu.com/ubuntu noble/main amd64 libxkbfile1 amd64 1:1.1.0-1build4 [70.0 kB]\n#8 427.4 Get:154 http://archive.ubuntu.com/ubuntu noble/main amd64 libxv1 amd64 2:1.0.11-1.1build1 [10.7 kB]\n#8 428.5 Get:155 http://archive.ubuntu.com/ubuntu noble/main amd64 libxxf86dga1 amd64 2:1.1.5-1build1 [11.6 kB]\n#8 430.2 Get:156 http://archive.ubuntu.com/ubuntu noble/main amd64 x11-utils amd64 7.7+6build2 [189 kB]\n#8 432.0 Get:157 http://archive.ubuntu.com/ubuntu noble/main amd64 libatk-wrapper-java all 0.40.0-3build2 [54.3 kB]\n#8 433.2 Get:158 http://archive.ubuntu.com/ubuntu noble/main amd64 libatk-wrapper-java-jni amd64 0.40.0-3build2 [46.4 kB]\n#8 434.5 Get:159 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgdk-pixbuf2.0-bin amd64 2.42.10+dfsg-3ubuntu3.3 [13.9 kB]\n#8 436.2 Get:160 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgtk-3-bin amd64 3.24.41-4ubuntu1.3 [73.9 kB]\n#8 437.3 Get:161 http://archive.ubuntu.com/ubuntu noble/main amd64 xorg-sgml-doctools all 1:1.11-1.1 [10.9 kB]\n#8 439.3 Get:162 http://archive.ubuntu.com/ubuntu noble/main amd64 x11proto-dev all 2023.2-1 [602 kB]\n#8 440.5 Get:163 http://archive.ubuntu.com/ubuntu noble/main amd64 libice-dev amd64 2:1.0.10-1build3 [51.0 kB]\n#8 441.5 Get:164 http://archive.ubuntu.com/ubuntu noble/main amd64 libpthread-stubs0-dev amd64 0.4-1build3 [4746 B]\n#8 445.1 Get:165 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 librsvg2-2 amd64 2.58.0+dfsg-1ubuntu0.1 [2141 kB]\n#8 446.7 Get:166 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 librsvg2-common amd64 2.58.0+dfsg-1ubuntu0.1 [11.8 kB]\n#8 447.9 Get:167 http://archive.ubuntu.com/ubuntu noble/main amd64 libsm-dev amd64 2:1.2.3-1build3 [17.8 kB]\n#8 449.1 Get:168 http://archive.ubuntu.com/ubuntu noble/main amd64 libxau-dev amd64 1:1.0.9-1build6 [9570 B]\n#8 451.5 Get:169 http://archive.ubuntu.com/ubuntu noble/main amd64 libxdmcp-dev amd64 1:1.1.3-0ubuntu6 [26.5 kB]\n#8 452.9 Get:170 http://archive.ubuntu.com/ubuntu noble/main amd64 xtrans-dev all 1.4.0-1 [68.9 kB]\n#8 454.7 Get:171 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb1-dev amd64 1.15-1ubuntu2 [85.8 kB]\n#8 456.9 Get:172 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libx11-dev amd64 2:1.8.7-1ubuntu0.1 [732 kB]\n#8 458.9 Get:173 http://archive.ubuntu.com/ubuntu noble/main amd64 libxt-dev amd64 1:1.2.1-1.2build1 [394 kB]\n#8 475.7 Get:174 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 mesa-vulkan-drivers amd64 25.2.8-0ubuntu0.24.04.4 [17.5 MB]\n#8 506.9 Ign:81 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openjdk-21-jre-headless amd64 21.0.12.1+1-1~24.04.4\n#8 567.2 Ign:141 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openjdk-21-jdk-headless amd64 21.0.12.1+1-1~24.04.4\n#8 627.5 Ign:81 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openjdk-21-jre-headless amd64 21.0.12.1+1-1~24.04.4\n#8 687.6 Ign:141 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openjdk-21-jdk-headless amd64 21.0.12.1+1-1~24.04.4\n#8 747.9 Ign:81 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openjdk-21-jre-headless amd64 21.0.12.1+1-1~24.04.4\n#8 808.2 Ign:141 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openjdk-21-jdk-headless amd64 21.0.12.1+1-1~24.04.4\n#8 808.3 Err:81 http://security.ubuntu.com/ubuntu noble-updates/main amd64 openjdk-21-jre-headless amd64 21.0.12.1+1-1~24.04.4\n#8 808.3   Connection failed [IP: 91.189.92.23 80]\n#8 867.8 Err:141 http://security.ubuntu.com/ubuntu noble-updates/main amd64 openjdk-21-jdk-headless amd64 21.0.12.1+1-1~24.04.4\n#8 867.8   Connection failed [IP: 91.189.91.81 80]\n#8 867.8 E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/o/openjdk-21/openjdk-21-jre-headless_21.0.12.1%2b1-1%7e24.04.4_amd64.deb  Connection failed [IP: 91.189.92.23 80]\n#8 867.8 E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/o/openjdk-21/openjdk-21-jdk-headless_21.0.12.1%2b1-1%7e24.04.4_amd64.deb  Connection failed [IP: 91.189.91.81 80]\n#8 867.8 E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?\n#8 867.8 Fetched 105 MB in 13min 31s (129 kB/s)\n#8 ERROR: process \"/bin/sh -c apt-get update -y &&     apt-get install -y default-jdk &&     apt-get install -y curl &&     apt-get clean\" did not complete successfully: exit code: 100\n------\n > [ 3/10] RUN apt-get update -y &&     apt-get install -y default-jdk &&     apt-get install -y curl &&     apt-get clean:\n747.9 Ign:81 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openjdk-21-jre-headless amd64 21.0.12.1+1-1~24.04.4\n808.2 Ign:141 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openjdk-21-jdk-headless amd64 21.0.12.1+1-1~24.04.4\n808.3 Err:81 http://security.ubuntu.com/ubuntu noble-updates/main amd64 openjdk-21-jre-headless amd64 21.0.12.1+1-1~24.04.4\n808.3   Connection failed [IP: 91.189.92.23 80]\n867.8 Err:141 http://security.ubuntu.com/ubuntu noble-updates/main amd64 openjdk-21-jdk-headless amd64 21.0.12.1+1-1~24.04.4\n867.8   Connection failed [IP: 91.189.91.81 80]\n867.8 E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/o/openjdk-21/openjdk-21-jre-headless_21.0.12.1%2b1-1%7e24.04.4_amd64.deb  Connection failed [IP: 91.189.92.23 80]\n867.8 E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/o/openjdk-21/openjdk-21-jdk-headless_21.0.12.1%2b1-1%7e24.04.4_amd64.deb  Connection failed [IP: 91.189.91.81 80]\n867.8 E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?\n867.8 Fetched 105 MB in 13min 31s (129 kB/s)\n------\nDockerfile:10\n\n--------------------\n\n   9 |     # Update the package list and install the default JDK\n\n  10 | >>> RUN apt-get update -y && \\\n\n  11 | >>>     apt-get install -y default-jdk && \\\n\n  12 | >>>     apt-get install -y curl && \\\n\n  13 | >>>     apt-get clean\n\n  14 |     \n\n--------------------\n\nfailed to solve: process \"/bin/sh -c apt-get update -y &&     apt-get install -y default-jdk &&     apt-get install -y curl &&     apt-get clean\" did not complete successfully: exit code: 100\n\n. Stderr: None. ",
+          "missing_reason": "Pre-agent apt download failure; slot retained without retry.",
+          "result_paths": [
+            "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-test_default-20261029T174427843328Z/2026-10-30__01-44-29/python-scala-translation__38675ba8/result.json"
+          ]
+        },
+        {
+          "task": "reserves-at-risk-calc",
+          "status": "complete",
+          "reward": 0.0,
+          "strict_pass": false,
+          "cost_usd": 0.0478461,
+          "unattributed_interval_usd": null,
+          "error": null,
+          "missing_reason": null,
+          "result_paths": [
+            "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-test_default-20261029T204806190351Z/2026-10-30__04-48-07/reserves-at-risk-calc__2c5b1fa7/result.json"
+          ]
+        },
+        {
+          "task": "threejs-structure-parser",
+          "status": "complete",
+          "reward": 0.0,
+          "strict_pass": false,
+          "cost_usd": 0.02015789999999995,
+          "unattributed_interval_usd": null,
+          "error": null,
+          "missing_reason": null,
+          "result_paths": [
+            "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-test_default-20261029T205829519651Z/2026-10-30__04-58-30/threejs-structure-parser__108d8138/result.json"
+          ]
+        }
+      ]
+    },
+    "random": {
+      "config": {
+        "contextWindow": 64000,
+        "maxTokens": 16384
+      },
+      "slots": 3,
+      "scored": 3,
+      "missing": 0,
+      "passes": 0,
+      "pass_rate_scored_only": 0.0,
+      "scored_observed_usd": 0.06581121999999995,
+      "unattributed_failure_interval_usd": 0,
+      "budget_accounted_usd": 0.06581121999999995,
+      "tasks": [
+        {
+          "task": "python-scala-translation",
+          "status": "complete",
+          "reward": 0.0,
+          "strict_pass": false,
+          "cost_usd": 0.02515402,
+          "unattributed_interval_usd": null,
+          "error": "Agent prompt exceeded wall-clock budget 600s",
+          "missing_reason": null,
+          "result_paths": [
+            "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-test_random-20261029T211124428749Z/2026-10-30__05-11-25/python-scala-translation__7d02e7b8/result.json"
+          ]
+        },
+        {
+          "task": "reserves-at-risk-calc",
+          "status": "complete",
+          "reward": 0.0,
+          "strict_pass": false,
+          "cost_usd": 0.022875250000000125,
+          "unattributed_interval_usd": null,
+          "error": null,
+          "missing_reason": null,
+          "result_paths": [
+            "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-test_random-20261029T214447920029Z/2026-10-30__05-44-48/reserves-at-risk-calc__116f8f55/result.json"
+          ]
+        },
+        {
+          "task": "threejs-structure-parser",
+          "status": "complete",
+          "reward": 0.0,
+          "strict_pass": false,
+          "cost_usd": 0.017781949999999824,
+          "unattributed_interval_usd": null,
+          "error": null,
+          "missing_reason": null,
+          "result_paths": [
+            "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-test_random-20261029T215424784272Z/2026-10-30__05-54-25/threejs-structure-parser__ffbdb15f/result.json"
+          ]
+        }
+      ]
+    },
+    "bayesian": {
+      "config": {
+        "contextWindow": 128000,
+        "maxTokens": 4096
+      },
+      "slots": 3,
+      "scored": 2,
+      "missing": 1,
+      "passes": 0,
+      "pass_rate_scored_only": 0.0,
+      "scored_observed_usd": 0.09615010000000002,
+      "unattributed_failure_interval_usd": 0.0,
+      "budget_accounted_usd": 0.09615010000000002,
+      "tasks": [
+        {
+          "task": "python-scala-translation",
+          "status": "skipped_command_timeout",
+          "reward": null,
+          "strict_pass": null,
+          "cost_usd": null,
+          "unattributed_interval_usd": 0.0,
+          "error": "Command timed out after 900 seconds",
+          "missing_reason": "Unscored 900-second command timeout; cause and model usage not established; slot retained without retry.",
+          "result_paths": [
+            "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-test_bayesian-20261030T013402247502Z/2026-10-30__09-34-03/python-scala-translation__6af72dd6/result.json"
+          ]
+        },
+        {
+          "task": "reserves-at-risk-calc",
+          "status": "complete",
+          "reward": 0.0,
+          "strict_pass": false,
+          "cost_usd": 0.05137690000000017,
+          "unattributed_interval_usd": null,
+          "error": null,
+          "missing_reason": null,
+          "result_paths": [
+            "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-test_bayesian-20261030T031401568957Z/2026-10-30__11-14-02/reserves-at-risk-calc__b4599ca9/result.json"
+          ]
+        },
+        {
+          "task": "threejs-structure-parser",
+          "status": "complete",
+          "reward": 0.0,
+          "strict_pass": false,
+          "cost_usd": 0.044773199999999846,
+          "unattributed_interval_usd": null,
+          "error": null,
+          "missing_reason": null,
+          "result_paths": [
+            "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-test_bayesian-20261030T031935199877Z/2026-10-30__11-19-35/threejs-structure-parser__522b30c2/result.json"
+          ]
+        }
+      ]
+    },
+    "multifidelity": {
+      "config": {
+        "contextWindow": 64000,
+        "maxTokens": 16384
+      },
+      "slots": 3,
+      "scored": 3,
+      "missing": 0,
+      "passes": 0,
+      "pass_rate_scored_only": 0.0,
+      "scored_observed_usd": 0.08904810000000007,
+      "unattributed_failure_interval_usd": 0,
+      "budget_accounted_usd": 0.08904810000000007,
+      "tasks": [
+        {
+          "task": "python-scala-translation",
+          "status": "complete",
+          "reward": 0.0,
+          "strict_pass": false,
+          "cost_usd": 0.01244550000000011,
+          "unattributed_interval_usd": null,
+          "error": null,
+          "missing_reason": null,
+          "result_paths": [
+            "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-test_multifidelity-20261030T032543225728Z/2026-10-30__11-25-43/python-scala-translation__38354467/result.json"
+          ]
+        },
+        {
+          "task": "reserves-at-risk-calc",
+          "status": "complete",
+          "reward": 0.0,
+          "strict_pass": false,
+          "cost_usd": 0.058799899999999905,
+          "unattributed_interval_usd": null,
+          "error": null,
+          "missing_reason": null,
+          "result_paths": [
+            "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-test_multifidelity-20261030T033410134043Z/2026-10-30__11-34-10/reserves-at-risk-calc__7dd1a5c9/result.json"
+          ]
+        },
+        {
+          "task": "threejs-structure-parser",
+          "status": "complete",
+          "reward": 0.0,
+          "strict_pass": false,
+          "cost_usd": 0.01780270000000006,
+          "unattributed_interval_usd": null,
+          "error": null,
+          "missing_reason": null,
+          "result_paths": [
+            "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-test_multifidelity-20261030T034139766151Z/2026-10-30__11-41-40/threejs-structure-parser__04f0e312/result.json"
+          ]
+        }
+      ]
+    }
+  },
+  "slots": 12,
+  "scored": 10,
+  "missing": 2,
+  "passes": 0,
+  "test_budget_accounted_usd": 0.31901342,
+  "validation": {
+    "random": {
+      "selected": {
+        "candidate": 0,
+        "config": {
+          "contextWindow": 64000,
+          "maxTokens": 16384
+        },
+        "validation_pass_rate": 0.0
+      },
+      "candidates": [
+        {
+          "candidate": 0,
+          "config": {
+            "contextWindow": 64000,
+            "maxTokens": 16384
+          },
+          "scored": 3,
+          "missing": 0,
+          "passes": 0,
+          "eligible": true,
+          "selected": true,
+          "pass_rate": 0.0
+        },
+        {
+          "candidate": 1,
+          "config": {
+            "contextWindow": 96000,
+            "maxTokens": 4096
+          },
+          "scored": 3,
+          "missing": 0,
+          "passes": 0,
+          "eligible": true,
+          "selected": false,
+          "pass_rate": 0.0
+        },
+        {
+          "candidate": 2,
+          "config": {
+            "contextWindow": 128000,
+            "maxTokens": 4096
+          },
+          "scored": 2,
+          "missing": 1,
+          "passes": 1,
+          "eligible": false,
+          "selected": false,
+          "pass_rate": null
+        }
+      ],
+      "curve": [
+        {
+          "resolved_slots": 1,
+          "best_complete_candidate_rate": null,
+          "cumulative_record_accounting_usd": 0.0493634
+        },
+        {
+          "resolved_slots": 2,
+          "best_complete_candidate_rate": null,
+          "cumulative_record_accounting_usd": 0.05770310000000001
+        },
+        {
+          "resolved_slots": 3,
+          "best_complete_candidate_rate": 0.0,
+          "cumulative_record_accounting_usd": 0.05932670000000001
+        },
+        {
+          "resolved_slots": 4,
+          "best_complete_candidate_rate": 0.0,
+          "cumulative_record_accounting_usd": 0.0781637
+        },
+        {
+          "resolved_slots": 5,
+          "best_complete_candidate_rate": 0.0,
+          "cumulative_record_accounting_usd": 0.09137410000000001
+        },
+        {
+          "resolved_slots": 6,
+          "best_complete_candidate_rate": 0.0,
+          "cumulative_record_accounting_usd": 0.16137484000000002
+        },
+        {
+          "resolved_slots": 7,
+          "best_complete_candidate_rate": 0.0,
+          "cumulative_record_accounting_usd": 0.18797323999999999
+        },
+        {
+          "resolved_slots": 8,
+          "best_complete_candidate_rate": 0.0,
+          "cumulative_record_accounting_usd": 0.18812254
+        },
+        {
+          "resolved_slots": 9,
+          "best_complete_candidate_rate": 0.0,
+          "cumulative_record_accounting_usd": 0.20431264
+        }
+      ],
+      "valid": 8,
+      "missing": 1,
+      "launches": 10,
+      "budget_accounted_usd": 0.20431264
+    },
+    "bayesian": {
+      "selected": {
+        "candidate": 1,
+        "config": {
+          "contextWindow": 128000,
+          "maxTokens": 4096
+        },
+        "validation_pass_rate": 0.3333333333333333
+      },
+      "candidates": [
+        {
+          "candidate": 0,
+          "config": {
+            "contextWindow": 128000,
+            "maxTokens": 4096
+          },
+          "scored": 3,
+          "missing": 0,
+          "passes": 0,
+          "eligible": true,
+          "selected": false,
+          "pass_rate": 0.0
+        },
+        {
+          "candidate": 1,
+          "config": {
+            "contextWindow": 128000,
+            "maxTokens": 4096
+          },
+          "scored": 3,
+          "missing": 0,
+          "passes": 1,
+          "eligible": true,
+          "selected": true,
+          "pass_rate": 0.3333333333333333
+        },
+        {
+          "candidate": 2,
+          "config": {
+            "contextWindow": 128000,
+            "maxTokens": 4096
+          },
+          "scored": 3,
+          "missing": 0,
+          "passes": 0,
+          "eligible": true,
+          "selected": false,
+          "pass_rate": 0.0
+        }
+      ],
+      "curve": [
+        {
+          "resolved_slots": 1,
+          "best_complete_candidate_rate": null,
+          "cumulative_record_accounting_usd": 0.006768249999999976
+        },
+        {
+          "resolved_slots": 2,
+          "best_complete_candidate_rate": null,
+          "cumulative_record_accounting_usd": 0.01792325
+        },
+        {
+          "resolved_slots": 3,
+          "best_complete_candidate_rate": 0.0,
+          "cumulative_record_accounting_usd": 0.024352350000000023
+        },
+        {
+          "resolved_slots": 4,
+          "best_complete_candidate_rate": 0.0,
+          "cumulative_record_accounting_usd": 0.05099545
+        },
+        {
+          "resolved_slots": 5,
+          "best_complete_candidate_rate": 0.0,
+          "cumulative_record_accounting_usd": 0.056212450000000025
+        },
+        {
+          "resolved_slots": 6,
+          "best_complete_candidate_rate": 0.3333333333333333,
+          "cumulative_record_accounting_usd": 0.10472965000000001
+        },
+        {
+          "resolved_slots": 7,
+          "best_complete_candidate_rate": 0.3333333333333333,
+          "cumulative_record_accounting_usd": 0.12584145000000002
+        },
+        {
+          "resolved_slots": 8,
+          "best_complete_candidate_rate": 0.3333333333333333,
+          "cumulative_record_accounting_usd": 0.13532034999999998
+        },
+        {
+          "resolved_slots": 9,
+          "best_complete_candidate_rate": 0.3333333333333333,
+          "cumulative_record_accounting_usd": 0.14163035
+        }
+      ],
+      "valid": 9,
+      "missing": 0,
+      "launches": 9,
+      "budget_accounted_usd": 0.14163035
+    },
+    "multifidelity": {
+      "selected": {
+        "candidate": 0,
+        "config": {
+          "contextWindow": 64000,
+          "maxTokens": 16384
+        },
+        "validation_pass_rate": 0.0
+      },
+      "candidates": [
+        {
+          "candidate": 0,
+          "config": {
+            "contextWindow": 64000,
+            "maxTokens": 16384
+          },
+          "scored": 3,
+          "missing": 0,
+          "passes": 0,
+          "eligible": true,
+          "selected": true,
+          "pass_rate": 0.0
+        },
+        {
+          "candidate": 1,
+          "config": {
+            "contextWindow": 96000,
+            "maxTokens": 4096
+          },
+          "scored": 2,
+          "missing": 1,
+          "passes": 0,
+          "eligible": false,
+          "selected": false,
+          "pass_rate": null
+        },
+        {
+          "candidate": 2,
+          "config": {
+            "contextWindow": 128000,
+            "maxTokens": 4096
+          },
+          "scored": 1,
+          "missing": 0,
+          "passes": 0,
+          "eligible": false,
+          "selected": false,
+          "pass_rate": null
+        },
+        {
+          "candidate": 3,
+          "config": {
+            "contextWindow": 128000,
+            "maxTokens": 8192
+          },
+          "scored": 1,
+          "missing": 0,
+          "passes": 0,
+          "eligible": false,
+          "selected": false,
+          "pass_rate": null
+        },
+        {
+          "candidate": 4,
+          "config": {
+            "contextWindow": 64000,
+            "maxTokens": 8192
+          },
+          "scored": 1,
+          "missing": 0,
+          "passes": 0,
+          "eligible": false,
+          "selected": false,
+          "pass_rate": null
+        }
+      ],
+      "curve": [
+        {
+          "resolved_slots": 1,
+          "best_complete_candidate_rate": null,
+          "cumulative_record_accounting_usd": 0.0322201
+        },
+        {
+          "resolved_slots": 2,
+          "best_complete_candidate_rate": null,
+          "cumulative_record_accounting_usd": 0.04097496999999997
+        },
+        {
+          "resolved_slots": 3,
+          "best_complete_candidate_rate": null,
+          "cumulative_record_accounting_usd": 0.07852357000000001
+        },
+        {
+          "resolved_slots": 4,
+          "best_complete_candidate_rate": null,
+          "cumulative_record_accounting_usd": 0.24578727000000003
+        },
+        {
+          "resolved_slots": 5,
+          "best_complete_candidate_rate": null,
+          "cumulative_record_accounting_usd": 0.28536936999999996
+        },
+        {
+          "resolved_slots": 6,
+          "best_complete_candidate_rate": null,
+          "cumulative_record_accounting_usd": 0.28692887
+        },
+        {
+          "resolved_slots": 7,
+          "best_complete_candidate_rate": null,
+          "cumulative_record_accounting_usd": 0.28692887
+        },
+        {
+          "resolved_slots": 8,
+          "best_complete_candidate_rate": null,
+          "cumulative_record_accounting_usd": 0.29299787
+        },
+        {
+          "resolved_slots": 9,
+          "best_complete_candidate_rate": 0.0,
+          "cumulative_record_accounting_usd": 0.30581629
+        }
+      ],
+      "valid": 8,
+      "missing": 1,
+      "launches": 10,
+      "budget_accounted_usd": 0.30581629000000005
+    }
+  },
+  "validation_budget_accounted_usd": 0.65175928,
+  "search_and_test_accounted_usd": 0.9707727,
+  "earlier_default_validation": {
+    "scope": "Earlier real Default validation baseline; not synthetic demo; saved result summaries, raw Linux jobs not independently re-read.",
+    "rows": [
+      {
+        "task": "financial-modeling-qa",
+        "reward": 0.0,
+        "strict_pass": false,
+        "observed_cost_usd": 0.1057824,
+        "source_file": "first_task.json",
+        "source_sha256": "880c70e76afa1994c6f9f3a6e9f196f4334c4b21730b2d73498ef96181c789e0",
+        "original_source": "C:\\Users\\happy\\Documents\\Codex\\2026-10-28\\applications-mentioned-by-the-user-appshot\\outputs\\validation_baseline\\first_task.json",
+        "raw_result_path": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/validation-default-20261028T084112321230Z/2026-10-28__16-41-14/financial-modeling-qa__9ce42528/result.json"
+      },
+      {
+        "task": "jax-computing-basics",
+        "reward": 0.0,
+        "strict_pass": false,
+        "observed_cost_usd": 0.0145364,
+        "source_file": "task_2.json",
+        "source_sha256": "2c7cf6b0b00b02592df7f6b6a5a2380eed721f8b1599ae217463bf690936c4fc",
+        "original_source": "C:\\Users\\happy\\Documents\\Codex\\2026-10-28\\applications-mentioned-by-the-user-appshot\\outputs\\validation_baseline\\task_2.json",
+        "raw_result_path": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/validation-default-20261028T085853151210Z/2026-10-28__16-58-56/jax-computing-basics__f69bdfbf/result.json"
+      },
+      {
+        "task": "travel-planning",
+        "reward": 1.0,
+        "strict_pass": true,
+        "observed_cost_usd": 0.020112400000000002,
+        "source_file": "task_3.json",
+        "source_sha256": "ec18bd67ce157f2cda1b5df94f35a9e55f896a86a43230a8cccefdd60813c28f",
+        "original_source": "C:\\Users\\happy\\Documents\\Codex\\2026-10-28\\applications-mentioned-by-the-user-appshot\\outputs\\validation_baseline\\task_3.json",
+        "raw_result_path": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/validation-default-20261028T094353441989Z/2026-10-28__17-43-55/travel-planning__ad872184/result.json"
+      }
+    ],
+    "passes": 1,
+    "tasks": 3,
+    "pass_rate": 0.3333333333333333,
+    "observed_accounted_usd": 0.1404312
+  },
+  "supplementary": {
+    "attempts": {
+      "default": {
+        "task": "python-scala-translation",
+        "status": "complete",
+        "reward": 0.0,
+        "strict_pass": false,
+        "cost_usd": 0.01259509999999997,
+        "result_paths": [
+          "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/supplement-default-20261030T041621835776Z/2026-10-30__12-16-22/python-scala-translation__3295bf76/result.json"
+        ],
+        "result_sha256": "1c325a006610fd3bc5312cab79f6566217e00e80b396716d787d919167a79430"
+      },
+      "bayesian": {
+        "task": "python-scala-translation",
+        "status": "complete",
+        "reward": 0.0,
+        "strict_pass": false,
+        "cost_usd": 0.007951199999999936,
+        "result_paths": [
+          "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/supplement-bayesian-20261030T043012617256Z/2026-10-30__12-30-13/python-scala-translation__270628f6/result.json"
+        ],
+        "result_sha256": "31daf9cbcd119b95048c86285a1c8fd98a8421205300556fe56f07f1c86e2852"
+      }
+    },
+    "completed_estimates": {
+      "default": {
+        "scored": 3,
+        "passes": 0,
+        "missing": 0,
+        "pass_rate": 0.0,
+        "test_accounted_usd": 0.08059909999999992
+      },
+      "random": {
+        "scored": 3,
+        "passes": 0,
+        "missing": 0,
+        "pass_rate": 0.0,
+        "test_accounted_usd": 0.06581121999999995
+      },
+      "bayesian": {
+        "scored": 3,
+        "passes": 0,
+        "missing": 0,
+        "pass_rate": 0.0,
+        "test_accounted_usd": 0.10410129999999995
+      },
+      "multifidelity": {
+        "scored": 3,
+        "passes": 0,
+        "missing": 0,
+        "pass_rate": 0.0,
+        "test_accounted_usd": 0.08904810000000007
+      }
+    },
+    "additional_accounted_usd": 0.020546299999999906,
+    "primary_plus_supplement_test_usd": 0.3395597199999999,
+    "search_primary_and_supplement_usd": 0.991319
+  }
+}

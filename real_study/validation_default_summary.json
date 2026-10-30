@@ -1,0 +1,39 @@
+{
+  "scope": "Earlier real Default validation baseline; not synthetic demo; saved result summaries, raw Linux jobs not independently re-read.",
+  "rows": [
+    {
+      "task": "financial-modeling-qa",
+      "reward": 0.0,
+      "strict_pass": false,
+      "observed_cost_usd": 0.1057824,
+      "source_file": "first_task.json",
+      "source_sha256": "880c70e76afa1994c6f9f3a6e9f196f4334c4b21730b2d73498ef96181c789e0",
+      "original_source": "C:\\Users\\happy\\Documents\\Codex\\2026-10-28\\applications-mentioned-by-the-user-appshot\\outputs\\validation_baseline\\first_task.json",
+      "raw_result_path": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/validation-default-20261028T084112321230Z/2026-10-28__16-41-14/financial-modeling-qa__9ce42528/result.json"
+    },
+    {
+      "task": "jax-computing-basics",
+      "reward": 0.0,
+      "strict_pass": false,
+      "observed_cost_usd": 0.0145364,
+      "source_file": "task_2.json",
+      "source_sha256": "2c7cf6b0b00b02592df7f6b6a5a2380eed721f8b1599ae217463bf690936c4fc",
+      "original_source": "C:\\Users\\happy\\Documents\\Codex\\2026-10-28\\applications-mentioned-by-the-user-appshot\\outputs\\validation_baseline\\task_2.json",
+      "raw_result_path": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/validation-default-20261028T085853151210Z/2026-10-28__16-58-56/jax-computing-basics__f69bdfbf/result.json"
+    },
+    {
+      "task": "travel-planning",
+      "reward": 1.0,
+      "strict_pass": true,
+      "observed_cost_usd": 0.020112400000000002,
+      "source_file": "task_3.json",
+      "source_sha256": "ec18bd67ce157f2cda1b5df94f35a9e55f896a86a43230a8cccefdd60813c28f",
+      "original_source": "C:\\Users\\happy\\Documents\\Codex\\2026-10-28\\applications-mentioned-by-the-user-appshot\\outputs\\validation_baseline\\task_3.json",
+      "raw_result_path": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/validation-default-20261028T094353441989Z/2026-10-28__17-43-55/travel-planning__ad872184/result.json"
+    }
+  ],
+  "passes": 1,
+  "tasks": 3,
+  "pass_rate": 0.3333333333333333,
+  "observed_accounted_usd": 0.1404312
+}

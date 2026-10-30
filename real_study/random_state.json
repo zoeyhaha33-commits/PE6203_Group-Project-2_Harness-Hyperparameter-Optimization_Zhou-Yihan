@@ -1,0 +1,843 @@
+{
+  "method": "random",
+  "protocol_sha256": "b46cdfa88f909202b68e80f43e28b28bfd82e44569d67cc33d5f9b54ac309050",
+  "configs": [
+    {
+      "contextWindow": 64000,
+      "maxTokens": 16384
+    },
+    {
+      "contextWindow": 96000,
+      "maxTokens": 4096
+    },
+    {
+      "contextWindow": 128000,
+      "maxTokens": 4096
+    }
+  ],
+  "records": [
+    {
+      "candidate": 0,
+      "task_index": 0,
+      "task": "financial-modeling-qa",
+      "status": "complete",
+      "key_usage_before_usd": 0.2364698,
+      "jobs_dir": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-random-20261028T095239591862Z",
+      "command": [
+        "/home/zoeyhaha33/.local/bin/bench",
+        "eval",
+        "run",
+        "--tasks-dir",
+        "tasks/financial-modeling-qa",
+        "--agent",
+        "pi",
+        "--model",
+        "litellm/qwen/qwen3-coder",
+        "--sandbox",
+        "docker",
+        "--skill-mode",
+        "no-skill",
+        "--loop-strategy",
+        "single-shot",
+        "--concurrency",
+        "1",
+        "--jobs-dir",
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-random-20261028T095239591862Z",
+        "--agent-env",
+        "BENCHFLOW_PROVIDER_MODELS=[{\"id\":\"qwen/qwen3-coder\",\"reasoning\":false,\"input\":[\"text\"],\"contextWindow\":64000,\"maxTokens\":16384}]"
+      ],
+      "returncode": 0,
+      "result_paths": [
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-random-20261028T095239591862Z/2026-10-28__17-52-42/financial-modeling-qa__2dfefa5b/result.json"
+      ],
+      "error": null,
+      "verifier_error": null,
+      "reward": 0.0,
+      "strict_pass": false,
+      "usage_snapshots_usd": [
+        0.2733409,
+        0.2858332,
+        0.2858332,
+        0.2858332
+      ],
+      "cost_usd": 0.0493634
+    },
+    {
+      "candidate": 0,
+      "task_index": 1,
+      "task": "jax-computing-basics",
+      "status": "complete",
+      "key_usage_before_usd": 0.2858332,
+      "jobs_dir": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-random-20261028T095726702461Z",
+      "command": [
+        "/home/zoeyhaha33/.local/bin/bench",
+        "eval",
+        "run",
+        "--tasks-dir",
+        "tasks/jax-computing-basics",
+        "--agent",
+        "pi",
+        "--model",
+        "litellm/qwen/qwen3-coder",
+        "--sandbox",
+        "docker",
+        "--skill-mode",
+        "no-skill",
+        "--loop-strategy",
+        "single-shot",
+        "--concurrency",
+        "1",
+        "--jobs-dir",
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-random-20261028T095726702461Z",
+        "--agent-env",
+        "BENCHFLOW_PROVIDER_MODELS=[{\"id\":\"qwen/qwen3-coder\",\"reasoning\":false,\"input\":[\"text\"],\"contextWindow\":64000,\"maxTokens\":16384}]"
+      ],
+      "returncode": 0,
+      "result_paths": [
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-random-20261028T095726702461Z/2026-10-28__17-57-27/jax-computing-basics__64eb80a7/result.json"
+      ],
+      "error": null,
+      "verifier_error": null,
+      "reward": 0.0,
+      "strict_pass": false,
+      "usage_snapshots_usd": [
+        0.2888315,
+        0.2935765,
+        0.2941729,
+        0.2941729
+      ],
+      "billing_reconciliation_attempts": [
+        {
+          "checked_at_utc": "2026-10-28T10:04:12.681665+00:00",
+          "assumption": "User asserts exclusive key use and no unrelated delayed charges.",
+          "usage_snapshots_usd": [
+            0.2941729,
+            0.2941729,
+            0.2941729
+          ]
+        }
+      ],
+      "cost_usd": 0.008339700000000005
+    },
+    {
+      "candidate": 0,
+      "task_index": 2,
+      "task": "travel-planning",
+      "status": "complete",
+      "key_usage_before_usd": 0.2941729,
+      "jobs_dir": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-random-20261028T100550212643Z",
+      "command": [
+        "/home/zoeyhaha33/.local/bin/bench",
+        "eval",
+        "run",
+        "--tasks-dir",
+        "tasks/travel-planning",
+        "--agent",
+        "pi",
+        "--model",
+        "litellm/qwen/qwen3-coder",
+        "--sandbox",
+        "docker",
+        "--skill-mode",
+        "no-skill",
+        "--loop-strategy",
+        "single-shot",
+        "--concurrency",
+        "1",
+        "--jobs-dir",
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-random-20261028T100550212643Z",
+        "--agent-env",
+        "BENCHFLOW_PROVIDER_MODELS=[{\"id\":\"qwen/qwen3-coder\",\"reasoning\":false,\"input\":[\"text\"],\"contextWindow\":64000,\"maxTokens\":16384}]"
+      ],
+      "returncode": 0,
+      "result_paths": [
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-random-20261028T100550212643Z/2026-10-28__18-05-52/travel-planning__607f2863/result.json"
+      ],
+      "error": null,
+      "verifier_error": null,
+      "reward": 0.0,
+      "strict_pass": false,
+      "usage_snapshots_usd": [
+        0.2941729,
+        0.2941729,
+        0.2957965,
+        0.2957965
+      ],
+      "billing_reconciliation_attempts": [
+        {
+          "checked_at_utc": "2026-10-28T10:09:25.505648+00:00",
+          "assumption": "User asserts exclusive key use and no unrelated delayed charges.",
+          "usage_snapshots_usd": [
+            0.2957965,
+            0.2957965,
+            0.2957965
+          ]
+        }
+      ],
+      "cost_usd": 0.0016236000000000028
+    },
+    {
+      "candidate": 1,
+      "task_index": 0,
+      "task": "financial-modeling-qa",
+      "status": "complete",
+      "key_usage_before_usd": 0.2957965,
+      "jobs_dir": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-random-20261028T101014784154Z",
+      "command": [
+        "/home/zoeyhaha33/.local/bin/bench",
+        "eval",
+        "run",
+        "--tasks-dir",
+        "tasks/financial-modeling-qa",
+        "--agent",
+        "pi",
+        "--model",
+        "litellm/qwen/qwen3-coder",
+        "--sandbox",
+        "docker",
+        "--skill-mode",
+        "no-skill",
+        "--loop-strategy",
+        "single-shot",
+        "--concurrency",
+        "1",
+        "--jobs-dir",
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-random-20261028T101014784154Z",
+        "--agent-env",
+        "BENCHFLOW_PROVIDER_MODELS=[{\"id\":\"qwen/qwen3-coder\",\"reasoning\":false,\"input\":[\"text\"],\"contextWindow\":96000,\"maxTokens\":4096}]"
+      ],
+      "returncode": 0,
+      "result_paths": [
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-random-20261028T101014784154Z/2026-10-28__18-10-17/financial-modeling-qa__fa932f0a/result.json"
+      ],
+      "error": null,
+      "verifier_error": null,
+      "reward": 0.0,
+      "strict_pass": false,
+      "usage_snapshots_usd": [
+        0.3081056,
+        0.3146335,
+        0.3146335,
+        0.3146335
+      ],
+      "cost_usd": 0.018836999999999993
+    },
+    {
+      "candidate": 1,
+      "task_index": 1,
+      "task": "jax-computing-basics",
+      "status": "complete",
+      "key_usage_before_usd": 0.3146335,
+      "jobs_dir": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-random-20261028T110558196281Z",
+      "command": [
+        "/home/zoeyhaha33/.local/bin/bench",
+        "eval",
+        "run",
+        "--tasks-dir",
+        "tasks/jax-computing-basics",
+        "--agent",
+        "pi",
+        "--model",
+        "litellm/qwen/qwen3-coder",
+        "--sandbox",
+        "docker",
+        "--skill-mode",
+        "no-skill",
+        "--loop-strategy",
+        "single-shot",
+        "--concurrency",
+        "1",
+        "--jobs-dir",
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-random-20261028T110558196281Z",
+        "--agent-env",
+        "BENCHFLOW_PROVIDER_MODELS=[{\"id\":\"qwen/qwen3-coder\",\"reasoning\":false,\"input\":[\"text\"],\"contextWindow\":96000,\"maxTokens\":4096}]"
+      ],
+      "returncode": 0,
+      "result_paths": [
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-random-20261028T110558196281Z/2026-10-28__19-06-00/jax-computing-basics__98bf9f69/result.json"
+      ],
+      "error": null,
+      "verifier_error": null,
+      "reward": 0.0,
+      "strict_pass": false,
+      "usage_snapshots_usd": [
+        0.3278439,
+        0.3278439,
+        0.3278439,
+        0.3278439
+      ],
+      "cost_usd": 0.013210400000000011
+    },
+    {
+      "candidate": 1,
+      "task_index": 2,
+      "task": "travel-planning",
+      "status": "complete",
+      "key_usage_before_usd": 0.3278439,
+      "jobs_dir": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-random-20261028T125702738378Z",
+      "command": [
+        "/home/zoeyhaha33/.local/bin/bench",
+        "eval",
+        "run",
+        "--tasks-dir",
+        "tasks/travel-planning",
+        "--agent",
+        "pi",
+        "--model",
+        "litellm/qwen/qwen3-coder",
+        "--sandbox",
+        "docker",
+        "--skill-mode",
+        "no-skill",
+        "--loop-strategy",
+        "single-shot",
+        "--concurrency",
+        "1",
+        "--jobs-dir",
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-random-20261028T125702738378Z",
+        "--agent-env",
+        "BENCHFLOW_PROVIDER_MODELS=[{\"id\":\"qwen/qwen3-coder\",\"reasoning\":false,\"input\":[\"text\"],\"contextWindow\":96000,\"maxTokens\":4096}]"
+      ],
+      "returncode": 0,
+      "result_paths": [
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-random-20261028T125702738378Z/2026-10-28__20-57-06/travel-planning__0af95440/result.json"
+      ],
+      "error": null,
+      "error_category": null,
+      "verifier_error": null,
+      "reward": 0.0,
+      "strict_pass": false,
+      "usage_snapshots_usd": [
+        0.38735073,
+        0.39784464,
+        0.39784464,
+        0.39784464
+      ],
+      "cost_usd": 0.07000074
+    },
+    {
+      "candidate": 2,
+      "task_index": 0,
+      "task": "financial-modeling-qa",
+      "status": "complete",
+      "key_usage_before_usd": 0.39784464,
+      "jobs_dir": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-random-20261028T141852831811Z",
+      "command": [
+        "/home/zoeyhaha33/.local/bin/bench",
+        "eval",
+        "run",
+        "--tasks-dir",
+        "tasks/financial-modeling-qa",
+        "--agent",
+        "pi",
+        "--model",
+        "litellm/qwen/qwen3-coder",
+        "--sandbox",
+        "docker",
+        "--skill-mode",
+        "no-skill",
+        "--loop-strategy",
+        "single-shot",
+        "--concurrency",
+        "1",
+        "--jobs-dir",
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-random-20261028T141852831811Z",
+        "--agent-env",
+        "BENCHFLOW_PROVIDER_MODELS=[{\"id\":\"qwen/qwen3-coder\",\"reasoning\":false,\"input\":[\"text\"],\"contextWindow\":128000,\"maxTokens\":4096}]"
+      ],
+      "returncode": 0,
+      "result_paths": [
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-random-20261028T141852831811Z/2026-10-28__22-18-55/financial-modeling-qa__329481fc/result.json"
+      ],
+      "error": null,
+      "error_category": null,
+      "verifier_error": null,
+      "reward": 0.0,
+      "strict_pass": false,
+      "usage_snapshots_usd": [
+        0.41083544,
+        0.42444304,
+        0.42444304,
+        0.42444304
+      ],
+      "cost_usd": 0.026598399999999967
+    },
+    {
+      "candidate": 2,
+      "task_index": 1,
+      "task": "jax-computing-basics",
+      "status": "skipped_api_failure",
+      "key_usage_before_usd": 0.42444304,
+      "jobs_dir": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-random-20261028T143930049874Z",
+      "command": [
+        "/home/zoeyhaha33/.local/bin/bench",
+        "eval",
+        "run",
+        "--tasks-dir",
+        "tasks/jax-computing-basics",
+        "--agent",
+        "pi",
+        "--model",
+        "litellm/qwen/qwen3-coder",
+        "--sandbox",
+        "docker",
+        "--skill-mode",
+        "no-skill",
+        "--loop-strategy",
+        "single-shot",
+        "--concurrency",
+        "1",
+        "--jobs-dir",
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-random-20261028T143930049874Z",
+        "--agent-env",
+        "BENCHFLOW_PROVIDER_MODELS=[{\"id\":\"qwen/qwen3-coder\",\"reasoning\":false,\"input\":[\"text\"],\"contextWindow\":128000,\"maxTokens\":4096}]"
+      ],
+      "returncode": 1,
+      "result_paths": [
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-random-20261028T143930049874Z/2026-10-28__22-39-33/jax-computing-basics__045019ba/result.json"
+      ],
+      "error": "suspected provider api error: agent ended with zero tokens and zero tool calls (no scoreable model activity)",
+      "error_category": "suspected_api_error",
+      "verifier_error": null,
+      "skip_accounting_checks": [
+        {
+          "timestamp_utc": "2026-10-28T16:34:04.908674+00:00",
+          "snapshots_usd": [
+            0.42459234,
+            0.42459234,
+            0.42459234
+          ]
+        }
+      ],
+      "original_status": "run_failed",
+      "raw_result": {
+        "task_name": "jax-computing-basics",
+        "rollout_name": "jax-computing-basics__045019ba",
+        "rewards": null,
+        "agent": "pi-acp",
+        "agent_name": "pi-acp",
+        "model": "litellm/qwen/qwen3-coder",
+        "skill_mode": "no-skill",
+        "skill_source": "none",
+        "requested_skills_dir": null,
+        "effective_skills_dir": null,
+        "skills_sandbox_dir": null,
+        "include_task_skills": false,
+        "n_tool_calls": 0,
+        "n_skill_invocations": 0,
+        "n_prompts": 1,
+        "agent_result": {
+          "n_tool_calls": 0,
+          "n_skill_invocations": 0,
+          "n_prompts": 1,
+          "n_input_tokens": 0,
+          "n_output_tokens": 0,
+          "n_cache_read_tokens": 0,
+          "n_cache_creation_tokens": 0,
+          "total_tokens": 0,
+          "cost_usd": null,
+          "usage_source": "unavailable",
+          "price_source": null
+        },
+        "final_metrics": {
+          "total_prompt_tokens": 0,
+          "total_completion_tokens": 0,
+          "total_cached_tokens": 0,
+          "total_cost_usd": null
+        },
+        "trajectory_summary": {
+          "steps": 2,
+          "tool_call_steps": 0,
+          "user_message_steps": 1,
+          "agent_message_steps": 1,
+          "agent_thought_steps": 0,
+          "other_steps": 0,
+          "event_type_counts": {
+            "agent_message": 1,
+            "user_message": 1
+          },
+          "tool_call_status_counts": {},
+          "partial_trajectory": false,
+          "trajectory_source": "acp"
+        },
+        "usage_tracking": {
+          "requested": "auto",
+          "status": "unavailable",
+          "environment": "docker",
+          "endpoint_kind": "host",
+          "usage_source": "unavailable"
+        },
+        "error": "suspected provider api error: agent ended with zero tokens and zero tool calls (no scoreable model activity)",
+        "error_category": "suspected_api_error",
+        "verifier_error": null,
+        "verifier_error_category": null,
+        "export_error": null,
+        "idle_timeout_info": null,
+        "agent_timeout_info": null,
+        "sandbox_startup_info": null,
+        "transport_error_info": null,
+        "verifier_timeout_info": null,
+        "api_error_info": null,
+        "suspected_api_error_info": {
+          "total_tokens": 0,
+          "n_tool_calls": 0,
+          "total_requests": 0,
+          "failed_requests": 0
+        },
+        "partial_trajectory": false,
+        "trajectory_source": "acp",
+        "started_at": "2026-10-28 22:39:33.509973",
+        "finished_at": "2026-10-28 22:41:59.025587",
+        "timing": {
+          "environment_setup": 14.8,
+          "agent_setup": 21.8,
+          "agent_execution": 31.5,
+          "verifier": 32.4,
+          "total": 145.5
+        },
+        "scenes": [
+          {
+            "name": "default",
+            "skills_dir": null,
+            "roles": [
+              {
+                "name": "agent",
+                "agent": "pi-acp",
+                "model": "litellm/qwen/qwen3-coder",
+                "reasoning_effort": null,
+                "timeout_sec": null,
+                "idle_timeout_sec": null,
+                "skills_dir": null,
+                "capabilities": null,
+                "env_keys": []
+              }
+            ],
+            "turns": [
+              {
+                "role": "agent",
+                "has_prompt": false
+              }
+            ]
+          }
+        ],
+        "loop": {
+          "strategy": "single-shot"
+        },
+        "source": {
+          "type": "github",
+          "repo": "benchflow-ai/skillsbench",
+          "requested_ref": "HEAD",
+          "resolved_sha": "b63b7b2850226b6aa4fb5929a8c1ac7bc4d9a6af",
+          "path": "tasks/jax-computing-basics",
+          "dirty": false,
+          "file_hashes": {
+            "environment/Dockerfile": "sha256:e7b6ed46301e8bb0d13153cd64fd0761c38b4891da336cf85cfd52b7f9712209",
+            "environment/data/logistic.npz": "sha256:a4bb6b8f97198d565fc949d4741a166c88ccb70a52a9e7b4a5dd5d823b2c3eb6",
+            "environment/data/mlp.npz": "sha256:334dbfb5fdc7fc9530cb4cf0ee2ed636c203f0eae026f63f5a5c3bc0d40cf4e8",
+            "environment/data/seq.npz": "sha256:6ed564abfac75bc3495afadd39fee4d55d1f19ad274ae023a1257d1436b365bf",
+            "environment/data/x.npy": "sha256:0c19b1f4f6a50a9cc07387d9e4b45fedcfa6e6cc95d3e75b4cf86f6b67f5a3f3",
+            "environment/generate_data.py": "sha256:26613dd1734c5250820c0aeb551e02f9b466fc2a9717e653c830e6c57f5c9e04",
+            "environment/problem.json": "sha256:49763a523f024bf7bf3fdfbedd45a136dbc2c55fd20510618eeee412fbef1f1f",
+            "environment/reference/basic_reduce.npy": "sha256:cbb12d7503cef5eca9375a61930fdd4a4344ef7931dddbc0cc4db08ff75c94f9",
+            "environment/reference/grad_logistic.npy": "sha256:fbbd93f5d5893e982fded67154c8167624e1bc029152e7b03f57eefc8795e349",
+            "environment/reference/jit_mlp.npy": "sha256:3956c2d3e4372fcac0158cf1cd9923c9ead5b8018dc4f8bfec85532679645c96",
+            "environment/reference/map_square.npy": "sha256:c1ea7747817fa72b678d408b4901de8274b15035403d1c282f87730d8b40913f",
+            "environment/reference/scan_rnn.npy": "sha256:17cab0789ce9104e5c07533b6674fa8a95b5ed3eb4de2c5575587c5ea7bb1881",
+            "environment/skills/jax-skills/SKILL.md": "sha256:2cff1fe8e449fe60ab8009980c4e44eaf0d6bc7ca14ae03fc1e5c7f7e82eb6d1",
+            "environment/skills/jax-skills/jax_grad.skill": "sha256:ec90ae70182d6fff279a08280bb204cb34d97d0e3dde3e185e629e9c9b895a48",
+            "environment/skills/jax-skills/jax_jit.skill": "sha256:815531d7402c293eaefef220eddcfc32453178246f2f24aa144a2a61447865fd",
+            "environment/skills/jax-skills/jax_load.skill": "sha256:91322ce1ebb63a63edd62a070a1f049401f627d24bd8d1b97eac4ffdf5d99a54",
+            "environment/skills/jax-skills/jax_map.skill": "sha256:c1437e3e8d454c1c20e8d6708288df358d5ae209a92b901fce448b10c66e86ec",
+            "environment/skills/jax-skills/jax_reduce.skill": "sha256:91815ca1ba33183dc0e9e82dbf40eba409221a8f293e97e19412298d24ea8dc5",
+            "environment/skills/jax-skills/jax_save.skill": "sha256:f95733860dda14ffb70790ad21021a0e479350393d484344b095ff928e70bc86",
+            "environment/skills/jax-skills/jax_scan.skill": "sha256:66ab890176e0b98e87f93a695aa4141fffe0067c648c8b93683778bbf27a4e0e",
+            "environment/skills/jax-skills/jax_skills.py": "sha256:4a7972b68d85057ad0ec59aa1fc1133e7f5e4f38b5429f2fde902cffdbf8d573",
+            "oracle/solve.sh": "sha256:d2392233827f7e4034f055f469eef2673742ff3a130dca2504590781160fc4f8",
+            "task.md": "sha256:4f96adb7b56b6d0703d88158d8c9ddbeeb4306df9e20e62fbfa20b81eee6bb3b",
+            "verifier/test.sh": "sha256:2c77dcbc5d8a924d408676002892868670b2a3bd3105118d1213d77cbcb2cfa6",
+            "verifier/test_outputs.py": "sha256:2ced913e7285fa815bbddc830381ca2288c9bebfbf5b60b17c5d9df825418a6b"
+          }
+        },
+        "task_digest": "sha256:85f8adc808c68bfacd1fa06b17b91bb82b09aac0848c2ba55e512feb84137b35",
+        "sandbox_id": null
+      },
+      "result_sha256": "869ea9afa807bda1e2c9809c6d2f9283af4670fcec7479b76c0bc93f0e78cf47",
+      "reward": null,
+      "strict_pass": null,
+      "cost_usd": null,
+      "unattributed_interval_usd": 0.00014930000000001886,
+      "cost_note": "Unattributed observed interval includes possible failed-task and diagnostic charges; not an exact task cost."
+    },
+    {
+      "candidate": 2,
+      "task_index": 2,
+      "task": "travel-planning",
+      "status": "complete",
+      "key_usage_before_usd": 0.42459234,
+      "jobs_dir": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-random-20261028T163519589147Z",
+      "command": [
+        "/home/zoeyhaha33/.local/bin/bench",
+        "eval",
+        "run",
+        "--tasks-dir",
+        "tasks/travel-planning",
+        "--agent",
+        "pi",
+        "--model",
+        "litellm/qwen/qwen3-coder",
+        "--sandbox",
+        "docker",
+        "--skill-mode",
+        "no-skill",
+        "--loop-strategy",
+        "single-shot",
+        "--concurrency",
+        "1",
+        "--jobs-dir",
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-random-20261028T163519589147Z",
+        "--agent-env",
+        "BENCHFLOW_PROVIDER_MODELS=[{\"id\":\"qwen/qwen3-coder\",\"reasoning\":false,\"input\":[\"text\"],\"contextWindow\":128000,\"maxTokens\":4096}]"
+      ],
+      "returncode": 0,
+      "result_paths": [
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-random-20261028T163519589147Z/2026-10-29__00-35-20/travel-planning__09efd6a3/result.json"
+      ],
+      "error": null,
+      "error_category": null,
+      "verifier_error": null,
+      "reward": 1.0,
+      "strict_pass": true,
+      "usage_snapshots_usd": [
+        0.43757614,
+        0.44078244,
+        0.44078244,
+        0.44078244
+      ],
+      "cost_usd": 0.016190099999999985
+    }
+  ],
+  "promoted": null,
+  "failed_attempts": [
+    {
+      "candidate": 1,
+      "task_index": 2,
+      "task": "travel-planning",
+      "status": "archived_api_failure",
+      "key_usage_before_usd": 0.3278439,
+      "jobs_dir": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-random-20261028T111128389120Z",
+      "command": [
+        "/home/zoeyhaha33/.local/bin/bench",
+        "eval",
+        "run",
+        "--tasks-dir",
+        "tasks/travel-planning",
+        "--agent",
+        "pi",
+        "--model",
+        "litellm/qwen/qwen3-coder",
+        "--sandbox",
+        "docker",
+        "--skill-mode",
+        "no-skill",
+        "--loop-strategy",
+        "single-shot",
+        "--concurrency",
+        "1",
+        "--jobs-dir",
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-random-20261028T111128389120Z",
+        "--agent-env",
+        "BENCHFLOW_PROVIDER_MODELS=[{\"id\":\"qwen/qwen3-coder\",\"reasoning\":false,\"input\":[\"text\"],\"contextWindow\":96000,\"maxTokens\":4096}]"
+      ],
+      "returncode": 1,
+      "result_paths": [
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-random-20261028T111128389120Z/2026-10-28__19-11-29/travel-planning__cdfd8288/result.json"
+      ],
+      "failure_billing_checks": [
+        {
+          "checked_at_utc": "2026-10-28T12:56:19.440820+00:00",
+          "exclusive_key_asserted": true,
+          "usage_snapshots_usd": [
+            0.3278439,
+            0.3278439,
+            0.3278439
+          ]
+        }
+      ],
+      "original_status": "started",
+      "raw_result": {
+        "task_name": "travel-planning",
+        "rollout_name": "travel-planning__cdfd8288",
+        "rewards": null,
+        "agent": "pi-acp",
+        "agent_name": "pi-acp",
+        "model": "litellm/qwen/qwen3-coder",
+        "skill_mode": "no-skill",
+        "skill_source": "none",
+        "requested_skills_dir": null,
+        "effective_skills_dir": null,
+        "skills_sandbox_dir": null,
+        "include_task_skills": false,
+        "n_tool_calls": 0,
+        "n_skill_invocations": 0,
+        "n_prompts": 1,
+        "agent_result": {
+          "n_tool_calls": 0,
+          "n_skill_invocations": 0,
+          "n_prompts": 1,
+          "n_input_tokens": 0,
+          "n_output_tokens": 0,
+          "n_cache_read_tokens": 0,
+          "n_cache_creation_tokens": 0,
+          "total_tokens": 0,
+          "cost_usd": null,
+          "usage_source": "unavailable",
+          "price_source": null
+        },
+        "final_metrics": {
+          "total_prompt_tokens": 0,
+          "total_completion_tokens": 0,
+          "total_cached_tokens": 0,
+          "total_cost_usd": null
+        },
+        "trajectory_summary": {
+          "steps": 3,
+          "tool_call_steps": 0,
+          "user_message_steps": 1,
+          "agent_message_steps": 2,
+          "agent_thought_steps": 0,
+          "other_steps": 0,
+          "event_type_counts": {
+            "agent_message": 2,
+            "user_message": 1
+          },
+          "tool_call_status_counts": {},
+          "partial_trajectory": false,
+          "trajectory_source": "acp"
+        },
+        "usage_tracking": {
+          "requested": "auto",
+          "status": "unavailable",
+          "environment": "docker",
+          "endpoint_kind": "host",
+          "usage_source": "unavailable"
+        },
+        "error": "suspected provider api error: agent ended with zero tokens and zero tool calls (no scoreable model activity)",
+        "error_category": "suspected_api_error",
+        "verifier_error": null,
+        "verifier_error_category": null,
+        "export_error": null,
+        "idle_timeout_info": null,
+        "agent_timeout_info": null,
+        "sandbox_startup_info": null,
+        "transport_error_info": null,
+        "verifier_timeout_info": null,
+        "api_error_info": null,
+        "suspected_api_error_info": {
+          "total_tokens": 0,
+          "n_tool_calls": 0,
+          "total_requests": 0,
+          "failed_requests": 0
+        },
+        "partial_trajectory": false,
+        "trajectory_source": "acp",
+        "started_at": "2026-10-28 19:11:30.300141",
+        "finished_at": "2026-10-28 19:14:15.367658",
+        "timing": {
+          "environment_setup": 32.3,
+          "agent_setup": 12.3,
+          "agent_execution": 65.5,
+          "verifier": 15.6,
+          "total": 165.1
+        },
+        "scenes": [
+          {
+            "name": "default",
+            "skills_dir": null,
+            "roles": [
+              {
+                "name": "agent",
+                "agent": "pi-acp",
+                "model": "litellm/qwen/qwen3-coder",
+                "reasoning_effort": null,
+                "timeout_sec": null,
+                "idle_timeout_sec": null,
+                "skills_dir": null,
+                "capabilities": null,
+                "env_keys": []
+              }
+            ],
+            "turns": [
+              {
+                "role": "agent",
+                "has_prompt": false
+              }
+            ]
+          }
+        ],
+        "loop": {
+          "strategy": "single-shot"
+        },
+        "source": {
+          "type": "github",
+          "repo": "benchflow-ai/skillsbench",
+          "requested_ref": "HEAD",
+          "resolved_sha": "b63b7b2850226b6aa4fb5929a8c1ac7bc4d9a6af",
+          "path": "tasks/travel-planning",
+          "dirty": false,
+          "file_hashes": {
+            "environment/Dockerfile": "sha256:3fd07e18c11720cdce54203fd5436568eb11ba461c82e54b60483bcc4efb32f5",
+            "environment/data/.gitkeep": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "environment/data/accommodations/clean_accommodations_2022.csv": "sha256:137a42ab5c4343c292279132699ec3db99075cfb00b54b24d11660503600d705",
+            "environment/data/attractions/attractions.csv": "sha256:8007fa851ba5b3adb205fbd298169c95116b297cef7ccd21dbea26ecce2605d8",
+            "environment/data/background/citySet.txt": "sha256:5e80edac9ccacec673d51bbeaf2d4e99339e104684988eafdb42c214ddb0ce39",
+            "environment/data/background/citySet_with_states.txt": "sha256:627891f4ee2044e6fafdff983c4874d4ed4743efc94437c2a199c56009a2d119",
+            "environment/data/background/stateSet.txt": "sha256:ad8d88f7e87cf85f230abf4b69c69cd4908399c1c93049eaa466d0ce0fe6bed5",
+            "environment/data/flights/clean_Flights_2022.csv": "sha256:9e0903f7ed7c75f2208e0253826fa431584b468fc5e514bcad94f1a6cf0a4fc0",
+            "environment/data/googleDistanceMatrix/distance.csv": "sha256:7dc1a26dc7877ae96ce63e74be0d9660bbdef96ffccaffce441128e3a4864a27",
+            "environment/data/restaurants/clean_restaurant_2022.csv": "sha256:a38ef00a3398b1ef78306a9b1851c491723d27899c6a1d4a3d6fe042929c0f26",
+            "environment/skills/search-accommodations/SKILL.md": "sha256:b4d84f0d8f5ca68d6d9da711041be8208d509a8137c01cd7edcb9726b03a9e81",
+            "environment/skills/search-accommodations/scripts/search_accommodations.py": "sha256:5f5f6237e62f9578883a01692dbfe836dac7f940f71595714eaa5d6e8406ed41",
+            "environment/skills/search-attractions/SKILL.md": "sha256:1a022a9c7ddfaed2f02a668535c491bd44e3196258258d5d84f00d8a26c0e7d8",
+            "environment/skills/search-attractions/scripts/search_attractions.py": "sha256:c37998ec48e3852e79d96c41586a2501ca6b80daa047a40fd614e8540bec85b8",
+            "environment/skills/search-cities/SKILL.md": "sha256:93df8526bfaa429af0770e9c8483ba4d183e6ab259dfb26c60ca4dcd5fcc0b0f",
+            "environment/skills/search-cities/scripts/search_cities.py": "sha256:44346df7b8391e00d1953d7786fcd6d2d37540947ddcbfc5ed583557fd9edd93",
+            "environment/skills/search-driving-distance/SKILL.md": "sha256:4d5c8c0b4249c47cda8d8b5c6400a085999c437c7c6837dfd81dd4ea01ec91d2",
+            "environment/skills/search-driving-distance/scripts/search_driving_distance.py": "sha256:4a7f0bc9ce94dde62e1c2875f85ee5d0d445d10586035086e563d97a81341123",
+            "environment/skills/search-flights/SKILL.md": "sha256:455734cb845620f57b39341a6f4372d28a084e70c741ce277a6a6f4323d46e06",
+            "environment/skills/search-flights/scripts/search_flights.py": "sha256:e78bec2bdfe3053235cc581c65f3097c9cd19d26025a17f6e7145c6997067e11",
+            "environment/skills/search-restaurants/SKILL.md": "sha256:6a33f2c46d214f14ad02ad0c47613d2cf4ce816a3aaf41adc1ac549c755780d6",
+            "environment/skills/search-restaurants/scripts/search_restaurants.py": "sha256:ea3ff98d87d5b0a91c200fdba6bbc0400654251450fc9ab66c2f8c096b174280",
+            "oracle/skills_inline.py": "sha256:1fbcb8c494d1a5a92dfaf5608cc100b119a144151b4acb21d479a83aeb05f1e7",
+            "oracle/solve.ipynb": "sha256:cf6d33b38a473f4e8b804d860e7a2bbc110d0e19f1cf58b28c368c05ad8f3be2",
+            "oracle/solve.sh": "sha256:a5b42d9b52942584fe941d7685acbcc851381be4509319c30e3f17fc83d66f34",
+            "task.md": "sha256:1c4e69fbd9f491f795ab15b50e6c5f4c165180e5f3e51d13f22ba0c235828b88",
+            "verifier/test.sh": "sha256:b09819e924a6b9f2dad0c23c717992d0ea7bdb69b9a1c87599c22f42cae26d0e",
+            "verifier/test_outputs.py": "sha256:196a2de08301264fd556d2b5fd0d60591345561285e8b2ba719c50a81983364f"
+          }
+        },
+        "task_digest": "sha256:99dd2da5c704914c52b220c9d26366e0ebf04e15ce24ac07635c9dc2c58d48bd",
+        "sandbox_id": null
+      },
+      "result_sha256": "655d553c11b9748ce711be6fcc1905c905a6ddb789e552d579b93f54a6214912",
+      "cost_usd": 0.0,
+      "cost_note": "Observed dedicated-key delta; zero is not confirmation of free usage."
+    }
+  ],
+  "recovery_policy_version": 1,
+  "missing_result_policy_version": 1,
+  "selected": {
+    "candidate": 0,
+    "config": {
+      "contextWindow": 64000,
+      "maxTokens": 16384
+    },
+    "validation_pass_rate": 0.0
+  },
+  "progress": {
+    "valid_evaluations": 8,
+    "missing_evaluations": 1,
+    "task_launches": 10,
+    "budget_accounted_usd": 0.20431264
+  },
+  "completion_status": "finished_with_missing_results"
+}

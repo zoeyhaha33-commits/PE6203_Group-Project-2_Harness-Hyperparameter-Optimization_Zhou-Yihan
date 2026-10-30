@@ -1,0 +1,51 @@
+{
+  "phase": "validation",
+  "method": "default",
+  "task": "travel-planning",
+  "benchmark_commit": "b63b7b2850226b6aa4fb5929a8c1ac7bc4d9a6af",
+  "status": "process_finished_or_interrupted",
+  "jobs_dir": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/validation-default-20261028T094353441989Z",
+  "key_usage_before_usd": 0.2163574,
+  "settings_override": null,
+  "test_tasks_started": 0,
+  "command": [
+    "/home/zoeyhaha33/.local/bin/bench",
+    "eval",
+    "run",
+    "--tasks-dir",
+    "tasks/travel-planning",
+    "--agent",
+    "pi",
+    "--model",
+    "litellm/qwen/qwen3-coder",
+    "--sandbox",
+    "docker",
+    "--skill-mode",
+    "no-skill",
+    "--loop-strategy",
+    "single-shot",
+    "--concurrency",
+    "1",
+    "--jobs-dir",
+    "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/validation-default-20261028T094353441989Z"
+  ],
+  "budget_note": "One task only; USD 0.50 baseline allocation is not a provider-enforced hard cap. Dedicated key required.",
+  "returncode": 0,
+  "results": [
+    {
+      "path": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/validation-default-20261028T094353441989Z/2026-10-28__17-43-55/travel-planning__ad872184/result.json",
+      "reward": 1.0,
+      "strict_pass": true,
+      "error": null,
+      "verifier_error": null,
+      "tool_calls": 23
+    }
+  ],
+  "key_usage_after_snapshots_usd": [
+    0.2295481,
+    0.2364698,
+    0.2364698
+  ],
+  "observed_cost_delta_usd": 0.020112400000000002,
+  "cost_note": "Delayed billing and concurrent requests can affect deltas; missing or zero delta is not confirmed free usage."
+}

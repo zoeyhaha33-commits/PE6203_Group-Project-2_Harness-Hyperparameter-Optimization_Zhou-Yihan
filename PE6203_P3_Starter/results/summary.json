@@ -1,0 +1,54 @@
+{
+  "mode": "demo",
+  "WARNING": "SYNTHETIC DATA \u2014 NOT COURSE EVIDENCE",
+  "methods": {
+    "default": {
+      "config": {
+        "steps": 15,
+        "retries": 2,
+        "context": "medium"
+      },
+      "best_validation_pass_at_1": 0.5833333333333334,
+      "test_pass_at_1": 0.6666666666666666,
+      "test_usd": 0.27895000000000003,
+      "search_usd": 0.5523,
+      "search_task_evaluations": 24
+    },
+    "random": {
+      "config": {
+        "steps": 10,
+        "retries": 1,
+        "context": "large"
+      },
+      "best_validation_pass_at_1": 0.6666666666666666,
+      "test_pass_at_1": 0.5,
+      "test_usd": 0.285592,
+      "search_usd": 5.7071,
+      "search_task_evaluations": 288
+    },
+    "bayesian": {
+      "config": {
+        "steps": 15,
+        "retries": 3,
+        "context": "large"
+      },
+      "best_validation_pass_at_1": 0.7083333333333334,
+      "test_pass_at_1": 0.6666666666666666,
+      "test_usd": 0.378575,
+      "search_usd": 6.79855,
+      "search_task_evaluations": 288
+    },
+    "our_multifidelity": {
+      "config": {
+        "steps": 15,
+        "retries": 3,
+        "context": "large"
+      },
+      "best_validation_pass_at_1": 0.7083333333333334,
+      "test_pass_at_1": 0.6666666666666666,
+      "test_usd": 0.378575,
+      "search_usd": 5.38265,
+      "search_task_evaluations": 288
+    }
+  }
+}

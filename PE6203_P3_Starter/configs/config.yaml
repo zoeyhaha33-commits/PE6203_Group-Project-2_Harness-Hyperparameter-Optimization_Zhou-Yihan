@@ -1,0 +1,11 @@
+# DEMO ONLY: these are abstract parameters, NOT verified Pi-supported settings.
+mode: demo
+seed: 42
+search_trials: 12
+validation_tasks: 24
+test_tasks: 12
+search_space:
+  steps: [5, 10, 15, 20]
+  retries: [0, 1, 2, 3]
+  context: [small, medium, large]
+# Real mode: edit harness_adapter.py and use mode: real.

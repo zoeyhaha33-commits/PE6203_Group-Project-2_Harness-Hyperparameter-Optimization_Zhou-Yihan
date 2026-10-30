@@ -1,0 +1,852 @@
+{
+  "method": "multifidelity",
+  "protocol_sha256": "b46cdfa88f909202b68e80f43e28b28bfd82e44569d67cc33d5f9b54ac309050",
+  "configs": [
+    {
+      "contextWindow": 64000,
+      "maxTokens": 16384
+    },
+    {
+      "contextWindow": 96000,
+      "maxTokens": 4096
+    },
+    {
+      "contextWindow": 128000,
+      "maxTokens": 4096
+    },
+    {
+      "contextWindow": 128000,
+      "maxTokens": 8192
+    },
+    {
+      "contextWindow": 64000,
+      "maxTokens": 8192
+    }
+  ],
+  "records": [
+    {
+      "candidate": 0,
+      "task_index": 0,
+      "task": "financial-modeling-qa",
+      "status": "complete",
+      "key_usage_before_usd": 0.57610279,
+      "jobs_dir": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-multifidelity-20261029T051559429367Z",
+      "command": [
+        "/home/zoeyhaha33/.local/bin/bench",
+        "eval",
+        "run",
+        "--tasks-dir",
+        "tasks/financial-modeling-qa",
+        "--agent",
+        "pi",
+        "--model",
+        "litellm/qwen/qwen3-coder",
+        "--sandbox",
+        "docker",
+        "--skill-mode",
+        "no-skill",
+        "--loop-strategy",
+        "single-shot",
+        "--concurrency",
+        "1",
+        "--jobs-dir",
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-multifidelity-20261029T051559429367Z",
+        "--agent-env",
+        "BENCHFLOW_PROVIDER_MODELS=[{\"id\":\"qwen/qwen3-coder\",\"reasoning\":false,\"input\":[\"text\"],\"contextWindow\":64000,\"maxTokens\":16384}]"
+      ],
+      "returncode": 0,
+      "result_paths": [
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-multifidelity-20261029T051559429367Z/2026-10-29__13-16-00/financial-modeling-qa__09de5cbd/result.json"
+      ],
+      "error": null,
+      "error_category": null,
+      "verifier_error": null,
+      "reward": 0.0,
+      "strict_pass": false,
+      "usage_snapshots_usd": [
+        0.60278499,
+        0.61463289,
+        0.61463289,
+        0.61463289
+      ],
+      "cost_usd": 0.032206,
+      "billing_csv_reconciliation": {
+        "audit_path": "billing_audit_20261029_overlap/audit.json",
+        "previous_status": "complete",
+        "previous_cost_usd": 0.03853010000000001,
+        "basis": "Exported request costs attributed by isolated run time window; limited CSV precision.",
+        "request_count": 22
+      },
+      "unattributed_interval_usd": 1.41e-05,
+      "unattributed_interval_note": "Shared billing residual, reserved here once for budget only; not attributed to this task."
+    },
+    {
+      "candidate": 1,
+      "task_index": 0,
+      "task": "financial-modeling-qa",
+      "status": "complete",
+      "key_usage_before_usd": 0.61463289,
+      "jobs_dir": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-multifidelity-20261029T064609720796Z",
+      "command": [
+        "/home/zoeyhaha33/.local/bin/bench",
+        "eval",
+        "run",
+        "--tasks-dir",
+        "tasks/financial-modeling-qa",
+        "--agent",
+        "pi",
+        "--model",
+        "litellm/qwen/qwen3-coder",
+        "--sandbox",
+        "docker",
+        "--skill-mode",
+        "no-skill",
+        "--loop-strategy",
+        "single-shot",
+        "--concurrency",
+        "1",
+        "--jobs-dir",
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-multifidelity-20261029T064609720796Z",
+        "--agent-env",
+        "BENCHFLOW_PROVIDER_MODELS=[{\"id\":\"qwen/qwen3-coder\",\"reasoning\":false,\"input\":[\"text\"],\"contextWindow\":96000,\"maxTokens\":4096}]"
+      ],
+      "returncode": 0,
+      "result_paths": [
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-multifidelity-20261029T064609720796Z/2026-10-29__14-46-12/financial-modeling-qa__09b298d7/result.json"
+      ],
+      "error": null,
+      "error_category": null,
+      "verifier_error": null,
+      "reward": 0.0,
+      "strict_pass": false,
+      "usage_snapshots_usd": [
+        0.61845206,
+        0.62338776,
+        0.62338776,
+        0.62338776
+      ],
+      "cost_usd": 0.00875486999999997
+    },
+    {
+      "candidate": 2,
+      "task_index": 0,
+      "task": "financial-modeling-qa",
+      "status": "complete",
+      "key_usage_before_usd": 0.62338776,
+      "jobs_dir": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-multifidelity-20261029T144247874325Z",
+      "command": [
+        "/home/zoeyhaha33/.local/bin/bench",
+        "eval",
+        "run",
+        "--tasks-dir",
+        "tasks/financial-modeling-qa",
+        "--agent",
+        "pi",
+        "--model",
+        "litellm/qwen/qwen3-coder",
+        "--sandbox",
+        "docker",
+        "--skill-mode",
+        "no-skill",
+        "--loop-strategy",
+        "single-shot",
+        "--concurrency",
+        "1",
+        "--jobs-dir",
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-multifidelity-20261029T144247874325Z",
+        "--agent-env",
+        "BENCHFLOW_PROVIDER_MODELS=[{\"id\":\"qwen/qwen3-coder\",\"reasoning\":false,\"input\":[\"text\"],\"contextWindow\":128000,\"maxTokens\":4096}]"
+      ],
+      "returncode": 0,
+      "result_paths": [
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-multifidelity-20261029T144247874325Z/2026-10-29__22-42-51/financial-modeling-qa__7bff6dcc/result.json"
+      ],
+      "error": null,
+      "error_category": null,
+      "verifier_error": null,
+      "reward": 0.0,
+      "strict_pass": false,
+      "usage_snapshots_usd": [
+        0.66093636,
+        0.66093636,
+        0.66093636,
+        0.66093636
+      ],
+      "cost_usd": 0.03754860000000004
+    },
+    {
+      "candidate": 3,
+      "task_index": 0,
+      "task": "financial-modeling-qa",
+      "status": "complete",
+      "key_usage_before_usd": 0.66093636,
+      "jobs_dir": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-multifidelity-20261029T152332087639Z",
+      "command": [
+        "/home/zoeyhaha33/.local/bin/bench",
+        "eval",
+        "run",
+        "--tasks-dir",
+        "tasks/financial-modeling-qa",
+        "--agent",
+        "pi",
+        "--model",
+        "litellm/qwen/qwen3-coder",
+        "--sandbox",
+        "docker",
+        "--skill-mode",
+        "no-skill",
+        "--loop-strategy",
+        "single-shot",
+        "--concurrency",
+        "1",
+        "--jobs-dir",
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-multifidelity-20261029T152332087639Z",
+        "--agent-env",
+        "BENCHFLOW_PROVIDER_MODELS=[{\"id\":\"qwen/qwen3-coder\",\"reasoning\":false,\"input\":[\"text\"],\"contextWindow\":128000,\"maxTokens\":8192}]"
+      ],
+      "returncode": 0,
+      "result_paths": [
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-multifidelity-20261029T152332087639Z/2026-10-29__23-23-35/financial-modeling-qa__1d125c6d/result.json",
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-multifidelity-20261029T152332087639Z/2026-10-29__23-23-35/financial-modeling-qa__978691f9/result.json"
+      ],
+      "reward": 0.0,
+      "strict_pass": false,
+      "error": null,
+      "verifier_error": null,
+      "multiple_result_audit": "fourth_result_recovery_audit.json",
+      "scored_result_path": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-multifidelity-20261029T152332087639Z/2026-10-29__23-23-35/financial-modeling-qa__1d125c6d/result.json",
+      "internal_rollout_count": 2,
+      "internal_unscored_startup_failures": 1,
+      "billing_reconciliation_attempts": [
+        {
+          "checked_at_utc": "2026-10-29T15:50:41.851701+00:00",
+          "assumption": "User asserts exclusive key use and no unrelated delayed charges.",
+          "usage_snapshots_usd": [
+            0.82820006,
+            0.82820006,
+            0.82820006
+          ]
+        }
+      ],
+      "cost_usd": 0.16726370000000002
+    },
+    {
+      "candidate": 4,
+      "task_index": 0,
+      "task": "financial-modeling-qa",
+      "status": "complete",
+      "key_usage_before_usd": 0.82820006,
+      "jobs_dir": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-multifidelity-20261029T155543025739Z",
+      "command": [
+        "/home/zoeyhaha33/.local/bin/bench",
+        "eval",
+        "run",
+        "--tasks-dir",
+        "tasks/financial-modeling-qa",
+        "--agent",
+        "pi",
+        "--model",
+        "litellm/qwen/qwen3-coder",
+        "--sandbox",
+        "docker",
+        "--skill-mode",
+        "no-skill",
+        "--loop-strategy",
+        "single-shot",
+        "--concurrency",
+        "1",
+        "--jobs-dir",
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-multifidelity-20261029T155543025739Z",
+        "--agent-env",
+        "BENCHFLOW_PROVIDER_MODELS=[{\"id\":\"qwen/qwen3-coder\",\"reasoning\":false,\"input\":[\"text\"],\"contextWindow\":64000,\"maxTokens\":8192}]"
+      ],
+      "returncode": 0,
+      "result_paths": [
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-multifidelity-20261029T155543025739Z/2026-10-29__23-55-45/financial-modeling-qa__1d8e8295/result.json",
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-multifidelity-20261029T155543025739Z/2026-10-29__23-55-45/financial-modeling-qa__e7119584/result.json"
+      ],
+      "reward": 0.0,
+      "strict_pass": false,
+      "error": null,
+      "verifier_error": null,
+      "multiple_result_audit": "fifth_result_recovery_audit.json",
+      "scored_result_path": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-multifidelity-20261029T155543025739Z/2026-10-29__23-55-45/financial-modeling-qa__1d8e8295/result.json",
+      "internal_rollout_count": 2,
+      "internal_unscored_startup_failures": 1,
+      "billing_reconciliation_attempts": [
+        {
+          "checked_at_utc": "2026-10-29T16:09:25.264285+00:00",
+          "assumption": "User asserts exclusive key use and no unrelated delayed charges.",
+          "usage_snapshots_usd": [
+            0.86778216,
+            0.86778216,
+            0.86778216
+          ]
+        }
+      ],
+      "cost_usd": 0.03958209999999995
+    },
+    {
+      "candidate": 1,
+      "task_index": 1,
+      "task": "jax-computing-basics",
+      "status": "complete",
+      "key_usage_before_usd": 0.86778216,
+      "jobs_dir": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-multifidelity-20261029T161225489387Z",
+      "command": [
+        "/home/zoeyhaha33/.local/bin/bench",
+        "eval",
+        "run",
+        "--tasks-dir",
+        "tasks/jax-computing-basics",
+        "--agent",
+        "pi",
+        "--model",
+        "litellm/qwen/qwen3-coder",
+        "--sandbox",
+        "docker",
+        "--skill-mode",
+        "no-skill",
+        "--loop-strategy",
+        "single-shot",
+        "--concurrency",
+        "1",
+        "--jobs-dir",
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-multifidelity-20261029T161225489387Z",
+        "--agent-env",
+        "BENCHFLOW_PROVIDER_MODELS=[{\"id\":\"qwen/qwen3-coder\",\"reasoning\":false,\"input\":[\"text\"],\"contextWindow\":96000,\"maxTokens\":4096}]"
+      ],
+      "returncode": 0,
+      "result_paths": [
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-multifidelity-20261029T161225489387Z/2026-10-30__00-12-27/jax-computing-basics__06e598e0/result.json",
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-multifidelity-20261029T161225489387Z/2026-10-30__00-12-27/jax-computing-basics__26d1cff1/result.json"
+      ],
+      "reward": 0.0,
+      "strict_pass": false,
+      "error": null,
+      "verifier_error": null,
+      "multiple_result_audit": "sixth_result_recovery_audit.json",
+      "scored_result_path": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-multifidelity-20261029T161225489387Z/2026-10-30__00-12-27/jax-computing-basics__06e598e0/result.json",
+      "internal_rollout_count": 2,
+      "internal_unscored_startup_failures": 1,
+      "billing_reconciliation_attempts": [
+        {
+          "checked_at_utc": "2026-10-29T16:49:44.800167+00:00",
+          "assumption": "User asserts exclusive key use and no unrelated delayed charges.",
+          "usage_snapshots_usd": [
+            0.86934166,
+            0.86934166,
+            0.86934166
+          ]
+        }
+      ],
+      "cost_usd": 0.001559500000000047
+    },
+    {
+      "candidate": 1,
+      "task_index": 2,
+      "task": "travel-planning",
+      "status": "skipped_docker_failure",
+      "key_usage_before_usd": 0.86934166,
+      "jobs_dir": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-multifidelity-20261029T171517695271Z",
+      "command": [
+        "/home/zoeyhaha33/.local/share/uv/tools/benchflow/bin/python",
+        "/mnt/d/NTU-EAI/EAI-T1/PE6203-/Group Assignment2/PE6203_P3_Starter/real_study/bench_hardened.py",
+        "eval",
+        "run",
+        "--tasks-dir",
+        "tasks/travel-planning",
+        "--agent",
+        "pi",
+        "--model",
+        "litellm/qwen/qwen3-coder",
+        "--sandbox",
+        "docker",
+        "--skill-mode",
+        "no-skill",
+        "--loop-strategy",
+        "single-shot",
+        "--concurrency",
+        "1",
+        "--jobs-dir",
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-multifidelity-20261029T171517695271Z",
+        "--agent-env",
+        "BENCHFLOW_PROVIDER_MODELS=[{\"id\":\"qwen/qwen3-coder\",\"reasoning\":false,\"input\":[\"text\"],\"contextWindow\":96000,\"maxTokens\":4096}]"
+      ],
+      "returncode": 1,
+      "result_paths": [
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-multifidelity-20261029T171517695271Z/2026-10-30__01-15-20/travel-planning__8ff7ba7a/result.json"
+      ],
+      "error": "Docker compose command failed for environment travel-planning. Command: docker compose --project-name travel-planning__8ff7ba7a --project-directory /tmp/benchflow-task-z3oubni8/travel-planning/environment -f /home/zoeyhaha33/.local/share/uv/tools/benchflow/lib/python3.12/site-packages/benchflow/sandbox/_compose_files/docker-compose-base.yaml -f /home/zoeyhaha33/.local/share/uv/tools/benchflow/lib/python3.12/site-packages/benchflow/sandbox/_compose_files/docker-compose-build.yaml build. Return code: 1. Stdout:  Image travel-planning__8ff7ba7a-main Building \n#1 [internal] load local bake definitions\n#1 reading from stdin 592B done\n#1 DONE 0.0s\n\n#2 [internal] load build definition from Dockerfile\n#2 transferring dockerfile: 354B done\n#2 DONE 0.0s\n\n#3 [internal] load metadata for docker.io/library/python:3.12-slim\n#3 ...\n\n#4 [auth] library/python:pull token for registry-1.docker.io\n#4 DONE 0.0s\n\n#3 [internal] load metadata for docker.io/library/python:3.12-slim\n#3 ERROR: failed to authorize: DeadlineExceeded: context deadline exceeded\n------\n > [internal] load metadata for docker.io/library/python:3.12-slim:\n------\nDockerfile:1\n\n--------------------\n\n   1 | >>> FROM python:3.12-slim\n\n   2 |     \n\n   3 |     # Install runtime dependencies for the travel-planning skills (pinned versions)\n\n--------------------\n\nfailed to solve: DeadlineExceeded: context deadline exceeded\n\n. Stderr: None. ",
+      "error_category": "other",
+      "verifier_error": null,
+      "skip_accounting_checks": [
+        {
+          "timestamp_utc": "2026-10-29T17:22:17.616054+00:00",
+          "snapshots_usd": [
+            0.86934166,
+            0.86934166,
+            0.86934166
+          ]
+        }
+      ],
+      "original_status": "run_failed",
+      "raw_result": {
+        "task_name": "travel-planning",
+        "rollout_name": "travel-planning__8ff7ba7a",
+        "rewards": null,
+        "agent": "pi-acp",
+        "agent_name": "",
+        "model": "litellm/qwen/qwen3-coder",
+        "skill_mode": "no-skill",
+        "skill_source": "none",
+        "requested_skills_dir": null,
+        "effective_skills_dir": null,
+        "skills_sandbox_dir": null,
+        "include_task_skills": false,
+        "n_tool_calls": 0,
+        "n_skill_invocations": 0,
+        "n_prompts": 1,
+        "agent_result": {
+          "n_tool_calls": 0,
+          "n_skill_invocations": 0,
+          "n_prompts": 1,
+          "n_input_tokens": 0,
+          "n_output_tokens": 0,
+          "n_cache_read_tokens": 0,
+          "n_cache_creation_tokens": 0,
+          "total_tokens": 0,
+          "cost_usd": null,
+          "usage_source": "unavailable",
+          "price_source": null
+        },
+        "final_metrics": {
+          "total_prompt_tokens": 0,
+          "total_completion_tokens": 0,
+          "total_cached_tokens": 0,
+          "total_cost_usd": null
+        },
+        "trajectory_summary": {
+          "steps": 0,
+          "tool_call_steps": 0,
+          "user_message_steps": 0,
+          "agent_message_steps": 0,
+          "agent_thought_steps": 0,
+          "other_steps": 0,
+          "event_type_counts": {},
+          "tool_call_status_counts": {},
+          "partial_trajectory": false,
+          "trajectory_source": null
+        },
+        "usage_tracking": {
+          "requested": "auto",
+          "status": "unavailable",
+          "environment": "docker",
+          "endpoint_kind": "host",
+          "usage_source": "unavailable"
+        },
+        "error": "Docker compose command failed for environment travel-planning. Command: docker compose --project-name travel-planning__8ff7ba7a --project-directory /tmp/benchflow-task-z3oubni8/travel-planning/environment -f /home/zoeyhaha33/.local/share/uv/tools/benchflow/lib/python3.12/site-packages/benchflow/sandbox/_compose_files/docker-compose-base.yaml -f /home/zoeyhaha33/.local/share/uv/tools/benchflow/lib/python3.12/site-packages/benchflow/sandbox/_compose_files/docker-compose-build.yaml build. Return code: 1. Stdout:  Image travel-planning__8ff7ba7a-main Building \n#1 [internal] load local bake definitions\n#1 reading from stdin 592B done\n#1 DONE 0.0s\n\n#2 [internal] load build definition from Dockerfile\n#2 transferring dockerfile: 354B done\n#2 DONE 0.0s\n\n#3 [internal] load metadata for docker.io/library/python:3.12-slim\n#3 ...\n\n#4 [auth] library/python:pull token for registry-1.docker.io\n#4 DONE 0.0s\n\n#3 [internal] load metadata for docker.io/library/python:3.12-slim\n#3 ERROR: failed to authorize: DeadlineExceeded: context deadline exceeded\n------\n > [internal] load metadata for docker.io/library/python:3.12-slim:\n------\nDockerfile:1\n\n--------------------\n\n   1 | >>> FROM python:3.12-slim\n\n   2 |     \n\n   3 |     # Install runtime dependencies for the travel-planning skills (pinned versions)\n\n--------------------\n\nfailed to solve: DeadlineExceeded: context deadline exceeded\n\n. Stderr: None. ",
+        "error_category": "other",
+        "verifier_error": null,
+        "verifier_error_category": null,
+        "export_error": null,
+        "idle_timeout_info": null,
+        "agent_timeout_info": null,
+        "sandbox_startup_info": null,
+        "transport_error_info": null,
+        "verifier_timeout_info": null,
+        "api_error_info": null,
+        "suspected_api_error_info": null,
+        "partial_trajectory": false,
+        "trajectory_source": null,
+        "started_at": "2026-10-30 01:15:20.479477",
+        "finished_at": "2026-10-30 01:16:23.789419",
+        "timing": {
+          "total": 63.3
+        },
+        "scenes": [
+          {
+            "name": "default",
+            "skills_dir": null,
+            "roles": [
+              {
+                "name": "agent",
+                "agent": "pi-acp",
+                "model": "litellm/qwen/qwen3-coder",
+                "reasoning_effort": null,
+                "timeout_sec": null,
+                "idle_timeout_sec": null,
+                "skills_dir": null,
+                "capabilities": null,
+                "env_keys": []
+              }
+            ],
+            "turns": [
+              {
+                "role": "agent",
+                "has_prompt": false
+              }
+            ]
+          }
+        ],
+        "loop": {
+          "strategy": "single-shot"
+        },
+        "source": {
+          "type": "github",
+          "repo": "benchflow-ai/skillsbench",
+          "requested_ref": "HEAD",
+          "resolved_sha": "b63b7b2850226b6aa4fb5929a8c1ac7bc4d9a6af",
+          "path": "tasks/travel-planning",
+          "dirty": false,
+          "file_hashes": {
+            "environment/Dockerfile": "sha256:3fd07e18c11720cdce54203fd5436568eb11ba461c82e54b60483bcc4efb32f5",
+            "environment/data/.gitkeep": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "environment/data/accommodations/clean_accommodations_2022.csv": "sha256:137a42ab5c4343c292279132699ec3db99075cfb00b54b24d11660503600d705",
+            "environment/data/attractions/attractions.csv": "sha256:8007fa851ba5b3adb205fbd298169c95116b297cef7ccd21dbea26ecce2605d8",
+            "environment/data/background/citySet.txt": "sha256:5e80edac9ccacec673d51bbeaf2d4e99339e104684988eafdb42c214ddb0ce39",
+            "environment/data/background/citySet_with_states.txt": "sha256:627891f4ee2044e6fafdff983c4874d4ed4743efc94437c2a199c56009a2d119",
+            "environment/data/background/stateSet.txt": "sha256:ad8d88f7e87cf85f230abf4b69c69cd4908399c1c93049eaa466d0ce0fe6bed5",
+            "environment/data/flights/clean_Flights_2022.csv": "sha256:9e0903f7ed7c75f2208e0253826fa431584b468fc5e514bcad94f1a6cf0a4fc0",
+            "environment/data/googleDistanceMatrix/distance.csv": "sha256:7dc1a26dc7877ae96ce63e74be0d9660bbdef96ffccaffce441128e3a4864a27",
+            "environment/data/restaurants/clean_restaurant_2022.csv": "sha256:a38ef00a3398b1ef78306a9b1851c491723d27899c6a1d4a3d6fe042929c0f26",
+            "environment/skills/search-accommodations/SKILL.md": "sha256:b4d84f0d8f5ca68d6d9da711041be8208d509a8137c01cd7edcb9726b03a9e81",
+            "environment/skills/search-accommodations/scripts/search_accommodations.py": "sha256:5f5f6237e62f9578883a01692dbfe836dac7f940f71595714eaa5d6e8406ed41",
+            "environment/skills/search-attractions/SKILL.md": "sha256:1a022a9c7ddfaed2f02a668535c491bd44e3196258258d5d84f00d8a26c0e7d8",
+            "environment/skills/search-attractions/scripts/search_attractions.py": "sha256:c37998ec48e3852e79d96c41586a2501ca6b80daa047a40fd614e8540bec85b8",
+            "environment/skills/search-cities/SKILL.md": "sha256:93df8526bfaa429af0770e9c8483ba4d183e6ab259dfb26c60ca4dcd5fcc0b0f",
+            "environment/skills/search-cities/scripts/search_cities.py": "sha256:44346df7b8391e00d1953d7786fcd6d2d37540947ddcbfc5ed583557fd9edd93",
+            "environment/skills/search-driving-distance/SKILL.md": "sha256:4d5c8c0b4249c47cda8d8b5c6400a085999c437c7c6837dfd81dd4ea01ec91d2",
+            "environment/skills/search-driving-distance/scripts/search_driving_distance.py": "sha256:4a7f0bc9ce94dde62e1c2875f85ee5d0d445d10586035086e563d97a81341123",
+            "environment/skills/search-flights/SKILL.md": "sha256:455734cb845620f57b39341a6f4372d28a084e70c741ce277a6a6f4323d46e06",
+            "environment/skills/search-flights/scripts/search_flights.py": "sha256:e78bec2bdfe3053235cc581c65f3097c9cd19d26025a17f6e7145c6997067e11",
+            "environment/skills/search-restaurants/SKILL.md": "sha256:6a33f2c46d214f14ad02ad0c47613d2cf4ce816a3aaf41adc1ac549c755780d6",
+            "environment/skills/search-restaurants/scripts/search_restaurants.py": "sha256:ea3ff98d87d5b0a91c200fdba6bbc0400654251450fc9ab66c2f8c096b174280",
+            "oracle/skills_inline.py": "sha256:1fbcb8c494d1a5a92dfaf5608cc100b119a144151b4acb21d479a83aeb05f1e7",
+            "oracle/solve.ipynb": "sha256:cf6d33b38a473f4e8b804d860e7a2bbc110d0e19f1cf58b28c368c05ad8f3be2",
+            "oracle/solve.sh": "sha256:a5b42d9b52942584fe941d7685acbcc851381be4509319c30e3f17fc83d66f34",
+            "task.md": "sha256:1c4e69fbd9f491f795ab15b50e6c5f4c165180e5f3e51d13f22ba0c235828b88",
+            "verifier/test.sh": "sha256:b09819e924a6b9f2dad0c23c717992d0ea7bdb69b9a1c87599c22f42cae26d0e",
+            "verifier/test_outputs.py": "sha256:196a2de08301264fd556d2b5fd0d60591345561285e8b2ba719c50a81983364f"
+          }
+        },
+        "task_digest": "sha256:99dd2da5c704914c52b220c9d26366e0ebf04e15ce24ac07635c9dc2c58d48bd",
+        "sandbox_id": null
+      },
+      "result_sha256": "aa1afc1d264047d7a266b33eda95bc5cdc53111b879a16ad65dcca518dfa8205",
+      "reward": null,
+      "strict_pass": null,
+      "cost_usd": null,
+      "unattributed_interval_usd": 0.0,
+      "cost_note": "Unattributed observed interval includes possible failed-task and diagnostic charges; not an exact task cost."
+    },
+    {
+      "candidate": 0,
+      "task_index": 1,
+      "task": "jax-computing-basics",
+      "status": "complete",
+      "key_usage_before_usd": 0.86934166,
+      "jobs_dir": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-multifidelity-20261029T172322932057Z",
+      "command": [
+        "/home/zoeyhaha33/.local/share/uv/tools/benchflow/bin/python",
+        "/mnt/d/NTU-EAI/EAI-T1/PE6203-/Group Assignment2/PE6203_P3_Starter/real_study/bench_hardened.py",
+        "eval",
+        "run",
+        "--tasks-dir",
+        "tasks/jax-computing-basics",
+        "--agent",
+        "pi",
+        "--model",
+        "litellm/qwen/qwen3-coder",
+        "--sandbox",
+        "docker",
+        "--skill-mode",
+        "no-skill",
+        "--loop-strategy",
+        "single-shot",
+        "--concurrency",
+        "1",
+        "--jobs-dir",
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-multifidelity-20261029T172322932057Z",
+        "--agent-env",
+        "BENCHFLOW_PROVIDER_MODELS=[{\"id\":\"qwen/qwen3-coder\",\"reasoning\":false,\"input\":[\"text\"],\"contextWindow\":64000,\"maxTokens\":16384}]"
+      ],
+      "returncode": 0,
+      "result_paths": [
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-multifidelity-20261029T172322932057Z/2026-10-30__01-23-24/jax-computing-basics__54cf94ec/result.json"
+      ],
+      "error": null,
+      "error_category": null,
+      "verifier_error": null,
+      "reward": 0.0,
+      "strict_pass": false,
+      "usage_snapshots_usd": [
+        0.87541066,
+        0.87541066,
+        0.87541066,
+        0.87541066
+      ],
+      "cost_usd": 0.006068999999999991
+    },
+    {
+      "candidate": 0,
+      "task_index": 2,
+      "task": "travel-planning",
+      "status": "complete",
+      "key_usage_before_usd": 0.87541066,
+      "jobs_dir": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-multifidelity-20261029T173139705683Z",
+      "command": [
+        "/home/zoeyhaha33/.local/share/uv/tools/benchflow/bin/python",
+        "/mnt/d/NTU-EAI/EAI-T1/PE6203-/Group Assignment2/PE6203_P3_Starter/real_study/bench_hardened.py",
+        "eval",
+        "run",
+        "--tasks-dir",
+        "tasks/travel-planning",
+        "--agent",
+        "pi",
+        "--model",
+        "litellm/qwen/qwen3-coder",
+        "--sandbox",
+        "docker",
+        "--skill-mode",
+        "no-skill",
+        "--loop-strategy",
+        "single-shot",
+        "--concurrency",
+        "1",
+        "--jobs-dir",
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-multifidelity-20261029T173139705683Z",
+        "--agent-env",
+        "BENCHFLOW_PROVIDER_MODELS=[{\"id\":\"qwen/qwen3-coder\",\"reasoning\":false,\"input\":[\"text\"],\"contextWindow\":64000,\"maxTokens\":16384}]"
+      ],
+      "returncode": 0,
+      "result_paths": [
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-multifidelity-20261029T173139705683Z/2026-10-30__01-31-41/travel-planning__a6336bf2/result.json"
+      ],
+      "error": null,
+      "error_category": null,
+      "verifier_error": null,
+      "reward": 0.0,
+      "strict_pass": false,
+      "usage_snapshots_usd": [
+        0.88822908,
+        0.88822908,
+        0.88822908,
+        0.88822908
+      ],
+      "cost_usd": 0.012818419999999997
+    }
+  ],
+  "promoted": [
+    1,
+    0
+  ],
+  "progress": {
+    "valid_evaluations": 8,
+    "missing_evaluations": 1,
+    "task_launches": 10,
+    "budget_accounted_usd": 0.30581629000000005
+  },
+  "failed_attempts": [
+    {
+      "candidate": 2,
+      "task_index": 0,
+      "task": "financial-modeling-qa",
+      "status": "archived_docker_build_failure",
+      "key_usage_before_usd": 0.62338776,
+      "jobs_dir": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-multifidelity-20261029T143328893127Z",
+      "command": [
+        "/home/zoeyhaha33/.local/bin/bench",
+        "eval",
+        "run",
+        "--tasks-dir",
+        "tasks/financial-modeling-qa",
+        "--agent",
+        "pi",
+        "--model",
+        "litellm/qwen/qwen3-coder",
+        "--sandbox",
+        "docker",
+        "--skill-mode",
+        "no-skill",
+        "--loop-strategy",
+        "single-shot",
+        "--concurrency",
+        "1",
+        "--jobs-dir",
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-multifidelity-20261029T143328893127Z",
+        "--agent-env",
+        "BENCHFLOW_PROVIDER_MODELS=[{\"id\":\"qwen/qwen3-coder\",\"reasoning\":false,\"input\":[\"text\"],\"contextWindow\":128000,\"maxTokens\":4096}]"
+      ],
+      "returncode": 1,
+      "result_paths": [
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-multifidelity-20261029T143328893127Z/2026-10-29__22-33-31/financial-modeling-qa__9dacc490/result.json"
+      ],
+      "error": "Docker compose command failed for environment financial-modeling-qa. Command: docker compose --project-name financial-modeling-qa__9dacc490 --project-directory /tmp/benchflow-task-46r2kpxh/financial-modeling-qa/environment -f /home/zoeyhaha33/.local/share/uv/tools/benchflow/lib/python3.12/site-packages/benchflow/sandbox/_compose_files/docker-compose-base.yaml -f /home/zoeyhaha33/.local/share/uv/tools/benchflow/lib/python3.12/site-packages/benchflow/sandbox/_compose_files/docker-compose-build.yaml build. Return code: 1. Stdout:  Image financial-modeling-qa__9dacc490-main Building \n#1 [internal] load local bake definitions\n#1 reading from stdin 616B done\n#1 DONE 0.0s\n\n#2 [internal] load build definition from Dockerfile\n#2 transferring dockerfile: 603B 0.0s done\n#2 DONE 0.0s\n\n#3 [internal] load metadata for docker.io/library/ubuntu:24.04\n#3 ...\n\n#4 [auth] library/ubuntu:pull token for registry-1.docker.io\n#4 DONE 0.0s\n\n#3 [internal] load metadata for docker.io/library/ubuntu:24.04\n#3 ERROR: failed to authorize: DeadlineExceeded: context deadline exceeded\n------\n > [internal] load metadata for docker.io/library/ubuntu:24.04:\n------\nDockerfile:1\n\n--------------------\n\n   1 | >>> FROM ubuntu:24.04\n\n   2 |     \n\n   3 |     ENV DEBIAN_FRONTEND=noninteractive\n\n--------------------\n\nfailed to solve: DeadlineExceeded: context deadline exceeded\n\n. Stderr: None. ",
+      "error_category": "other",
+      "verifier_error": null,
+      "failure_billing_checks": [
+        {
+          "checked_at_utc": "2026-10-29T14:42:03.102189+00:00",
+          "exclusive_key_asserted": true,
+          "usage_snapshots_usd": [
+            0.62338776,
+            0.62338776,
+            0.62338776
+          ]
+        }
+      ],
+      "original_status": "run_failed",
+      "raw_result": {
+        "task_name": "financial-modeling-qa",
+        "rollout_name": "financial-modeling-qa__9dacc490",
+        "rewards": null,
+        "agent": "pi-acp",
+        "agent_name": "",
+        "model": "litellm/qwen/qwen3-coder",
+        "skill_mode": "no-skill",
+        "skill_source": "none",
+        "requested_skills_dir": null,
+        "effective_skills_dir": null,
+        "skills_sandbox_dir": null,
+        "include_task_skills": false,
+        "n_tool_calls": 0,
+        "n_skill_invocations": 0,
+        "n_prompts": 1,
+        "agent_result": {
+          "n_tool_calls": 0,
+          "n_skill_invocations": 0,
+          "n_prompts": 1,
+          "n_input_tokens": 0,
+          "n_output_tokens": 0,
+          "n_cache_read_tokens": 0,
+          "n_cache_creation_tokens": 0,
+          "total_tokens": 0,
+          "cost_usd": null,
+          "usage_source": "unavailable",
+          "price_source": null
+        },
+        "final_metrics": {
+          "total_prompt_tokens": 0,
+          "total_completion_tokens": 0,
+          "total_cached_tokens": 0,
+          "total_cost_usd": null
+        },
+        "trajectory_summary": {
+          "steps": 0,
+          "tool_call_steps": 0,
+          "user_message_steps": 0,
+          "agent_message_steps": 0,
+          "agent_thought_steps": 0,
+          "other_steps": 0,
+          "event_type_counts": {},
+          "tool_call_status_counts": {},
+          "partial_trajectory": false,
+          "trajectory_source": null
+        },
+        "usage_tracking": {
+          "requested": "auto",
+          "status": "unavailable",
+          "environment": "docker",
+          "endpoint_kind": "host",
+          "usage_source": "unavailable"
+        },
+        "error": "Docker compose command failed for environment financial-modeling-qa. Command: docker compose --project-name financial-modeling-qa__9dacc490 --project-directory /tmp/benchflow-task-46r2kpxh/financial-modeling-qa/environment -f /home/zoeyhaha33/.local/share/uv/tools/benchflow/lib/python3.12/site-packages/benchflow/sandbox/_compose_files/docker-compose-base.yaml -f /home/zoeyhaha33/.local/share/uv/tools/benchflow/lib/python3.12/site-packages/benchflow/sandbox/_compose_files/docker-compose-build.yaml build. Return code: 1. Stdout:  Image financial-modeling-qa__9dacc490-main Building \n#1 [internal] load local bake definitions\n#1 reading from stdin 616B done\n#1 DONE 0.0s\n\n#2 [internal] load build definition from Dockerfile\n#2 transferring dockerfile: 603B 0.0s done\n#2 DONE 0.0s\n\n#3 [internal] load metadata for docker.io/library/ubuntu:24.04\n#3 ...\n\n#4 [auth] library/ubuntu:pull token for registry-1.docker.io\n#4 DONE 0.0s\n\n#3 [internal] load metadata for docker.io/library/ubuntu:24.04\n#3 ERROR: failed to authorize: DeadlineExceeded: context deadline exceeded\n------\n > [internal] load metadata for docker.io/library/ubuntu:24.04:\n------\nDockerfile:1\n\n--------------------\n\n   1 | >>> FROM ubuntu:24.04\n\n   2 |     \n\n   3 |     ENV DEBIAN_FRONTEND=noninteractive\n\n--------------------\n\nfailed to solve: DeadlineExceeded: context deadline exceeded\n\n. Stderr: None. ",
+        "error_category": "other",
+        "verifier_error": null,
+        "verifier_error_category": null,
+        "export_error": null,
+        "idle_timeout_info": null,
+        "agent_timeout_info": null,
+        "sandbox_startup_info": null,
+        "transport_error_info": null,
+        "verifier_timeout_info": null,
+        "api_error_info": null,
+        "suspected_api_error_info": null,
+        "partial_trajectory": false,
+        "trajectory_source": null,
+        "started_at": "2026-10-29 22:33:31.285787",
+        "finished_at": "2026-10-29 22:34:33.917041",
+        "timing": {
+          "total": 62.6
+        },
+        "scenes": [
+          {
+            "name": "default",
+            "skills_dir": null,
+            "roles": [
+              {
+                "name": "agent",
+                "agent": "pi-acp",
+                "model": "litellm/qwen/qwen3-coder",
+                "reasoning_effort": null,
+                "timeout_sec": null,
+                "idle_timeout_sec": null,
+                "skills_dir": null,
+                "capabilities": null,
+                "env_keys": []
+              }
+            ],
+            "turns": [
+              {
+                "role": "agent",
+                "has_prompt": false
+              }
+            ]
+          }
+        ],
+        "loop": {
+          "strategy": "single-shot"
+        },
+        "source": {
+          "type": "github",
+          "repo": "benchflow-ai/skillsbench",
+          "requested_ref": "HEAD",
+          "resolved_sha": "b63b7b2850226b6aa4fb5929a8c1ac7bc4d9a6af",
+          "path": "tasks/financial-modeling-qa",
+          "dirty": false,
+          "file_hashes": {
+            "environment/Dockerfile": "sha256:1a96660506b8ff1bd2ed9b87f1e756bad4c4a05ddd38be4b645b36ed3a3a3f53",
+            "environment/background.pdf": "sha256:832ea5a99da6aeba8ed25f719c7d3ed035720871493a07ed43cae030463d8273",
+            "environment/data.xlsx": "sha256:b07809fca2e61dfe75dd3b43f0f6d5839d64697ed2f0a34c78367cf6dd204195",
+            "environment/skills/pdf/SKILL.md": "sha256:38d8559d4899602f82f3560052132aa0c40cfca80203037729756bdb4fb8e0cb",
+            "environment/skills/pdf/references/LICENSE.txt": "sha256:79f6d8f5b427252fa3b1c11ecdbdb6bf610b944f7530b4de78f770f38741cfaa",
+            "environment/skills/pdf/references/forms.md": "sha256:0ab10e9095deb1c1f9f79eb04254589f55c1d16e095cb53191e03f9fc3184449",
+            "environment/skills/pdf/references/reference.md": "sha256:03a5f964f8abecbbe156f363356e927e864d7ee964f1012c84ee1bfc8acbeb95",
+            "environment/skills/pdf/scripts/check_bounding_boxes.py": "sha256:eb2a5f79c8aa10c57b5867e1f0fc75b52a68b1218442ef9d838dfb4b9eedc6f4",
+            "environment/skills/pdf/scripts/check_bounding_boxes_test.py": "sha256:f95dca01a8b79aafd152511e9f7bf2bbcd606dde1be77d691f03a18624e002ca",
+            "environment/skills/pdf/scripts/check_fillable_fields.py": "sha256:250d5aa4e8451d6a83d17d3550c14e6c844ac347145f916ebf7980b118312b41",
+            "environment/skills/pdf/scripts/convert_pdf_to_images.py": "sha256:095a0105a718af75ede309cb03f84a20c81d17f1727f7686fd4b294f1f40294f",
+            "environment/skills/pdf/scripts/create_validation_image.py": "sha256:89675be66b48925d7b498eb9454521c78cf9e9ff188ebf094934b598550effe5",
+            "environment/skills/pdf/scripts/extract_form_field_info.py": "sha256:9db1a2720cf54223cdc4bf797080c70f4e0d27288d9f400e066c14524519021d",
+            "environment/skills/pdf/scripts/fill_fillable_fields.py": "sha256:65b3e41969707022283a313a4cf9696d31793cbe255dffe13370e75abda448a7",
+            "environment/skills/pdf/scripts/fill_pdf_form_with_annotations.py": "sha256:599d6f307edb4ee6b837f21d0ea860c41c22246e270b45d6bc750c5b87c86ce0",
+            "environment/skills/xlsx/LICENSE.txt": "sha256:79f6d8f5b427252fa3b1c11ecdbdb6bf610b944f7530b4de78f770f38741cfaa",
+            "environment/skills/xlsx/SKILL.md": "sha256:020ccdb5932257b66c638ec1157ea248d57fa52c8c01f1f68b559b5970c7df35",
+            "environment/skills/xlsx/recalc.py": "sha256:ab1ef0c94536bb23b6c6a3d32769b0401ec3cc85e73c247d574dd84ec73af15d",
+            "oracle/solve.sh": "sha256:75171aad9ccbc6bb498937822fd024063616c4284d3f4261a52a3ebd72de02c4",
+            "task.md": "sha256:83c9740297d9c67576707d933ba1e9b8660f8cbfd941e1082d170105432b4d13",
+            "verifier/test.sh": "sha256:fe7195562321b71ace6e1f6858994939238cc7ce0ec2d0ae3b610278489a42b7",
+            "verifier/test_outputs.py": "sha256:66550d2f2b83314342c8ea8c81a867d06bbc0b177c23f34b44161f022d64f5ec"
+          }
+        },
+        "task_digest": "sha256:c9fd9621f3d14dda5cb73b9d5e30ccdbfcc3c0311d51ab0502ef17065e14770f",
+        "sandbox_id": null
+      },
+      "result_sha256": "fb9a11e88d89d5241a2cac1d78c8fda62559e3bb65b7ee1ac87d7562fa058ae0",
+      "cost_usd": 0.0,
+      "cost_note": "Observed dedicated-key delta; zero is not confirmation of free usage."
+    }
+  ],
+  "recovery_policy_version": 1,
+  "missing_result_policy_version": 1,
+  "selected": {
+    "candidate": 0,
+    "config": {
+      "contextWindow": 64000,
+      "maxTokens": 16384
+    },
+    "validation_pass_rate": 0.0
+  },
+  "completion_status": "finished_with_missing_results"
+}

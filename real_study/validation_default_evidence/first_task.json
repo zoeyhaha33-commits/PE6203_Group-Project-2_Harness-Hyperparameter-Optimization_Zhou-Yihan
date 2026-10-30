@@ -1,0 +1,51 @@
+{
+  "phase": "validation",
+  "method": "default",
+  "task": "financial-modeling-qa",
+  "benchmark_commit": "b63b7b2850226b6aa4fb5929a8c1ac7bc4d9a6af",
+  "status": "process_finished_or_interrupted",
+  "jobs_dir": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/validation-default-20261028T084112321230Z",
+  "key_usage_before_usd": 0.0905012,
+  "settings_override": null,
+  "test_tasks_started": 0,
+  "command": [
+    "/home/zoeyhaha33/.local/bin/bench",
+    "eval",
+    "run",
+    "--tasks-dir",
+    "tasks/financial-modeling-qa",
+    "--agent",
+    "pi",
+    "--model",
+    "litellm/qwen/qwen3-coder",
+    "--sandbox",
+    "docker",
+    "--skill-mode",
+    "no-skill",
+    "--loop-strategy",
+    "single-shot",
+    "--concurrency",
+    "1",
+    "--jobs-dir",
+    "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/validation-default-20261028T084112321230Z"
+  ],
+  "budget_note": "One task only; USD 0.50 baseline allocation is not a provider-enforced hard cap. Dedicated key required.",
+  "returncode": 0,
+  "results": [
+    {
+      "path": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/validation-default-20261028T084112321230Z/2026-10-28__16-41-14/financial-modeling-qa__9ce42528/result.json",
+      "reward": 0.0,
+      "strict_pass": false,
+      "error": null,
+      "verifier_error": null,
+      "tool_calls": 13
+    }
+  ],
+  "key_usage_after_snapshots_usd": [
+    0.1488683,
+    0.1962836,
+    0.1962836
+  ],
+  "observed_cost_delta_usd": 0.1057824,
+  "cost_note": "Delayed billing and concurrent requests can affect deltas; missing or zero delta is not confirmed free usage."
+}

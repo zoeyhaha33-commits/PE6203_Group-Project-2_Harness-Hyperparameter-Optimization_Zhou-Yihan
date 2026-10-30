@@ -1,0 +1,156 @@
+{
+  "method": "test_multifidelity",
+  "configs": [
+    {
+      "contextWindow": 64000,
+      "maxTokens": 16384
+    }
+  ],
+  "records": [
+    {
+      "candidate": 0,
+      "task_index": 0,
+      "task": "python-scala-translation",
+      "status": "complete",
+      "key_usage_before_usd": 1.1181944,
+      "jobs_dir": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-test_multifidelity-20261030T032543225728Z",
+      "command": [
+        "/home/zoeyhaha33/.local/share/uv/tools/benchflow/bin/python",
+        "/mnt/d/NTU-EAI/EAI-T1/PE6203-/Group Assignment2/PE6203_P3_Starter/real_study/bench_hardened.py",
+        "eval",
+        "run",
+        "--tasks-dir",
+        "tasks/python-scala-translation",
+        "--agent",
+        "pi",
+        "--model",
+        "litellm/qwen/qwen3-coder",
+        "--sandbox",
+        "docker",
+        "--skill-mode",
+        "no-skill",
+        "--loop-strategy",
+        "single-shot",
+        "--concurrency",
+        "1",
+        "--jobs-dir",
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-test_multifidelity-20261030T032543225728Z",
+        "--agent-env",
+        "BENCHFLOW_PROVIDER_MODELS=[{\"id\":\"qwen/qwen3-coder\",\"reasoning\":false,\"input\":[\"text\"],\"contextWindow\":64000,\"maxTokens\":16384}]"
+      ],
+      "returncode": 0,
+      "result_paths": [
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-test_multifidelity-20261030T032543225728Z/2026-10-30__11-25-43/python-scala-translation__38354467/result.json"
+      ],
+      "error": null,
+      "error_category": null,
+      "verifier_error": null,
+      "reward": 0.0,
+      "strict_pass": false,
+      "usage_snapshots_usd": [
+        1.1306399,
+        1.1306399,
+        1.1306399,
+        1.1306399
+      ],
+      "cost_usd": 0.01244550000000011
+    },
+    {
+      "candidate": 0,
+      "task_index": 1,
+      "task": "reserves-at-risk-calc",
+      "status": "complete",
+      "key_usage_before_usd": 1.1306399,
+      "jobs_dir": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-test_multifidelity-20261030T033410134043Z",
+      "command": [
+        "/home/zoeyhaha33/.local/share/uv/tools/benchflow/bin/python",
+        "/mnt/d/NTU-EAI/EAI-T1/PE6203-/Group Assignment2/PE6203_P3_Starter/real_study/bench_hardened.py",
+        "eval",
+        "run",
+        "--tasks-dir",
+        "tasks/reserves-at-risk-calc",
+        "--agent",
+        "pi",
+        "--model",
+        "litellm/qwen/qwen3-coder",
+        "--sandbox",
+        "docker",
+        "--skill-mode",
+        "no-skill",
+        "--loop-strategy",
+        "single-shot",
+        "--concurrency",
+        "1",
+        "--jobs-dir",
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-test_multifidelity-20261030T033410134043Z",
+        "--agent-env",
+        "BENCHFLOW_PROVIDER_MODELS=[{\"id\":\"qwen/qwen3-coder\",\"reasoning\":false,\"input\":[\"text\"],\"contextWindow\":64000,\"maxTokens\":16384}]"
+      ],
+      "returncode": 0,
+      "result_paths": [
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-test_multifidelity-20261030T033410134043Z/2026-10-30__11-34-10/reserves-at-risk-calc__7dd1a5c9/result.json"
+      ],
+      "error": null,
+      "error_category": null,
+      "verifier_error": null,
+      "reward": 0.0,
+      "strict_pass": false,
+      "usage_snapshots_usd": [
+        1.1894398,
+        1.1894398,
+        1.1894398,
+        1.1894398
+      ],
+      "cost_usd": 0.058799899999999905
+    },
+    {
+      "candidate": 0,
+      "task_index": 2,
+      "task": "threejs-structure-parser",
+      "status": "complete",
+      "key_usage_before_usd": 1.1894398,
+      "jobs_dir": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-test_multifidelity-20261030T034139766151Z",
+      "command": [
+        "/home/zoeyhaha33/.local/share/uv/tools/benchflow/bin/python",
+        "/mnt/d/NTU-EAI/EAI-T1/PE6203-/Group Assignment2/PE6203_P3_Starter/real_study/bench_hardened.py",
+        "eval",
+        "run",
+        "--tasks-dir",
+        "tasks/threejs-structure-parser",
+        "--agent",
+        "pi",
+        "--model",
+        "litellm/qwen/qwen3-coder",
+        "--sandbox",
+        "docker",
+        "--skill-mode",
+        "no-skill",
+        "--loop-strategy",
+        "single-shot",
+        "--concurrency",
+        "1",
+        "--jobs-dir",
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-test_multifidelity-20261030T034139766151Z",
+        "--agent-env",
+        "BENCHFLOW_PROVIDER_MODELS=[{\"id\":\"qwen/qwen3-coder\",\"reasoning\":false,\"input\":[\"text\"],\"contextWindow\":64000,\"maxTokens\":16384}]"
+      ],
+      "returncode": 0,
+      "result_paths": [
+        "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-test_multifidelity-20261030T034139766151Z/2026-10-30__11-41-40/threejs-structure-parser__04f0e312/result.json"
+      ],
+      "error": null,
+      "error_category": null,
+      "verifier_error": null,
+      "reward": 0.0,
+      "strict_pass": false,
+      "usage_snapshots_usd": [
+        1.2072425,
+        1.2072425,
+        1.2072425,
+        1.2072425
+      ],
+      "cost_usd": 0.01780270000000006
+    }
+  ],
+  "frozen_protocol_sha256": "edf0b4dbd5a403202077da6db21a2b908f6726d087a1e8799e22f3f52a83c128"
+}

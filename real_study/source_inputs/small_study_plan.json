@@ -1,0 +1,689 @@
+{
+  "status": "small_study_subset_frozen_no_evaluations_started",
+  "benchmark_commit": "b63b7b2850226b6aa4fb5929a8c1ac7bc4d9a6af",
+  "selection_rule": "First 3 eligible tasks in each existing seeded partition; resource screening only, no evaluation outcomes.",
+  "development_excluded": [
+    "dialogue-parser"
+  ],
+  "validation": [
+    {
+      "name": "financial-modeling-qa",
+      "definition_sha256": "83c9740297d9c67576707d933ba1e9b8660f8cbfd941e1082d170105432b4d13",
+      "development_only": false,
+      "resources": {
+        "network_mode": "public",
+        "build_timeout_sec": 600.0,
+        "os": "linux",
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "agent_timeout_sec": 600.0
+    },
+    {
+      "name": "jax-computing-basics",
+      "definition_sha256": "4f96adb7b56b6d0703d88158d8c9ddbeeb4306df9e20e62fbfa20b81eee6bb3b",
+      "development_only": false,
+      "resources": {
+        "network_mode": "public",
+        "build_timeout_sec": 600.0,
+        "os": "linux",
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "agent_timeout_sec": 600.0
+    },
+    {
+      "name": "travel-planning",
+      "definition_sha256": "1c4e69fbd9f491f795ab15b50e6c5f4c165180e5f3e51d13f22ba0c235828b88",
+      "development_only": false,
+      "resources": {
+        "network_mode": "public",
+        "build_timeout_sec": 600.0,
+        "os": "linux",
+        "cpus": 2,
+        "memory_mb": 4096,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "agent_timeout_sec": 600.0
+    }
+  ],
+  "test": [
+    {
+      "name": "python-scala-translation",
+      "definition_sha256": "df4efec83eeb79098331597b460f88b1d5087f3d856a00759336ab6977a70cf7",
+      "development_only": false,
+      "resources": {
+        "network_mode": "public",
+        "build_timeout_sec": 600.0,
+        "os": "linux",
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "agent_timeout_sec": 600.0
+    },
+    {
+      "name": "reserves-at-risk-calc",
+      "definition_sha256": "6c7023a07f2f5dc3ad98cb2885ae05ccba11ed9b5f9cf5ece13b4a33114ce8cf",
+      "development_only": false,
+      "resources": {
+        "network_mode": "public",
+        "build_timeout_sec": 600.0,
+        "os": "linux",
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "agent_timeout_sec": 600.0
+    },
+    {
+      "name": "threejs-structure-parser",
+      "definition_sha256": "94cf9d94d2e1ef6f2ae7ded259be3d78736e9c5f02ae18ffb8b74a58e7699c7e",
+      "development_only": false,
+      "resources": {
+        "network_mode": "public",
+        "build_timeout_sec": 600.0,
+        "os": "linux",
+        "cpus": 1,
+        "memory_mb": 4096,
+        "storage_mb": 8192,
+        "gpus": 0
+      },
+      "agent_timeout_sec": 600.0
+    }
+  ],
+  "resource_screening": [
+    {
+      "partition": "validation",
+      "name": "fix-erlang-ssh-cve",
+      "resources": {
+        "network_mode": "public",
+        "build_timeout_sec": 600.0,
+        "os": "linux",
+        "cpus": 8,
+        "memory_mb": 4096,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "agent_timeout_sec": 600.0,
+      "excluded_reasons": [
+        "cpus exceeds limit or is unspecified"
+      ]
+    },
+    {
+      "partition": "validation",
+      "name": "financial-modeling-qa",
+      "resources": {
+        "network_mode": "public",
+        "build_timeout_sec": 600.0,
+        "os": "linux",
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "agent_timeout_sec": 600.0,
+      "excluded_reasons": []
+    },
+    {
+      "partition": "validation",
+      "name": "jpg-ocr-stat",
+      "resources": {
+        "network_mode": "public",
+        "build_timeout_sec": 600.0,
+        "os": "linux",
+        "cpus": 4,
+        "memory_mb": 4096,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "agent_timeout_sec": 1800.0,
+      "excluded_reasons": [
+        "agent timeout exceeds 600 seconds or is unspecified"
+      ]
+    },
+    {
+      "partition": "validation",
+      "name": "flood-risk-analysis",
+      "resources": {
+        "network_mode": "public",
+        "build_timeout_sec": 600.0,
+        "os": "linux",
+        "cpus": 1,
+        "memory_mb": 4096,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "agent_timeout_sec": 7200.0,
+      "excluded_reasons": [
+        "agent timeout exceeds 600 seconds or is unspecified"
+      ]
+    },
+    {
+      "partition": "validation",
+      "name": "court-form-filling",
+      "resources": {
+        "network_mode": "public",
+        "build_timeout_sec": 600.0,
+        "os": "linux",
+        "cpus": 1,
+        "memory_mb": 4096,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "agent_timeout_sec": 1800.0,
+      "excluded_reasons": [
+        "agent timeout exceeds 600 seconds or is unspecified"
+      ]
+    },
+    {
+      "partition": "validation",
+      "name": "shock-analysis-supply",
+      "resources": {
+        "network_mode": "public",
+        "build_timeout_sec": 600.0,
+        "os": "linux",
+        "cpus": 1,
+        "memory_mb": 4096,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "agent_timeout_sec": 2700.0,
+      "excluded_reasons": [
+        "agent timeout exceeds 600 seconds or is unspecified"
+      ]
+    },
+    {
+      "partition": "validation",
+      "name": "fix-visual-stability",
+      "resources": {
+        "network_mode": "public",
+        "build_timeout_sec": 600.0,
+        "os": "linux",
+        "cpus": 2,
+        "memory_mb": 4096,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "agent_timeout_sec": 3000.0,
+      "excluded_reasons": [
+        "agent timeout exceeds 600 seconds or is unspecified"
+      ]
+    },
+    {
+      "partition": "validation",
+      "name": "civ6-adjacency-optimizer",
+      "resources": {
+        "network_mode": "public",
+        "build_timeout_sec": 600.0,
+        "os": "linux",
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "agent_timeout_sec": 1800.0,
+      "excluded_reasons": [
+        "agent timeout exceeds 600 seconds or is unspecified"
+      ]
+    },
+    {
+      "partition": "validation",
+      "name": "setup-fuzzing-py",
+      "resources": {
+        "network_mode": "public",
+        "build_timeout_sec": 600.0,
+        "os": "linux",
+        "cpus": 5,
+        "memory_mb": 2048,
+        "storage_mb": 5120,
+        "gpus": 0
+      },
+      "agent_timeout_sec": 1800.0,
+      "excluded_reasons": [
+        "cpus exceeds limit or is unspecified",
+        "agent timeout exceeds 600 seconds or is unspecified"
+      ]
+    },
+    {
+      "partition": "validation",
+      "name": "energy-market-pricing",
+      "resources": {
+        "network_mode": "public",
+        "build_timeout_sec": 600.0,
+        "os": "linux",
+        "cpus": 1,
+        "memory_mb": 4096,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "agent_timeout_sec": 1800.0,
+      "excluded_reasons": [
+        "agent timeout exceeds 600 seconds or is unspecified"
+      ]
+    },
+    {
+      "partition": "validation",
+      "name": "jax-computing-basics",
+      "resources": {
+        "network_mode": "public",
+        "build_timeout_sec": 600.0,
+        "os": "linux",
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "agent_timeout_sec": 600.0,
+      "excluded_reasons": []
+    },
+    {
+      "partition": "validation",
+      "name": "organize-messy-files",
+      "resources": {
+        "network_mode": "public",
+        "build_timeout_sec": 600.0,
+        "os": "linux",
+        "cpus": 4,
+        "memory_mb": 4096,
+        "storage_mb": 20480,
+        "gpus": 0
+      },
+      "agent_timeout_sec": 900.0,
+      "excluded_reasons": [
+        "storage_mb exceeds limit or is unspecified",
+        "agent timeout exceeds 600 seconds or is unspecified"
+      ]
+    },
+    {
+      "partition": "validation",
+      "name": "spring-boot-jakarta-migration",
+      "resources": {
+        "network_mode": "public",
+        "build_timeout_sec": 600.0,
+        "os": "linux",
+        "cpus": 1,
+        "memory_mb": 4096,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "agent_timeout_sec": 900.0,
+      "excluded_reasons": [
+        "agent timeout exceeds 600 seconds or is unspecified"
+      ]
+    },
+    {
+      "partition": "validation",
+      "name": "travel-planning",
+      "resources": {
+        "network_mode": "public",
+        "build_timeout_sec": 600.0,
+        "os": "linux",
+        "cpus": 2,
+        "memory_mb": 4096,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "agent_timeout_sec": 600.0,
+      "excluded_reasons": []
+    },
+    {
+      "partition": "test",
+      "name": "ada-bathroom-plan-repair",
+      "resources": {
+        "network_mode": "public",
+        "build_timeout_sec": 600.0,
+        "os": "linux",
+        "cpus": 1,
+        "memory_mb": 4096,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "agent_timeout_sec": 2400.0,
+      "excluded_reasons": [
+        "agent timeout exceeds 600 seconds or is unspecified"
+      ]
+    },
+    {
+      "partition": "test",
+      "name": "tictoc-unnecessary-abort-detection",
+      "resources": {
+        "network_mode": "public",
+        "build_timeout_sec": 600.0,
+        "os": "linux",
+        "cpus": 1,
+        "memory_mb": 4096,
+        "storage_mb": 8192,
+        "gpus": 0
+      },
+      "agent_timeout_sec": 1800.0,
+      "excluded_reasons": [
+        "agent timeout exceeds 600 seconds or is unspecified"
+      ]
+    },
+    {
+      "partition": "test",
+      "name": "radar-vital-signs",
+      "resources": {
+        "network_mode": "public",
+        "build_timeout_sec": 600.0,
+        "os": "linux",
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 5120,
+        "gpus": 0
+      },
+      "agent_timeout_sec": 1200.0,
+      "excluded_reasons": [
+        "agent timeout exceeds 600 seconds or is unspecified"
+      ]
+    },
+    {
+      "partition": "test",
+      "name": "exoplanet-detection-period",
+      "resources": {
+        "network_mode": "public",
+        "build_timeout_sec": 900.0,
+        "os": "linux",
+        "cpus": 1,
+        "memory_mb": 8192,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "agent_timeout_sec": 3600.0,
+      "excluded_reasons": [
+        "memory_mb exceeds limit or is unspecified",
+        "agent timeout exceeds 600 seconds or is unspecified"
+      ]
+    },
+    {
+      "partition": "test",
+      "name": "data-to-d3",
+      "resources": {
+        "network_mode": "public",
+        "build_timeout_sec": 600.0,
+        "os": "linux",
+        "cpus": 2,
+        "memory_mb": 4096,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "agent_timeout_sec": 1800.0,
+      "excluded_reasons": [
+        "agent timeout exceeds 600 seconds or is unspecified"
+      ]
+    },
+    {
+      "partition": "test",
+      "name": "paper-anonymizer",
+      "resources": {
+        "network_mode": "public",
+        "build_timeout_sec": 300.0,
+        "os": "linux",
+        "cpus": 1,
+        "memory_mb": 4096,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "agent_timeout_sec": 1000.0,
+      "excluded_reasons": [
+        "agent timeout exceeds 600 seconds or is unspecified"
+      ]
+    },
+    {
+      "partition": "test",
+      "name": "pptx-reference-formatting",
+      "resources": {
+        "network_mode": "public",
+        "build_timeout_sec": 600.0,
+        "os": "linux",
+        "cpus": 2,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "agent_timeout_sec": 900.0,
+      "excluded_reasons": [
+        "agent timeout exceeds 600 seconds or is unspecified"
+      ]
+    },
+    {
+      "partition": "test",
+      "name": "multilingual-video-dubbing",
+      "resources": {
+        "network_mode": "public",
+        "build_timeout_sec": 1200.0,
+        "os": "linux",
+        "cpus": 2,
+        "memory_mb": 4096,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "agent_timeout_sec": 2700.0,
+      "excluded_reasons": [
+        "agent timeout exceeds 600 seconds or is unspecified"
+      ]
+    },
+    {
+      "partition": "test",
+      "name": "syzkaller-ppdev-syzlang",
+      "resources": {
+        "network_mode": "public",
+        "build_timeout_sec": 1200.0,
+        "os": "linux",
+        "cpus": 2,
+        "memory_mb": 8192,
+        "storage_mb": 20480,
+        "gpus": 0
+      },
+      "agent_timeout_sec": 1400.0,
+      "excluded_reasons": [
+        "memory_mb exceeds limit or is unspecified",
+        "storage_mb exceeds limit or is unspecified",
+        "agent timeout exceeds 600 seconds or is unspecified"
+      ]
+    },
+    {
+      "partition": "test",
+      "name": "software-dependency-audit",
+      "resources": {
+        "network_mode": "public",
+        "build_timeout_sec": 600.0,
+        "os": "linux",
+        "cpus": 1,
+        "memory_mb": 4096,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "agent_timeout_sec": 900.0,
+      "excluded_reasons": [
+        "agent timeout exceeds 600 seconds or is unspecified"
+      ]
+    },
+    {
+      "partition": "test",
+      "name": "mario-coin-counting",
+      "resources": {
+        "network_mode": "public",
+        "build_timeout_sec": 600.0,
+        "os": "linux",
+        "cpus": 1,
+        "memory_mb": 4096,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "agent_timeout_sec": 900.0,
+      "excluded_reasons": [
+        "agent timeout exceeds 600 seconds or is unspecified"
+      ]
+    },
+    {
+      "partition": "test",
+      "name": "python-scala-translation",
+      "resources": {
+        "network_mode": "public",
+        "build_timeout_sec": 600.0,
+        "os": "linux",
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "agent_timeout_sec": 600.0,
+      "excluded_reasons": []
+    },
+    {
+      "partition": "test",
+      "name": "reserves-at-risk-calc",
+      "resources": {
+        "network_mode": "public",
+        "build_timeout_sec": 600.0,
+        "os": "linux",
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "agent_timeout_sec": 600.0,
+      "excluded_reasons": []
+    },
+    {
+      "partition": "test",
+      "name": "sec-financial-report",
+      "resources": {
+        "network_mode": "public",
+        "build_timeout_sec": 600.0,
+        "os": "linux",
+        "cpus": 1,
+        "memory_mb": 4096,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "agent_timeout_sec": 900.0,
+      "excluded_reasons": [
+        "agent timeout exceeds 600 seconds or is unspecified"
+      ]
+    },
+    {
+      "partition": "test",
+      "name": "azure-bgp-oscillation-route-leak",
+      "resources": {
+        "network_mode": "public",
+        "build_timeout_sec": 600.0,
+        "os": "linux",
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "agent_timeout_sec": 3600.0,
+      "excluded_reasons": [
+        "agent timeout exceeds 600 seconds or is unspecified"
+      ]
+    },
+    {
+      "partition": "test",
+      "name": "manufacturing-equipment-maintenance",
+      "resources": {
+        "network_mode": "public",
+        "build_timeout_sec": 600.0,
+        "os": "linux",
+        "cpus": 2,
+        "memory_mb": 4096,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "agent_timeout_sec": 1800.0,
+      "excluded_reasons": [
+        "agent timeout exceeds 600 seconds or is unspecified"
+      ]
+    },
+    {
+      "partition": "test",
+      "name": "hvac-control",
+      "resources": {
+        "network_mode": "public",
+        "build_timeout_sec": 600.0,
+        "os": "linux",
+        "cpus": 2,
+        "memory_mb": 2048,
+        "storage_mb": 5120,
+        "gpus": 0
+      },
+      "agent_timeout_sec": 1800.0,
+      "excluded_reasons": [
+        "agent timeout exceeds 600 seconds or is unspecified"
+      ]
+    },
+    {
+      "partition": "test",
+      "name": "drone-planning-control",
+      "resources": {
+        "network_mode": "public",
+        "build_timeout_sec": 600.0,
+        "os": "linux",
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "agent_timeout_sec": 1800.0,
+      "excluded_reasons": [
+        "agent timeout exceeds 600 seconds or is unspecified"
+      ]
+    },
+    {
+      "partition": "test",
+      "name": "threejs-structure-parser",
+      "resources": {
+        "network_mode": "public",
+        "build_timeout_sec": 600.0,
+        "os": "linux",
+        "cpus": 1,
+        "memory_mb": 4096,
+        "storage_mb": 8192,
+        "gpus": 0
+      },
+      "agent_timeout_sec": 600.0,
+      "excluded_reasons": []
+    }
+  ],
+  "fixed": {
+    "harness": "pi-acp",
+    "pi_version": "0.81.0",
+    "acp_version": "0.0.34",
+    "model": "litellm/qwen/qwen3-coder",
+    "skill_mode": "no-skill",
+    "loop_strategy": "single-shot",
+    "concurrency": 1
+  },
+  "budget_allocations_usd": {
+    "default_validation": 0.5,
+    "random_search": 1.5,
+    "bayesian_search": 1.5,
+    "student_multifidelity_search": 1.5,
+    "final_test_all_methods": 2.0
+  },
+  "budget_rules": [
+    "These allocations are admission limits, not provider-enforced hard caps.",
+    "Recheck dedicated-key cumulative usage before and after each task; stop if accounting is unavailable.",
+    "Keep at least USD 2 unallocated for development costs, billing delays and overruns; total project allocation USD 10.",
+    "No automatic retries after infrastructure errors; retain failed and interrupted run records."
+  ],
+  "evaluation_rules": [
+    "Freeze search space and optimizer stopping rules before validation runs.",
+    "Select all four methods configurations before evaluating any held-out test task.",
+    "Never select tasks or parameters based on test outcomes.",
+    "Primary metric: strict whole-task pass@1; retain official partial reward separately.",
+    "Three held-out tasks provide only a small exploratory comparison, not a precise benchmark estimate.",
+    "Audit verification and cost capture before scaling to parameter search."
+  ],
+  "paid_tasks_started_by_this_script": 0
+}

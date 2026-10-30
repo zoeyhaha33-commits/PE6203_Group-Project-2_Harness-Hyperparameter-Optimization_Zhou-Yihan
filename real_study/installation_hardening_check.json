@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "benchflow": "0.6.3",
+  "node": "22.20.0",
+  "pi": "0.81.0",
+  "pi_acp": "0.0.34",
+  "original_install_sha256": "19befe282289334428a43ce016017f8588d220eb5b81a1d52b8019fbaf6a895c",
+  "hardened_install_sha256": "fd05b32e27ee447088ad6acbbb2da79bf016b53d67d850ae2181451cea514342",
+  "model_calls": 0,
+  "note": "Installation-only amendment after multifidelity sixth evaluation; same pins and agent logic. Fresh task containers still depend on network."
+}

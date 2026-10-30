@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "declared_after": "Second Random API failure and subsequent diagnostic probes.",
+  "applies_to": [
+    "random",
+    "bayesian",
+    "multifidelity"
+  ],
+  "rule": "Explicitly skip unscored API failures; retain task slot and ten-launch cap. Do not impute zero reward. Select only candidates completing all three validation tasks.",
+  "accounting": "Post-failure key usage may include diagnostics. Charge the whole observed interval conservatively against admission budget, separately from candidate scoring costs."
+}

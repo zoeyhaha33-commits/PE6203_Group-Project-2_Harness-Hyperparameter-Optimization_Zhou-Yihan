@@ -1,0 +1,9 @@
+{
+  "declared_after": "Multi-fidelity seventh launch failed fetching python:3.12-slim metadata.",
+  "applies_to": [
+    "random",
+    "bayesian",
+    "multifidelity"
+  ],
+  "rule": "Verified pre-agent Docker metadata timeout may consume its slot as missing. No extra retry. Preserve raw result and budget interval; incomplete candidates remain ineligible."
+}

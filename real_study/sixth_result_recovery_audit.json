@@ -1,0 +1,307 @@
+{
+  "basis": "One unscored Pi startup failure followed by exactly one scored rollout; no choice among scored results.",
+  "scored_result_path": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-multifidelity-20261029T161225489387Z/2026-10-30__00-12-27/jax-computing-basics__06e598e0/result.json",
+  "rollouts": [
+    {
+      "path": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-multifidelity-20261029T161225489387Z/2026-10-30__00-12-27/jax-computing-basics__06e598e0/result.json",
+      "sha256": "548f961da1da4abf5c14af5334cf666045148c40977677c710cf73713cb6d44a",
+      "raw_result": {
+        "task_name": "jax-computing-basics",
+        "rollout_name": "jax-computing-basics__06e598e0",
+        "rewards": {
+          "reward": 0.0
+        },
+        "agent": "pi-acp",
+        "agent_name": "pi-acp",
+        "model": "litellm/qwen/qwen3-coder",
+        "skill_mode": "no-skill",
+        "skill_source": "none",
+        "requested_skills_dir": null,
+        "effective_skills_dir": null,
+        "skills_sandbox_dir": null,
+        "include_task_skills": false,
+        "n_tool_calls": 4,
+        "n_skill_invocations": 0,
+        "n_prompts": 1,
+        "agent_result": {
+          "n_tool_calls": 4,
+          "n_skill_invocations": 0,
+          "n_prompts": 1,
+          "n_input_tokens": 0,
+          "n_output_tokens": 0,
+          "n_cache_read_tokens": 0,
+          "n_cache_creation_tokens": 0,
+          "total_tokens": 0,
+          "cost_usd": null,
+          "usage_source": "unavailable",
+          "price_source": null
+        },
+        "final_metrics": {
+          "total_prompt_tokens": 0,
+          "total_completion_tokens": 0,
+          "total_cached_tokens": 0,
+          "total_cost_usd": null
+        },
+        "trajectory_summary": {
+          "steps": 11,
+          "tool_call_steps": 4,
+          "user_message_steps": 1,
+          "agent_message_steps": 6,
+          "agent_thought_steps": 0,
+          "other_steps": 0,
+          "event_type_counts": {
+            "agent_message": 6,
+            "user_message": 1,
+            "tool_call": 4
+          },
+          "tool_call_status_counts": {
+            "completed": 4
+          },
+          "partial_trajectory": false,
+          "trajectory_source": "acp"
+        },
+        "usage_tracking": {
+          "requested": "auto",
+          "status": "unavailable",
+          "environment": "docker",
+          "endpoint_kind": "host",
+          "usage_source": "unavailable"
+        },
+        "error": null,
+        "error_category": null,
+        "verifier_error": null,
+        "verifier_error_category": null,
+        "export_error": null,
+        "idle_timeout_info": null,
+        "agent_timeout_info": null,
+        "sandbox_startup_info": null,
+        "transport_error_info": null,
+        "verifier_timeout_info": null,
+        "api_error_info": null,
+        "suspected_api_error_info": null,
+        "partial_trajectory": false,
+        "trajectory_source": "acp",
+        "started_at": "2026-10-30 00:16:26.354310",
+        "finished_at": "2026-10-30 00:43:05.757860",
+        "timing": {
+          "environment_setup": 10.3,
+          "agent_setup": 21.1,
+          "agent_execution": 928.2,
+          "verifier": 496.7,
+          "total": 1599.4
+        },
+        "scenes": [
+          {
+            "name": "default",
+            "skills_dir": null,
+            "roles": [
+              {
+                "name": "agent",
+                "agent": "pi-acp",
+                "model": "litellm/qwen/qwen3-coder",
+                "reasoning_effort": null,
+                "timeout_sec": null,
+                "idle_timeout_sec": null,
+                "skills_dir": null,
+                "capabilities": null,
+                "env_keys": []
+              }
+            ],
+            "turns": [
+              {
+                "role": "agent",
+                "has_prompt": false
+              }
+            ]
+          }
+        ],
+        "loop": {
+          "strategy": "single-shot"
+        },
+        "source": {
+          "type": "github",
+          "repo": "benchflow-ai/skillsbench",
+          "requested_ref": "HEAD",
+          "resolved_sha": "b63b7b2850226b6aa4fb5929a8c1ac7bc4d9a6af",
+          "path": "tasks/jax-computing-basics",
+          "dirty": false,
+          "file_hashes": {
+            "environment/Dockerfile": "sha256:e7b6ed46301e8bb0d13153cd64fd0761c38b4891da336cf85cfd52b7f9712209",
+            "environment/data/logistic.npz": "sha256:a4bb6b8f97198d565fc949d4741a166c88ccb70a52a9e7b4a5dd5d823b2c3eb6",
+            "environment/data/mlp.npz": "sha256:334dbfb5fdc7fc9530cb4cf0ee2ed636c203f0eae026f63f5a5c3bc0d40cf4e8",
+            "environment/data/seq.npz": "sha256:6ed564abfac75bc3495afadd39fee4d55d1f19ad274ae023a1257d1436b365bf",
+            "environment/data/x.npy": "sha256:0c19b1f4f6a50a9cc07387d9e4b45fedcfa6e6cc95d3e75b4cf86f6b67f5a3f3",
+            "environment/generate_data.py": "sha256:26613dd1734c5250820c0aeb551e02f9b466fc2a9717e653c830e6c57f5c9e04",
+            "environment/problem.json": "sha256:49763a523f024bf7bf3fdfbedd45a136dbc2c55fd20510618eeee412fbef1f1f",
+            "environment/reference/basic_reduce.npy": "sha256:cbb12d7503cef5eca9375a61930fdd4a4344ef7931dddbc0cc4db08ff75c94f9",
+            "environment/reference/grad_logistic.npy": "sha256:fbbd93f5d5893e982fded67154c8167624e1bc029152e7b03f57eefc8795e349",
+            "environment/reference/jit_mlp.npy": "sha256:3956c2d3e4372fcac0158cf1cd9923c9ead5b8018dc4f8bfec85532679645c96",
+            "environment/reference/map_square.npy": "sha256:c1ea7747817fa72b678d408b4901de8274b15035403d1c282f87730d8b40913f",
+            "environment/reference/scan_rnn.npy": "sha256:17cab0789ce9104e5c07533b6674fa8a95b5ed3eb4de2c5575587c5ea7bb1881",
+            "environment/skills/jax-skills/SKILL.md": "sha256:2cff1fe8e449fe60ab8009980c4e44eaf0d6bc7ca14ae03fc1e5c7f7e82eb6d1",
+            "environment/skills/jax-skills/jax_grad.skill": "sha256:ec90ae70182d6fff279a08280bb204cb34d97d0e3dde3e185e629e9c9b895a48",
+            "environment/skills/jax-skills/jax_jit.skill": "sha256:815531d7402c293eaefef220eddcfc32453178246f2f24aa144a2a61447865fd",
+            "environment/skills/jax-skills/jax_load.skill": "sha256:91322ce1ebb63a63edd62a070a1f049401f627d24bd8d1b97eac4ffdf5d99a54",
+            "environment/skills/jax-skills/jax_map.skill": "sha256:c1437e3e8d454c1c20e8d6708288df358d5ae209a92b901fce448b10c66e86ec",
+            "environment/skills/jax-skills/jax_reduce.skill": "sha256:91815ca1ba33183dc0e9e82dbf40eba409221a8f293e97e19412298d24ea8dc5",
+            "environment/skills/jax-skills/jax_save.skill": "sha256:f95733860dda14ffb70790ad21021a0e479350393d484344b095ff928e70bc86",
+            "environment/skills/jax-skills/jax_scan.skill": "sha256:66ab890176e0b98e87f93a695aa4141fffe0067c648c8b93683778bbf27a4e0e",
+            "environment/skills/jax-skills/jax_skills.py": "sha256:4a7972b68d85057ad0ec59aa1fc1133e7f5e4f38b5429f2fde902cffdbf8d573",
+            "oracle/solve.sh": "sha256:d2392233827f7e4034f055f469eef2673742ff3a130dca2504590781160fc4f8",
+            "task.md": "sha256:4f96adb7b56b6d0703d88158d8c9ddbeeb4306df9e20e62fbfa20b81eee6bb3b",
+            "verifier/test.sh": "sha256:2c77dcbc5d8a924d408676002892868670b2a3bd3105118d1213d77cbcb2cfa6",
+            "verifier/test_outputs.py": "sha256:2ced913e7285fa815bbddc830381ca2288c9bebfbf5b60b17c5d9df825418a6b"
+          }
+        },
+        "task_digest": "sha256:85f8adc808c68bfacd1fa06b17b91bb82b09aac0848c2ba55e512feb84137b35",
+        "sandbox_id": null
+      }
+    },
+    {
+      "path": "/home/zoeyhaha33/pe6203-linux/skillsbench/jobs/search-multifidelity-20261029T161225489387Z/2026-10-30__00-12-27/jax-computing-basics__26d1cff1/result.json",
+      "sha256": "254b13ec43f05f3ed3d5cb03a331e202b6f764339b9e3d2e8594d1b183b7004b",
+      "raw_result": {
+        "task_name": "jax-computing-basics",
+        "rollout_name": "jax-computing-basics__26d1cff1",
+        "rewards": null,
+        "agent": "pi-acp",
+        "agent_name": "",
+        "model": "litellm/qwen/qwen3-coder",
+        "skill_mode": "no-skill",
+        "skill_source": "none",
+        "requested_skills_dir": null,
+        "effective_skills_dir": null,
+        "skills_sandbox_dir": null,
+        "include_task_skills": false,
+        "n_tool_calls": 0,
+        "n_skill_invocations": 0,
+        "n_prompts": 1,
+        "agent_result": {
+          "n_tool_calls": 0,
+          "n_skill_invocations": 0,
+          "n_prompts": 1,
+          "n_input_tokens": 0,
+          "n_output_tokens": 0,
+          "n_cache_read_tokens": 0,
+          "n_cache_creation_tokens": 0,
+          "total_tokens": 0,
+          "cost_usd": null,
+          "usage_source": "unavailable",
+          "price_source": null
+        },
+        "final_metrics": {
+          "total_prompt_tokens": 0,
+          "total_completion_tokens": 0,
+          "total_cached_tokens": 0,
+          "total_cost_usd": null
+        },
+        "trajectory_summary": {
+          "steps": 0,
+          "tool_call_steps": 0,
+          "user_message_steps": 0,
+          "agent_message_steps": 0,
+          "agent_thought_steps": 0,
+          "other_steps": 0,
+          "event_type_counts": {},
+          "tool_call_status_counts": {},
+          "partial_trajectory": false,
+          "trajectory_source": null
+        },
+        "usage_tracking": {
+          "requested": "auto",
+          "status": "unavailable",
+          "environment": "docker",
+          "endpoint_kind": "host",
+          "usage_source": "unavailable"
+        },
+        "error": "ACP error -32603: Internal error: Could not start pi: executable not found (command: pi). Pi needs to be installed before it can run in ACP clients. Install it via `npm install -g @earendil-works/pi-coding-agent` or ensure `pi` is on your PATH. Then try again.",
+        "error_category": "acp_error",
+        "verifier_error": null,
+        "verifier_error_category": null,
+        "export_error": null,
+        "idle_timeout_info": null,
+        "agent_timeout_info": null,
+        "sandbox_startup_info": null,
+        "transport_error_info": null,
+        "verifier_timeout_info": null,
+        "api_error_info": null,
+        "suspected_api_error_info": null,
+        "partial_trajectory": false,
+        "trajectory_source": null,
+        "started_at": "2026-10-30 00:12:27.759484",
+        "finished_at": "2026-10-30 00:16:24.136628",
+        "timing": {
+          "environment_setup": 11.0,
+          "total": 236.4
+        },
+        "scenes": [
+          {
+            "name": "default",
+            "skills_dir": null,
+            "roles": [
+              {
+                "name": "agent",
+                "agent": "pi-acp",
+                "model": "litellm/qwen/qwen3-coder",
+                "reasoning_effort": null,
+                "timeout_sec": null,
+                "idle_timeout_sec": null,
+                "skills_dir": null,
+                "capabilities": null,
+                "env_keys": []
+              }
+            ],
+            "turns": [
+              {
+                "role": "agent",
+                "has_prompt": false
+              }
+            ]
+          }
+        ],
+        "loop": {
+          "strategy": "single-shot"
+        },
+        "source": {
+          "type": "github",
+          "repo": "benchflow-ai/skillsbench",
+          "requested_ref": "HEAD",
+          "resolved_sha": "b63b7b2850226b6aa4fb5929a8c1ac7bc4d9a6af",
+          "path": "tasks/jax-computing-basics",
+          "dirty": false,
+          "file_hashes": {
+            "environment/Dockerfile": "sha256:e7b6ed46301e8bb0d13153cd64fd0761c38b4891da336cf85cfd52b7f9712209",
+            "environment/data/logistic.npz": "sha256:a4bb6b8f97198d565fc949d4741a166c88ccb70a52a9e7b4a5dd5d823b2c3eb6",
+            "environment/data/mlp.npz": "sha256:334dbfb5fdc7fc9530cb4cf0ee2ed636c203f0eae026f63f5a5c3bc0d40cf4e8",
+            "environment/data/seq.npz": "sha256:6ed564abfac75bc3495afadd39fee4d55d1f19ad274ae023a1257d1436b365bf",
+            "environment/data/x.npy": "sha256:0c19b1f4f6a50a9cc07387d9e4b45fedcfa6e6cc95d3e75b4cf86f6b67f5a3f3",
+            "environment/generate_data.py": "sha256:26613dd1734c5250820c0aeb551e02f9b466fc2a9717e653c830e6c57f5c9e04",
+            "environment/problem.json": "sha256:49763a523f024bf7bf3fdfbedd45a136dbc2c55fd20510618eeee412fbef1f1f",
+            "environment/reference/basic_reduce.npy": "sha256:cbb12d7503cef5eca9375a61930fdd4a4344ef7931dddbc0cc4db08ff75c94f9",
+            "environment/reference/grad_logistic.npy": "sha256:fbbd93f5d5893e982fded67154c8167624e1bc029152e7b03f57eefc8795e349",
+            "environment/reference/jit_mlp.npy": "sha256:3956c2d3e4372fcac0158cf1cd9923c9ead5b8018dc4f8bfec85532679645c96",
+            "environment/reference/map_square.npy": "sha256:c1ea7747817fa72b678d408b4901de8274b15035403d1c282f87730d8b40913f",
+            "environment/reference/scan_rnn.npy": "sha256:17cab0789ce9104e5c07533b6674fa8a95b5ed3eb4de2c5575587c5ea7bb1881",
+            "environment/skills/jax-skills/SKILL.md": "sha256:2cff1fe8e449fe60ab8009980c4e44eaf0d6bc7ca14ae03fc1e5c7f7e82eb6d1",
+            "environment/skills/jax-skills/jax_grad.skill": "sha256:ec90ae70182d6fff279a08280bb204cb34d97d0e3dde3e185e629e9c9b895a48",
+            "environment/skills/jax-skills/jax_jit.skill": "sha256:815531d7402c293eaefef220eddcfc32453178246f2f24aa144a2a61447865fd",
+            "environment/skills/jax-skills/jax_load.skill": "sha256:91322ce1ebb63a63edd62a070a1f049401f627d24bd8d1b97eac4ffdf5d99a54",
+            "environment/skills/jax-skills/jax_map.skill": "sha256:c1437e3e8d454c1c20e8d6708288df358d5ae209a92b901fce448b10c66e86ec",
+            "environment/skills/jax-skills/jax_reduce.skill": "sha256:91815ca1ba33183dc0e9e82dbf40eba409221a8f293e97e19412298d24ea8dc5",
+            "environment/skills/jax-skills/jax_save.skill": "sha256:f95733860dda14ffb70790ad21021a0e479350393d484344b095ff928e70bc86",
+            "environment/skills/jax-skills/jax_scan.skill": "sha256:66ab890176e0b98e87f93a695aa4141fffe0067c648c8b93683778bbf27a4e0e",
+            "environment/skills/jax-skills/jax_skills.py": "sha256:4a7972b68d85057ad0ec59aa1fc1133e7f5e4f38b5429f2fde902cffdbf8d573",
+            "oracle/solve.sh": "sha256:d2392233827f7e4034f055f469eef2673742ff3a130dca2504590781160fc4f8",
+            "task.md": "sha256:4f96adb7b56b6d0703d88158d8c9ddbeeb4306df9e20e62fbfa20b81eee6bb3b",
+            "verifier/test.sh": "sha256:2c77dcbc5d8a924d408676002892868670b2a3bd3105118d1213d77cbcb2cfa6",
+            "verifier/test_outputs.py": "sha256:2ced913e7285fa815bbddc830381ca2288c9bebfbf5b60b17c5d9df825418a6b"
+          }
+        },
+        "task_digest": "sha256:85f8adc808c68bfacd1fa06b17b91bb82b09aac0848c2ba55e512feb84137b35",
+        "sandbox_id": null
+      }
+    }
+  ],
+  "count_note": "task_launches counts wrapper launches plus explicit retry archives; this launch contains two internal rollouts.",
+  "billing_note": "Attribute the whole exclusive-key interval once, including internal failed startup, subject to delayed billing."
+}

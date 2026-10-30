@@ -1,0 +1,53 @@
+{
+  "schema": 1,
+  "original_sha256": {
+    "final_test_protocol.json": "edf0b4dbd5a403202077da6db21a2b908f6726d087a1e8799e22f3f52a83c128",
+    "test_default_state.json": "284356f2110628d325efde51d891f57ec6571c0f5989f6d6dcbf5ad200119d86",
+    "test_random_state.json": "a78f7ad98983eb3b2114f7e8e27a1e587e4f3e3835f6f3080323630871b88f21",
+    "test_bayesian_state.json": "4cf2a022dad153169d6ecd502411b4db93d1f5fd80ff1ab00878f6600db1d784",
+    "test_multifidelity_state.json": "cf58ea017d4faef4c0d271c9e68cca8a628e10bee1db6d26971350eafe106361"
+  },
+  "authorized_scope": "User requested an amendment after inspecting original failure logs and results.",
+  "methods": [
+    "default",
+    "bayesian"
+  ],
+  "task": {
+    "name": "python-scala-translation",
+    "definition_sha256": "df4efec83eeb79098331597b460f88b1d5087f3d856a00759336ab6977a70cf7",
+    "development_only": false,
+    "resources": {
+      "network_mode": "public",
+      "build_timeout_sec": 600.0,
+      "os": "linux",
+      "cpus": 1,
+      "memory_mb": 2048,
+      "storage_mb": 10240,
+      "gpus": 0
+    },
+    "agent_timeout_sec": 600.0
+  },
+  "configs": {
+    "default": null,
+    "bayesian": {
+      "contextWindow": 128000,
+      "maxTokens": 4096
+    }
+  },
+  "fixed": {
+    "harness": "pi-acp",
+    "pi_version": "0.81.0",
+    "acp_version": "0.0.34",
+    "model": "litellm/qwen/qwen3-coder",
+    "skill_mode": "no-skill",
+    "loop_strategy": "single-shot",
+    "concurrency": 1
+  },
+  "benchmark_commit": "b63b7b2850226b6aa4fb5929a8c1ac7bc4d9a6af",
+  "maximum_launches_per_method": 1,
+  "rules": "Supplementary only, after observing main results. Preserve original protocol, ledgers and primary table. No tuning, changed task limits, best-of-attempt selection or further retries. A second unscored failure stays missing. Supplementary completed estimates must be labelled and shown beside original results.",
+  "accounting": "Dedicated exclusive key. All supplementary usage intervals retained, including failures. Same original shared USD 2 test admission budget and USD 0.20 reserve; no budget reset. Stable zero is observed zero, not proof of free usage.",
+  "test_budget_usd": 2.0,
+  "reserve_usd": 0.2,
+  "cause_note": "Default: failed apt/JDK download during image build. Bayesian: unscored 900-second command timeout with empty trajectory; root cause unconfirmed. Existing build cache may be used; no task or agent timeout changes."
+}

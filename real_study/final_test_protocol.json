@@ -1,0 +1,99 @@
+{
+  "schema": 1,
+  "benchmark_commit": "b63b7b2850226b6aa4fb5929a8c1ac7bc4d9a6af",
+  "fixed": {
+    "harness": "pi-acp",
+    "pi_version": "0.81.0",
+    "acp_version": "0.0.34",
+    "model": "litellm/qwen/qwen3-coder",
+    "skill_mode": "no-skill",
+    "loop_strategy": "single-shot",
+    "concurrency": 1
+  },
+  "test": [
+    {
+      "name": "python-scala-translation",
+      "definition_sha256": "df4efec83eeb79098331597b460f88b1d5087f3d856a00759336ab6977a70cf7",
+      "development_only": false,
+      "resources": {
+        "network_mode": "public",
+        "build_timeout_sec": 600.0,
+        "os": "linux",
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "agent_timeout_sec": 600.0
+    },
+    {
+      "name": "reserves-at-risk-calc",
+      "definition_sha256": "6c7023a07f2f5dc3ad98cb2885ae05ccba11ed9b5f9cf5ece13b4a33114ce8cf",
+      "development_only": false,
+      "resources": {
+        "network_mode": "public",
+        "build_timeout_sec": 600.0,
+        "os": "linux",
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "agent_timeout_sec": 600.0
+    },
+    {
+      "name": "threejs-structure-parser",
+      "definition_sha256": "94cf9d94d2e1ef6f2ae7ded259be3d78736e9c5f02ae18ffb8b74a58e7699c7e",
+      "development_only": false,
+      "resources": {
+        "network_mode": "public",
+        "build_timeout_sec": 600.0,
+        "os": "linux",
+        "cpus": 1,
+        "memory_mb": 4096,
+        "storage_mb": 8192,
+        "gpus": 0
+      },
+      "agent_timeout_sec": 600.0
+    }
+  ],
+  "selections": {
+    "default": {
+      "config": null,
+      "basis": "No parameter overrides, matching original baseline."
+    },
+    "random": {
+      "candidate": 0,
+      "config": {
+        "contextWindow": 64000,
+        "maxTokens": 16384
+      },
+      "validation_pass_rate": 0.0
+    },
+    "bayesian": {
+      "candidate": 1,
+      "config": {
+        "contextWindow": 128000,
+        "maxTokens": 4096
+      },
+      "validation_pass_rate": 0.3333333333333333
+    },
+    "multifidelity": {
+      "candidate": 0,
+      "config": {
+        "contextWindow": 64000,
+        "maxTokens": 16384
+      },
+      "validation_pass_rate": 0.0
+    }
+  },
+  "search_state_sha256": {
+    "random": "4a82a0bc6115b712bb4f73a4f1357d2af91f97750782cc83a103a8b16b8d59f8",
+    "bayesian": "d16be713a21f4d05ae82f918c9e8d85d185cdf6c8e475d3c18dff53b3609ae7d",
+    "multifidelity": "09c4b7017fc4d036f4f4464e91bc86beaf1fe41154bbcaf775f9616b49cf1ddd"
+  },
+  "test_budget_usd": 2.0,
+  "admission_reserve_usd": 0.2,
+  "rules": "Four methods independently evaluate their frozen configuration once per test task. No test-guided tuning. One wrapper launch per method/task; no explicit paid retries. Infrastructure failures stop for audit and must be reported as missing, not zero. Internal rollouts must be retained and counted separately.",
+  "limitations": "Three test tasks only. Random and multifidelity each have one missing validation evaluation. Equal evaluation caps do not imply equal realized USD spend. Installation hardening applied to all final methods."
+}

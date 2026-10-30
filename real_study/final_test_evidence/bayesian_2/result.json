@@ -1,0 +1,137 @@
+{
+  "task_name": "reserves-at-risk-calc",
+  "rollout_name": "reserves-at-risk-calc__b4599ca9",
+  "rewards": {
+    "reward": 0.0
+  },
+  "agent": "pi-acp",
+  "agent_name": "pi-acp",
+  "model": "litellm/qwen/qwen3-coder",
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "n_tool_calls": 27,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 27,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 0,
+    "n_output_tokens": 0,
+    "n_cache_read_tokens": 0,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": null,
+    "usage_source": "unavailable",
+    "price_source": null
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 0,
+    "total_completion_tokens": 0,
+    "total_cached_tokens": 0,
+    "total_cost_usd": null
+  },
+  "trajectory_summary": {
+    "steps": 48,
+    "tool_call_steps": 27,
+    "user_message_steps": 1,
+    "agent_message_steps": 20,
+    "agent_thought_steps": 0,
+    "other_steps": 0,
+    "event_type_counts": {
+      "agent_message": 20,
+      "user_message": 1,
+      "tool_call": 27
+    },
+    "tool_call_status_counts": {
+      "failed": 8,
+      "completed": 19
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "unavailable",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "unavailable"
+  },
+  "error": null,
+  "error_category": null,
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": null,
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-10-30 11:14:02.529168",
+  "finished_at": "2026-10-30 11:18:27.470417",
+  "timing": {
+    "environment_setup": 2.2,
+    "agent_setup": 14.9,
+    "agent_execution": 91.9,
+    "verifier": 83.2,
+    "total": 264.9
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "litellm/qwen/qwen3-coder",
+          "reasoning_effort": null,
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "source": {
+    "type": "github",
+    "repo": "benchflow-ai/skillsbench",
+    "requested_ref": "HEAD",
+    "resolved_sha": "b63b7b2850226b6aa4fb5929a8c1ac7bc4d9a6af",
+    "path": "tasks/reserves-at-risk-calc",
+    "dirty": false,
+    "file_hashes": {
+      "environment/Dockerfile": "sha256:0d38dce65931366e5d40dd8b20a1c274ad33cd02fb22a04a52d7d7fe9f4a0e62",
+      "environment/skills/xlsx/LICENSE.txt": "sha256:79f6d8f5b427252fa3b1c11ecdbdb6bf610b944f7530b4de78f770f38741cfaa",
+      "environment/skills/xlsx/SKILL.md": "sha256:9bdc1fee81f3be9cb34ac49f8890c094a3855d3d0236783d10e0ea6df1515e01",
+      "environment/skills/xlsx/recalc.py": "sha256:f0833720e26fa894c9c1ccf0bd71dfc4609f8a310360fb2de2071efb64fbd409",
+      "environment/test-rar.xlsx": "sha256:2d61c05fae65a34352ebfd32edecc05b1f4282cf792280a2b18298deec7dcec4",
+      "oracle/answer-rar.xlsx": "sha256:dcd1a9aa99f2b7f8685e6d40577e22e01e64e04ba9d2b628b2f9d9b8eb4943bd",
+      "oracle/solve.sh": "sha256:b53f7b23aec04bc0a509928dfb8e50ac8c583cdb81ad1b69d7759c4bb1131579",
+      "task.md": "sha256:6c7023a07f2f5dc3ad98cb2885ae05ccba11ed9b5f9cf5ece13b4a33114ce8cf",
+      "verifier/test.sh": "sha256:8c19cd71192307dca91fad22715869428e8a158fb77710ac83695b8873192396",
+      "verifier/test_outputs.py": "sha256:cbefaf02b57cadafb51f4e0055bab5a5f0dead3956edb83ee79d263bdbb59432"
+    }
+  },
+  "task_digest": "sha256:bbf57b1a76688f2877c29db1bbcfed818acd9cda238a25d76fedd6bdbbadbd55",
+  "sandbox_id": null
+}
